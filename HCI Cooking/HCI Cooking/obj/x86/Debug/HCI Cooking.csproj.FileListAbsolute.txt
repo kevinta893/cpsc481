@@ -9,3 +9,5 @@ d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj
 d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
 d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
 d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb
