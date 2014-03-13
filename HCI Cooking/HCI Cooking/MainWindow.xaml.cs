@@ -33,12 +33,11 @@ namespace HCI_Cooking
         {
 
             label1.Margin = new Thickness(r.Next(400), r.Next(230), 0, 0);
-       
+
         }
 
-
-       
-        }
+        // PB just testing a commit!
+    }
     
     
 }
