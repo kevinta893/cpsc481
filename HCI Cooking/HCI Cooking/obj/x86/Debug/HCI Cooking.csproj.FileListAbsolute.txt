@@ -31,3 +31,9 @@ D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking_
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.g.resources
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI_Cooking.Properties.Resources.resources
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\MainMenu.baml
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeOverview.baml
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeSelectionMenu.baml
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\MainMenu.g.cs
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeOverview.g.cs
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeSelectionMenu.g.cs

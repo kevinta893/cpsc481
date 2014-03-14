@@ -1,0 +1,14 @@
+﻿<Page x:Class="HCI_Cooking.Pages.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+	Title="MainMenu">
+
+    <Grid>
+        <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="170" HorizontalAlignment="Left" Margin="95,404,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="296" />
+        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="170" HorizontalAlignment="Left" Margin="610,403,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="296" />
+    </Grid>
+</Page>

@@ -1,0 +1,36 @@
+﻿<Page x:Class="HCI_Cooking.Pages.RecipeSelectionMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+	Title="RecipeSelectionMenu">
+
+    <Grid>
+        <StackPanel Height="678" HorizontalAlignment="Left" Margin="10,10,0,0" Name="stpFilter" VerticalAlignment="Top" Width="200">
+            <Expander Header="BBQ" Height="79" Name="expBeef" Width="201">
+                <Grid>
+                    <CheckBox Content="Marinating" HorizontalAlignment="Left" Margin="23,6,0,34" Name="ckbxMarinate" />
+                    <CheckBox Content="Glazing" Height="16" HorizontalAlignment="Left" Margin="23,28,0,0" Name="chkbxGlaze" VerticalAlignment="Top" />
+                </Grid>
+            </Expander>
+            <Expander Header="Baking" Height="100" Name="expBaking">
+                <Grid>
+                    <CheckBox Content="Mixing" Height="16" HorizontalAlignment="Left" Margin="26,6,0,0" Name="chkbxMixing" VerticalAlignment="Top" />
+                    <CheckBox Content="Folding" Height="16" HorizontalAlignment="Left" Margin="26,28,0,0" Name="chkbxFolding" VerticalAlignment="Top" />
+                    <CheckBox Content="Decorating" Height="16" HorizontalAlignment="Left" Margin="26,50,0,0" Name="chkbxDeco" VerticalAlignment="Top" />
+                </Grid>
+            </Expander>
+            <Expander Header="Deep Frying" Height="69" Name="expDeepFry">
+                <Grid>
+                    <CheckBox Content="Breading" Height="16" HorizontalAlignment="Left" Margin="22,6,0,0" Name="chkbxBread" VerticalAlignment="Top" />
+                </Grid>
+            </Expander>
+            <Expander Header="Saute" Height="100" Name="expSaute">
+                <Grid></Grid>
+            </Expander>
+        </StackPanel>
+        <Grid Name="gridRecipeDisplay" Margin="224,12,12,12" />
+    </Grid>
+</Page>
