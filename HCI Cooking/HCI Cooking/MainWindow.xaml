@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Learn2CookMe???" Height="700" Width="1000">
     <Window.Background>
-        <ImageBrush />
+        <ImageBrush ImageSource="/HCI%20Cooking;component/Images/nichi.png" />
     </Window.Background>
     <Grid>
         <Button Content="CLICK ME!" Height="64" HorizontalAlignment="Left" Margin="152,146,0,0" Name="button1" VerticalAlignment="Top" Width="179" Click="button1_Click" />
