@@ -1,0 +1,2 @@
+Loading an image:
+http://www.dotnetperls.com/picturebox
