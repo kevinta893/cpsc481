@@ -17,7 +17,7 @@ namespace HCI_Cooking.Pages
     /// <summary>
     /// Interaction logic for RecipeOverview.xaml
     /// </summary>
-    public partial class RecipeOverview : Page
+    public partial class RecipeOverview : UserControl, ISwitchable
     {
         public RecipeOverview()
         {

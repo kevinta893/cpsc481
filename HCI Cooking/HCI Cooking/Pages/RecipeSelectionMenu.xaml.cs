@@ -11,13 +11,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HCI_Cooking;
 
 namespace HCI_Cooking.Pages
 {
     /// <summary>
     /// Interaction logic for RecipeSelectionMenu.xaml
     /// </summary>
-    public partial class RecipeSelectionMenu : Page
+    public partial class RecipeSelectionMenu : UserControl, ISwitchable
     {
         public RecipeSelectionMenu()
         {

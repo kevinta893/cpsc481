@@ -7,11 +7,18 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+/**
+ * Code taken from:
+ * http://azerdark.wordpress.com/2010/04/23/multi-page-application-in-wpf/
+ * With modifications. Uses functionality to switch pages.
+ */
+
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
+using HCI_Cooking.Pages;
 
 
 namespace HCI_Cooking
@@ -25,19 +32,47 @@ namespace HCI_Cooking
         public MainWindow()
         {
             InitializeComponent();
+
+            Switcher.pageSwitcher = this;
+            //create pages and retain copies
+            MainMenu mainmenu = new MainMenu();
+
+            Switcher.Switch(mainmenu);
         }
+
+
+        public void Navigate(UserControl nextPage)
+        {
+            this.Content = nextPage;
+        }
+ 
+        public void Navigate(UserControl nextPage, object state)
+        {
+            this.Content = nextPage;
+            ISwitchable s = nextPage as ISwitchable;
+ 
+            if (s != null)
+                s.UtilizeState(state);
+            else
+                throw new ArgumentException("NextPage is not ISwitchable! "
+                  + nextPage.Name.ToString());
+        }
+
+
+
+
+
 
         private Random r = new Random();
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
 
-            label1.Margin = new Thickness(r.Next(400), r.Next(230), 0, 0);
-
+          
         }
 
-        // PB just testing a commit!
+
     }
-    
-    
-}
+   
+ }
+
