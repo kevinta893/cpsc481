@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\
 HCI_Cooking
 none
 false
 DEBUG;TRACE
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\App.xaml
-4-147807155
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\App.xaml
+7-1519413897
 
-121934660134
+15-1745008630
 13-1012886045
-MainWindow.xaml;Pages\MainMenu.xaml;Pages\RecipeOverview.xaml;Pages\RecipeSelectionMenu.xaml;
+MainWindow.xaml;Pages\CookingTechniqueLessons.xaml;Pages\MainMenu.xaml;Pages\RecipeCompleteSteps.xaml;Pages\RecipeIndividualSteps.xaml;Pages\RecipeOverview.xaml;Pages\RecipeSelectionMenu.xaml;
 
 False
 
