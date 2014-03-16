@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Learn2CookMe???" Height="700" Width="1000">
     <Grid>
-        <Button Content="COOKING TECHNIQUES" FontFamily="Leelawadee" FontSize="24" Height="229" HorizontalAlignment="Left" Margin="56,199,0,0" Name="btnCookTech" VerticalAlignment="Top" Width="357"/>
-        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="24" Height="229" HorizontalAlignment="Left" Margin="554,199,0,0" Name="btnAchievement" VerticalAlignment="Top" Width="368" />
+        
     </Grid>
 </Window>
