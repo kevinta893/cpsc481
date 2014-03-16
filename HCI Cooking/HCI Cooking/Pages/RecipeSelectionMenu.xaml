@@ -19,14 +19,15 @@
                     <CheckBox Content="Glazing" Height="16" HorizontalAlignment="Left" Margin="1,28,0,0" Name="chkbxGlaze" VerticalAlignment="Top" Grid.Column="1" />
                 </Grid>
             </Expander>
-            <Expander Header="Baking" Height="100" Name="expBaking">
+            <Expander Header="Baking" Height="120" Name="expBaking">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="26*" />
                     </Grid.ColumnDefinitions>
-                    <CheckBox Content="Mixing" Height="16" HorizontalAlignment="Left" Margin="0,6,0,0" Name="chkbxMixing" VerticalAlignment="Top" Grid.Column="1" />
-                    <CheckBox Content="Folding" Height="16" HorizontalAlignment="Left" Margin="0,28,0,0" Name="chkbxFolding" VerticalAlignment="Top" Grid.Column="1" />
-                    <CheckBox Content="Decorating" Height="16" HorizontalAlignment="Left" Margin="0,50,0,0" Name="chkbxDeco" VerticalAlignment="Top" Grid.Column="1" />
+                    <CheckBox Content="Mixing" Height="16" HorizontalAlignment="Left" Margin="22,6,0,0" Name="chkbxMixing" VerticalAlignment="Top" />
+                    <CheckBox Content="Folding" Height="16" HorizontalAlignment="Left" Margin="22,28,0,0" Name="chkbxFolding" VerticalAlignment="Top" />
+                    <CheckBox Content="Decorating" HorizontalAlignment="Left" Margin="22,50,0,31" Name="chkbxDeco" />
+                    <CheckBox Content="Whisking" Height="16" HorizontalAlignment="Left" Margin="22,72,0,0" Name="chkBxWhisking" VerticalAlignment="Top" />
                 </Grid>
             </Expander>
             <Expander Header="Saute" Height="100" Name="expSaute">
