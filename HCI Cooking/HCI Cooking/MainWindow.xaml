@@ -2,11 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Learn2CookMe???" Height="700" Width="1000">
-    <Window.Background>
-        <ImageBrush ImageSource="/HCI%20Cooking;component/Images/nichi.png" />
-    </Window.Background>
     <Grid>
-        <Button Content="CLICK ME!" Height="64" HorizontalAlignment="Left" Margin="152,146,0,0" Name="button1" VerticalAlignment="Top" Width="179" Click="button1_Click" />
-        <Label Content="COOKING!" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <Button Content="COOKING TECHNIQUES" FontFamily="Leelawadee" FontSize="24" Height="229" HorizontalAlignment="Left" Margin="56,199,0,0" Name="btnCookTech" VerticalAlignment="Top" Width="357"/>
+        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="24" Height="229" HorizontalAlignment="Left" Margin="554,199,0,0" Name="btnAchievement" VerticalAlignment="Top" Width="368" />
     </Grid>
 </Window>
