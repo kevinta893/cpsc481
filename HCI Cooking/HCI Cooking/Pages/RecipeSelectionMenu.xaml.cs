@@ -18,11 +18,23 @@ namespace HCI_Cooking.Pages
     /// <summary>
     /// Interaction logic for RecipeSelectionMenu.xaml
     /// </summary>
-    public partial class RecipeSelectionMenu : UserControl, ISwitchable
+    public partial class RecipeSelectionMenu : ISwitchable
     {
         public RecipeSelectionMenu()
         {
             InitializeComponent();
+            txtBlkMPCDesc.Text = "Recipe Information"; //replace string with data from the recipe data class
+
         }
+
+
+
+
+        #region ISwitchable Members
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

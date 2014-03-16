@@ -4,10 +4,28 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="700" d:DesignWidth="1000"
 	Title="RecipeOverview">
 
-    <Grid>
-        
+    <Grid Name="grdRecipeOverview">
+        <Image Height="278" HorizontalAlignment="Left" Margin="599,12,0,0" Name="imgRecipePreview" Stretch="Fill" VerticalAlignment="Top" Width="389" />
+        <Button Content="Start Cooking" FontFamily="Leelawadee" FontSize="24" Height="94" HorizontalAlignment="Left" Margin="694,566,0,0" Name="button1" VerticalAlignment="Top" Width="294" />
+        <TextBlock Height="143" HorizontalAlignment="Left" Margin="12,12,0,0" Name="txtBlkRecipeIngred" Text="Recipe Ingredients" FontSize="20" VerticalAlignment="Top" Width="565" Background="#FFE2E2E2" />
+        <TextBlock Height="150" HorizontalAlignment="Left" Margin="12,172,0,0" Name="txtBlkTools" Text="Tools Required" FontSize="20" VerticalAlignment="Top" Width="251" Background="#FFF2ECEC" />
+        <Grid Height="251" HorizontalAlignment="Left" Margin="12,345,0,0" Name="grdSkillsNeeded" VerticalAlignment="Top" Width="478">
+            <Label Content="Skills Needed" FontFamily="Leelawadee" FontSize="18" Height="34" HorizontalAlignment="Left" Margin="6,6,0,0" Name="lblSkillsNeed" VerticalAlignment="Top" Width="255" />
+            <Image Height="40" HorizontalAlignment="Left" Margin="22,46,0,0" Name="imgMixing" Stretch="Fill" VerticalAlignment="Top" Width="46" />
+            <Image Height="40" HorizontalAlignment="Left" Margin="22,92,0,0" Name="imgDecorating" Stretch="Fill" VerticalAlignment="Top" Width="46" />
+            <Image Height="40" HorizontalAlignment="Left" Margin="22,138,0,0" Name="imgFolding" Stretch="Fill" VerticalAlignment="Top" Width="46" />
+            <Image Height="40" HorizontalAlignment="Left" Margin="22,184,0,0" Name="imgWhisking" Stretch="Fill" VerticalAlignment="Top" Width="46" />
+            <Label Content="Mixing" FontFamily="Leelawadee" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="83,46,0,0" Name="lblFolding" VerticalAlignment="Top" Width="238" />
+            <Label Content="Decorating"  FontFamily="Leelawadee" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="83,92,0,0" Name="lblWhisking" VerticalAlignment="Top" Width="238" />
+            <Label Content="Folding"  FontFamily="Leelawadee" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="83,138,0,0" Name="lbl" VerticalAlignment="Top" Width="108" />
+            <Label Content="Whisking"  FontFamily="Leelawadee" FontSize="20" Height="40" HorizontalAlignment="Left" Margin="83,184,0,0" Name="label5" VerticalAlignment="Top" Width="238" />
+            <Button Content="->" Height="27" HorizontalAlignment="Left" Margin="390,52,0,0" Name="btnMixPlay" VerticalAlignment="Top" Width="59" />
+            <Button Content="->" Height="27" HorizontalAlignment="Left" Margin="390,98,0,0" Name="btnDecoPlay" VerticalAlignment="Top" Width="59" />
+            <Button Content="->" Height="27" HorizontalAlignment="Left" Margin="390,144,0,0" Name="btnFoldPlay" VerticalAlignment="Top" Width="59" />
+            <Button Content="->" Height="27" HorizontalAlignment="Left" Margin="390,190,0,0" Name="btnWhiskPlay" VerticalAlignment="Top" Width="59" />
+        </Grid>
     </Grid>
 </Page>

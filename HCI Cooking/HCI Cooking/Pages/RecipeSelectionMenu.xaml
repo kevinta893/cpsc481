@@ -7,30 +7,62 @@
       d:DesignHeight="700" d:DesignWidth="1000"
 	Title="RecipeSelectionMenu">
 
-    <Grid>
+    <Grid Name="grdRecipeSelectionMenu">
         <StackPanel Height="678" HorizontalAlignment="Left" Margin="10,10,0,0" Name="stpFilter" VerticalAlignment="Top" Width="200">
             <Expander Header="BBQ" Height="79" Name="expBeef" Width="201">
                 <Grid>
-                    <CheckBox Content="Marinating" HorizontalAlignment="Left" Margin="23,6,0,34" Name="ckbxMarinate" />
-                    <CheckBox Content="Glazing" Height="16" HorizontalAlignment="Left" Margin="23,28,0,0" Name="chkbxGlaze" VerticalAlignment="Top" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="22*" />
+                        <ColumnDefinition Width="177*" />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Content="Marinating" HorizontalAlignment="Left" Margin="1,6,0,34" Name="ckbxMarinate" Grid.Column="1" />
+                    <CheckBox Content="Glazing" Height="16" HorizontalAlignment="Left" Margin="1,28,0,0" Name="chkbxGlaze" VerticalAlignment="Top" Grid.Column="1" />
                 </Grid>
             </Expander>
-            <Expander Header="Baking" Height="100" Name="expBaking">
+            <Expander Header="Baking" Height="120" Name="expBaking">
                 <Grid>
-                    <CheckBox Content="Mixing" Height="16" HorizontalAlignment="Left" Margin="26,6,0,0" Name="chkbxMixing" VerticalAlignment="Top" />
-                    <CheckBox Content="Folding" Height="16" HorizontalAlignment="Left" Margin="26,28,0,0" Name="chkbxFolding" VerticalAlignment="Top" />
-                    <CheckBox Content="Decorating" Height="16" HorizontalAlignment="Left" Margin="26,50,0,0" Name="chkbxDeco" VerticalAlignment="Top" />
-                </Grid>
-            </Expander>
-            <Expander Header="Deep Frying" Height="69" Name="expDeepFry">
-                <Grid>
-                    <CheckBox Content="Breading" Height="16" HorizontalAlignment="Left" Margin="22,6,0,0" Name="chkbxBread" VerticalAlignment="Top" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="26*" />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Content="Mixing" Height="16" HorizontalAlignment="Left" Margin="22,6,0,0" Name="chkbxMixing" VerticalAlignment="Top" />
+                    <CheckBox Content="Folding" Height="16" HorizontalAlignment="Left" Margin="22,28,0,0" Name="chkbxFolding" VerticalAlignment="Top" />
+                    <CheckBox Content="Decorating" HorizontalAlignment="Left" Margin="22,50,0,31" Name="chkbxDeco" />
+                    <CheckBox Content="Whisking" Height="16" HorizontalAlignment="Left" Margin="22,72,0,0" Name="chkBxWhisking" VerticalAlignment="Top" />
                 </Grid>
             </Expander>
             <Expander Header="Saute" Height="100" Name="expSaute">
-                <Grid></Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*" />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Content="Deglazing" Height="16" HorizontalAlignment="Left" Margin="19,6,0,0" Name="chkBxDeglaze" VerticalAlignment="Top" Grid.ColumnSpan="3" />
+                </Grid>
+            </Expander>
+            <Expander Header="Deep Frying" Height="65" Name="expDeepFry">
+                <Grid Height="77">
+                    <CheckBox Content="Breading" Height="16" HorizontalAlignment="Left" Margin="22,6,0,0" Name="chkbxBread" VerticalAlignment="Top" />
+                    <CheckBox Content="Degreasing" Height="16" HorizontalAlignment="Left" Margin="22,24,0,0" Name="chkBxDegrease" VerticalAlignment="Top" />
+                </Grid>
             </Expander>
         </StackPanel>
-        <Grid Name="gridRecipeDisplay" Margin="224,12,12,12" />
+        <Grid Name="gridRecipeDisplay" Margin="224,12,12,12">
+            <Label Content="RECOMMENDED RECIPES" FontFamily="Leelawadee" FontSize="30" Height="53" HorizontalAlignment="Left" Margin="10,10,0,0" Name="lblRecRecipes" VerticalAlignment="Top" Width="452" Grid.ColumnSpan="3" />
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="18,59,0,0" Name="canvMangoPuddingCake" VerticalAlignment="Top" Width="347">
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkMPCDesc" Text="TextBlock" Width="347" />
+                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgMPC" Stretch="Fill" Width="347" />
+            </Canvas>
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="390,59,0,0" Name="canvPowChicken" VerticalAlignment="Top" Width="347">
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkPC" Text="TextBlock" Width="347" />
+                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgPC" Stretch="Fill" Width="347" />
+            </Canvas>
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="18,369,0,0" Name="canvSpringRolls" VerticalAlignment="Top" Width="347">
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkSprRoll" Text="TextBlock" Width="347" />
+                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgSprRoll" Stretch="Fill" Width="347" />
+            </Canvas>
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="390,369,0,0" Name="canvRibs" VerticalAlignment="Top" Width="347">
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRibs" Text="TextBlock" Width="347" />
+                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgRibs" Stretch="Fill" Width="347" />
+            </Canvas>
+        </Grid>
     </Grid>
 </Page>
