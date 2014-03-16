@@ -17,11 +17,23 @@ namespace HCI_Cooking.Pages
     /// <summary>
     /// Interaction logic for CookingTechniqueLessons.xaml
     /// </summary>
-    public partial class CookingTechniqueLessons : Page
+    public partial class CookingTechniqueLessons : ISwitchable
     {
         public CookingTechniqueLessons()
         {
             InitializeComponent();
         }
+
+
+
+
+
+
+        #region ISwitchable Members
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

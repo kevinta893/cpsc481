@@ -17,11 +17,23 @@ namespace HCI_Cooking.Pages
     /// <summary>
     /// Interaction logic for RecipeIndividualSteps.xaml
     /// </summary>
-    public partial class RecipeIndividualSteps : Page
+    public partial class RecipeIndividualSteps : ISwitchable
     {
         public RecipeIndividualSteps()
         {
             InitializeComponent();
         }
+
+
+
+
+
+
+        #region ISwitchable Members
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

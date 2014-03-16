@@ -37,7 +37,6 @@ namespace HCI_Cooking
             //create pages and retain copies
             MainMenu mainmenu = new MainMenu();
 
-            Switcher.Switch(mainmenu);
         }
 
 

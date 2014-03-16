@@ -18,15 +18,20 @@ namespace HCI_Cooking.Pages
     /// <summary>
     /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class MainMenu : UserControl, ISwitchable
+    public partial class MainMenu : ISwitchable
     {
         public MainMenu()
         { 
             InitializeComponent();
         }
 
+
+
+
+
+
         #region ISwitchable Members
-        void UtilizeState(object state)
+        public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }

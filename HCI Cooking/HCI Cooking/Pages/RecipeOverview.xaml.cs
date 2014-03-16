@@ -17,11 +17,22 @@ namespace HCI_Cooking.Pages
     /// <summary>
     /// Interaction logic for RecipeOverview.xaml
     /// </summary>
-    public partial class RecipeOverview : UserControl, ISwitchable
+    public partial class RecipeOverview : ISwitchable
     {
         public RecipeOverview()
         {
             InitializeComponent();
         }
+
+
+
+
+
+        #region ISwitchable Members
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }
