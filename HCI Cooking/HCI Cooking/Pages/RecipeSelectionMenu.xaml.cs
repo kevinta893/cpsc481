@@ -23,6 +23,8 @@ namespace HCI_Cooking.Pages
         public RecipeSelectionMenu()
         {
             InitializeComponent();
+            txtBlkMPCDesc.Text = "Recipe Information"; //replace string with data from the recipe data class
+
         }
     }
 }
