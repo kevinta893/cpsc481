@@ -25,26 +25,15 @@ namespace HCI_Cooking.Pages
         }
 
 
+
+
+
+
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
         #endregion
-
-        private void btnIndiToogleView_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeCompleteSteps());
-        }
-
-        private void btnIndivRecipeBack_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeOverview());
-        }
-
-        private void btnIndivRecipeNext_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeIndividualSteps());
-        }
     }
 }

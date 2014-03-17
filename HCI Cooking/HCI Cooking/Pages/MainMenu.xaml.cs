@@ -27,6 +27,10 @@ namespace HCI_Cooking.Pages
         }
 
 
+
+
+
+
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -37,6 +41,11 @@ namespace HCI_Cooking.Pages
         private void btnCookingTech_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new RecipeSelectionMenu());
+        }
+
+        private void btnAchievements_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new AchievementMenu());
         }
     }
 }

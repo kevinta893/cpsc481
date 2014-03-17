@@ -25,23 +25,15 @@ namespace HCI_Cooking.Pages
         }
 
 
+
+
+
+
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
         #endregion
-
-        private void btnLesBack_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeOverview()); //by default I have set this to recipe overview. 
-                                                 
-        }
-
-        private void imgLessonIV_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            Switcher.Switch(new CookingLessonWhisking());
-        }
-
     }
 }
