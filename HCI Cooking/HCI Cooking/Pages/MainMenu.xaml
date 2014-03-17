@@ -1,15 +1,16 @@
-﻿<Page x:Class="HCI_Cooking.Pages.MainMenu"
+<UserControl x:Class="HCI_Cooking.Pages.MainMenu"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="1000"
-	Title="MainMenu">
+      d:DesignHeight="700" d:DesignWidth="1000">
 
     <Grid Name="grdMainMenu">
-        <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="248" HorizontalAlignment="Left" Margin="73,404,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="340" />
-        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="249" HorizontalAlignment="Left" Margin="552,403,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" />
-        <Label Content="Learn To How To Cook Humans!" FontFamily="Leelawadee" FontSize="24" Height="44" Margin="301,68,337,0" Name="label1" VerticalAlignment="Top" />
+        <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="248" HorizontalAlignment="Left" Margin="77,378,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="340" Background="#E065CFEF" Click="btnCookingTech_Click" />
+        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="249" HorizontalAlignment="Left" Margin="553,378,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="#E065CFEF" />
+        <Border BorderBrush="Silver" BorderThickness="5" Height="69" HorizontalAlignment="Left" Margin="236,54,0,0" Name="bdrTitle" VerticalAlignment="Top" Width="498" Background="#E065CFEF">
+            <Label Content="Learn To How To Cook Humans!" FontFamily="Elephant" FontSize="24" Height="39" Name="lblTitle" Width="409" />
+        </Border>
     </Grid>
-</Page>
+</UserControl>
