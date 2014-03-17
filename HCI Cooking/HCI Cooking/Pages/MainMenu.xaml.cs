@@ -42,5 +42,10 @@ namespace HCI_Cooking.Pages
         {
             Switcher.Switch(new RecipeSelectionMenu());
         }
+
+        private void btnAchievements_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new AchievementMenu());
+        }
     }
 }

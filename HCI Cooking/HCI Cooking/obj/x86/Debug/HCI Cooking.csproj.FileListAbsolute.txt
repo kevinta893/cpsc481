@@ -79,3 +79,5 @@ D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.
 \\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.g.resources
 \\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI_Cooking.Properties.Resources.resources
 \\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\AchievementMenu.baml
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\AchievementMenu.g.cs
