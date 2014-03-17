@@ -8,11 +8,13 @@
 	Title="RecipeIndividualSteps">
 
     <Grid Name="grdRIndiSteps">
-        <Image Height="275" HorizontalAlignment="Left" Margin="29,27,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="434" />
-        <TextBlock Height="182" HorizontalAlignment="Left" Margin="516,85,0,0" Name="txtBlkTips" Text="TIPS: TIPS TO THE NOOB CHEF" VerticalAlignment="Top" Width="449" Background="WhiteSmoke" />
-        <Button Content="Toogle View" Height="48" HorizontalAlignment="Left" Margin="907,12,0,0" Name="btnIndiToogleView" VerticalAlignment="Top" Width="81" />
-        <Button Content="Back" Height="313" HorizontalAlignment="Left" Margin="29,356,0,0" Name="btnIndivRecipeBack" VerticalAlignment="Top" Width="101" />
-        <Button Content="Next" Height="332" HorizontalAlignment="Left" Margin="864,337,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" />
+         <TextBlock Height="182" HorizontalAlignment="Left" Margin="516,85,0,0" Name="txtBlkTips" Text="TIPS: TIPS TO THE NOOB CHEF" VerticalAlignment="Top" Width="449" Background="WhiteSmoke" />
+        <Button Content="Toogle View" Height="48" HorizontalAlignment="Left" Margin="907,12,0,0" Name="btnIndiToogleView" VerticalAlignment="Top" Width="81" Background="#FFC1C1FF" />
+        <Button Content="Back" Height="313" HorizontalAlignment="Left" Margin="29,356,0,0" Name="btnIndivRecipeBack" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" />
+        <Button Content="Next" Height="332" HorizontalAlignment="Left" Margin="864,337,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" />
         <TextBlock Height="313" HorizontalAlignment="Left" Margin="177,356,0,0" Name="txtBlkIndivRecipeStep" Text="Recipe Instructions Go In Here" VerticalAlignment="Top" Width="657" Background="#FFF4F8E2" />
+        <Border BorderBrush="Silver" BorderThickness="5" Height="269" HorizontalAlignment="Left" Margin="29,48,0,0" Name="brdrImagePlaceholder" VerticalAlignment="Top" Width="452" Background="#FFBF7CA6">
+            <Label Content="IMAGE PLACEHOLDER" Height="28" Name="lblimgPH" Width="152" />
+        </Border>
     </Grid>
 </Page>

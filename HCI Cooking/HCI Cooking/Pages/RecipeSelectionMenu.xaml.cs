@@ -36,5 +36,10 @@ namespace HCI_Cooking.Pages
             throw new NotImplementedException();
         }
         #endregion
+
+        private void btnRSMBack_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new MainMenu());
+        }
     }
 }

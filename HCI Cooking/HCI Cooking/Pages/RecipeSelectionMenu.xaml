@@ -1,14 +1,13 @@
-﻿<Page x:Class="HCI_Cooking.Pages.RecipeSelectionMenu"
+﻿<UserControl x:Class="HCI_Cooking.Pages.RecipeSelectionMenu"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="1000"
-	Title="RecipeSelectionMenu">
+      d:DesignHeight="700" d:DesignWidth="1000">
 
-    <Grid Name="grdRecipeSelectionMenu">
-        <StackPanel Height="678" HorizontalAlignment="Left" Margin="10,10,0,0" Name="stpFilter" VerticalAlignment="Top" Width="200">
+    <Grid Name="grdRecipeSelectionMenu" Height="700">
+        <StackPanel Height="661" HorizontalAlignment="Left" Margin="10,10,0,0" Name="stpFilter" VerticalAlignment="Top" Width="200" Background="#FFF4F8F8">
             <Expander Header="BBQ" Height="79" Name="expBeef" Width="201">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -38,31 +37,32 @@
                     <CheckBox Content="Deglazing" Height="16" HorizontalAlignment="Left" Margin="19,6,0,0" Name="chkBxDeglaze" VerticalAlignment="Top" Grid.ColumnSpan="3" />
                 </Grid>
             </Expander>
-            <Expander Header="Deep Frying" Height="65" Name="expDeepFry">
+            <Expander Header="Deep Frying" Height="66" Name="expDeepFry">
                 <Grid Height="77">
                     <CheckBox Content="Breading" Height="16" HorizontalAlignment="Left" Margin="22,6,0,0" Name="chkbxBread" VerticalAlignment="Top" />
                     <CheckBox Content="Degreasing" Height="16" HorizontalAlignment="Left" Margin="22,24,0,0" Name="chkBxDegrease" VerticalAlignment="Top" />
                 </Grid>
             </Expander>
         </StackPanel>
-        <Grid Name="gridRecipeDisplay" Margin="224,12,12,12">
-            <Label Content="RECOMMENDED RECIPES" FontFamily="Leelawadee" FontSize="30" Height="53" HorizontalAlignment="Left" Margin="10,10,0,0" Name="lblRecRecipes" VerticalAlignment="Top" Width="452" Grid.ColumnSpan="3" />
+        <Grid Name="gridRecipeDisplay" Margin="224,12,12,29" Background="#FFD8E4FC">
+            <Label Content="RECOMMENDED RECIPES" FontFamily="Leelawadee" FontSize="30" Height="53" HorizontalAlignment="Left" Margin="223,6,0,0" Name="lblRecRecipes" VerticalAlignment="Top" Width="352" />
             <Canvas Height="275" HorizontalAlignment="Left" Margin="18,59,0,0" Name="canvMangoPuddingCake" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkMPCDesc" Text="TextBlock" Width="347" />
-                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgMPC" Stretch="Fill" Width="347" />
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkMPCDesc" Text="TextBlock" Width="347" Background="#FFF4F8E2" />
+                <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrMPCimgPH" Width="347" Background="#FFBF7CA6" />
             </Canvas>
             <Canvas Height="275" HorizontalAlignment="Left" Margin="390,59,0,0" Name="canvPowChicken" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkPC" Text="TextBlock" Width="347" />
-                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgPC" Stretch="Fill" Width="347" />
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkPC" Text="TextBlock" Width="347" Background="#FFF4F8E2" Foreground="Black" />
+                <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrPCimgPH" Width="347" Background="#FFBF7CA6" />
             </Canvas>
             <Canvas Height="275" HorizontalAlignment="Left" Margin="18,369,0,0" Name="canvSpringRolls" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkSprRoll" Text="TextBlock" Width="347" />
-                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgSprRoll" Stretch="Fill" Width="347" />
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkSprRoll" Text="TextBlock" Width="347" Background="#FFF4F8E2" />
+                <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrSprRollimgPH" Width="347" />
             </Canvas>
             <Canvas Height="275" HorizontalAlignment="Left" Margin="390,369,0,0" Name="canvRibs" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRibs" Text="TextBlock" Width="347" />
-                <Image Canvas.Left="0" Canvas.Top="0" Height="184" Name="imgRibs" Stretch="Fill" Width="347" />
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRibs" Text="TextBlock" Width="347" Background="#FFF4F8E2"/>
+                <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrRibsimgPH" Width="347" />
             </Canvas>
+            <Button Content="&lt;---" Height="47" HorizontalAlignment="Left" Margin="662,6,0,0" Name="btnRSMBack" VerticalAlignment="Top" Width="75" Click="btnRSMBack_Click" />
         </Grid>
     </Grid>
-</Page>
+</UserControl>

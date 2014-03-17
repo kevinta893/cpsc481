@@ -36,6 +36,7 @@ namespace HCI_Cooking
             Switcher.pageSwitcher = this;
             //create pages and retain copies
             MainMenu mainmenu = new MainMenu();
+            Switcher.Switch(mainmenu);
 
         }
 
@@ -56,20 +57,6 @@ namespace HCI_Cooking
                 throw new ArgumentException("NextPage is not ISwitchable! "
                   + nextPage.Name.ToString());
         }
-
-
-
-
-
-
-        private Random r = new Random();
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-
-          
-        }
-
 
     }
    

@@ -8,7 +8,7 @@
 	Title="RecipeCompleteSteps">
 
     <Grid Name="grdRCompSteps">
-        <TextBlock Height="590" HorizontalAlignment="Left" Margin="44,74,0,0" Name="txtBlkFullRecipe" Text="ALL THE RECIPE STEPS GO IN HERE" VerticalAlignment="Top" Width="914" />
-        <Button Content="Toogle View" Height="48" HorizontalAlignment="Left" Margin="897,12,0,0" Name="btnCompToogleView" VerticalAlignment="Top" Width="81" />
+        <TextBlock Height="590" HorizontalAlignment="Left" Margin="44,74,0,0" Name="txtBlkFullRecipe" Text="ALL THE RECIPE STEPS GO IN HERE" VerticalAlignment="Top" Width="914" Background="#FFF5F5D9" />
+        <Button Content="Toogle View" Height="48" HorizontalAlignment="Left" Margin="897,12,0,0" Name="btnCompToogleView" VerticalAlignment="Top" Width="81" Background="#FFC1C1FF" />
     </Grid>
 </Page>
