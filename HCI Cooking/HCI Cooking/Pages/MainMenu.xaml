@@ -8,7 +8,7 @@
 
     <Grid Name="grdMainMenu">
         <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="248" HorizontalAlignment="Left" Margin="77,378,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="340" Background="#E065CFEF" Click="btnCookingTech_Click" />
-        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="249" HorizontalAlignment="Left" Margin="553,378,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="#E065CFEF" Click="btnAchievements_Click" />
+        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="249" HorizontalAlignment="Left" Margin="553,378,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="#E065CFEF" />
         <Border BorderBrush="Silver" BorderThickness="5" Height="69" HorizontalAlignment="Left" Margin="236,54,0,0" Name="bdrTitle" VerticalAlignment="Top" Width="498" Background="#E065CFEF">
             <Label Content="Learn To How To Cook Humans!" FontFamily="Elephant" FontSize="24" Height="39" Name="lblTitle" Width="409" />
         </Border>

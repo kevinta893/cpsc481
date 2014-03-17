@@ -26,10 +26,7 @@ namespace HCI_Cooking.Pages
             txtBlkMPCDesc.Text = "Recipe Information"; //replace string with data from the recipe data class
 
         }
-
-
-
-
+        
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -37,9 +34,15 @@ namespace HCI_Cooking.Pages
         }
         #endregion
 
+        private void brdrMPCimgPH_MouseLeftButtonDown(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeOverview());
+        }
+
         private void btnRSMBack_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new MainMenu());
         }
+
     }
 }

@@ -25,14 +25,41 @@ namespace HCI_Cooking.Pages
         }
 
 
-
-
-
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
         #endregion
+        private void btnStartCooking_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeIndividualSteps());
+        }
+
+        private void btnMixPlay_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new CookingTechniqueLessons()); //we can change the page navigation to Mix Lesson later
+        }
+
+        private void btnDecoPlay_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new CookingTechniqueLessons());
+        }
+
+        private void btnFoldPlay_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new CookingTechniqueLessons());
+        }
+
+        private void btnWhiskPlay_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new CookingLessonWhisking());
+        }
+
+        private void btnRecipeOverviewBack_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeSelectionMenu());
+        }
+
     }
 }

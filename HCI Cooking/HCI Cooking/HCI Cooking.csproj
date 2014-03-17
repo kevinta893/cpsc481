@@ -64,8 +64,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Pages\AchievementMenu.xaml.cs">
-      <DependentUpon>AchievementMenu.xaml</DependentUpon>
+    <Compile Include="Pages\CookingLessonWhisking.xaml.cs">
+      <DependentUpon>CookingLessonWhisking.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\CookingTechniqueLessons.xaml.cs">
       <DependentUpon>CookingTechniqueLessons.xaml</DependentUpon>
@@ -83,7 +83,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\AchievementMenu.xaml">
+    <Page Include="Pages\CookingLessonWhisking.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

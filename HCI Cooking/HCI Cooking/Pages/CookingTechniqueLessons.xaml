@@ -16,7 +16,7 @@
             <Border Name="imgLessonI"  Margin="14,44,265,0" Height="45" VerticalAlignment="Top" BorderThickness="5" BorderBrush="White" Background="#FFBF7CA6" />
             <Border Name="imgLessonII" Margin="14,95,265,0" Height="45" VerticalAlignment="Top" Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" />
             <Border Name="imgLessonIII" Margin="14,146,265,0" Height="45" VerticalAlignment="Top" Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" />
-            <Border Name="imgLessonIV"  Margin="14,197,265,0" Height="45" VerticalAlignment="Top" Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" />
+            <Border MouseLeftButtonDown="imgLessonIV_MouseLeftButtonDown" Name="imgLessonIV"  Margin="14,197,265,0" Height="45" VerticalAlignment="Top" Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" />
             <Label Content="Mixing" FontFamily="Leelawadee" FontSize="20" Height="45" HorizontalAlignment="Left" Margin="85,44,0,0" Name="lblLessonI" VerticalAlignment="Top" Width="116" />
             <Label Content="Decorating" FontFamily="Leelawadee" FontSize="20" Height="45" HorizontalAlignment="Left" Margin="85,95,0,0" Name="lblLessonII" VerticalAlignment="Top" Width="147" />
             <Label Content="Folding" FontFamily="Leelawadee" FontSize="20" Height="45" HorizontalAlignment="Left" Margin="85,146,0,0" Name="lblLessonIII" VerticalAlignment="Top" Width="116" />
@@ -26,6 +26,6 @@
         <Label Content="VIDEO GOES HERE" FontFamily="Leelawadee" FontSize="20" Height="51" HorizontalAlignment="Left" Margin="189,213,0,0" Name="label1" VerticalAlignment="Top" Width="229" />
         <ProgressBar Height="45" HorizontalAlignment="Left" Margin="41,432,0,0" Name="progressBar1" VerticalAlignment="Top" Width="549" />
         <Label Content="         0 / 1500 points"  FontFamily="Leelawadee" FontSize="20" Height="37" HorizontalAlignment="Left" Margin="176,493,0,0" Name="label2" VerticalAlignment="Top" Width="259" />
-        <Button Content="BACK" Height="53" HorizontalAlignment="Left" Margin="12,635,0,0" Name="btnLesBack" VerticalAlignment="Top" Width="112" />
+        <Button Content="BACK" Height="53" HorizontalAlignment="Left" Margin="25,594,0,0" Name="btnLesBack" VerticalAlignment="Top" Width="112" Click="btnLesBack_Click" />
     </Grid>
 </UserControl>
