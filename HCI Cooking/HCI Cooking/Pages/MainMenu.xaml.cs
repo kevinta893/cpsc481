@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +23,7 @@ namespace HCI_Cooking.Pages
         public MainMenu()
         { 
             InitializeComponent();
+
         }
 
 
@@ -36,5 +37,10 @@ namespace HCI_Cooking.Pages
             throw new NotImplementedException();
         }
         #endregion
+
+        private void btnCookingTech_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeSelectionMenu());
+        }
     }
 }
