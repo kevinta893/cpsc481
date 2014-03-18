@@ -1,7 +1,7 @@
 ﻿<Window x:Class="HCI_Cooking.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Learn2CookMe???" Height="700" Width="1000">
+        Title="Learn2CookMe???" MinHeight="700" MinWidth="1000" MaxHeight="700" MaxWidth="1000">
     <Grid>
         
     </Grid>
