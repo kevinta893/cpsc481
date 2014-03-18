@@ -17,6 +17,7 @@ namespace HCI_Cooking
         private string title;
         private string description;
         private List<string> tools;    // list of tools
+        private List<string> ingredients; // list of ingredients
         private List<string> steps;    // list of steps
         private Image mainPicture;     // main picture for a recipe
         private List<Image> stepPictures; // list of step-by-step pictures
@@ -72,6 +73,12 @@ namespace HCI_Cooking
         {
             get { return stepPictures; }
             set { stepPictures = value; }
+        }
+
+        public List<string> Ingredients
+        {
+            get { return ingredients; }
+            set { ingredients = value; }
         }
 
         /* this is how you load the image.

@@ -1,14 +1,14 @@
-﻿<Page x:Class="HCI_Cooking.Pages.RecipeCompleteSteps"
+﻿<UserControl x:Class="HCI_Cooking.Pages.RecipeCompleteSteps"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="1000"
-	Title="RecipeCompleteSteps">
+      d:DesignHeight="700" d:DesignWidth="1000">
 
     <Grid Name="grdRCompSteps">
-        <TextBlock Height="590" HorizontalAlignment="Left" Margin="44,74,0,0" Name="txtBlkFullRecipe" Text="ALL THE RECIPE STEPS GO IN HERE" VerticalAlignment="Top" Width="914" />
-        <Button Content="Toogle View" Height="48" HorizontalAlignment="Left" Margin="897,12,0,0" Name="btnCompToogleView" VerticalAlignment="Top" Width="81" />
+        <TextBlock Height="578" HorizontalAlignment="Left" Margin="44,75,0,0" Name="txtBlkFullRecipe" Text="ALL THE RECIPE STEPS GO IN HERE" VerticalAlignment="Top" Width="914" Background="#FFF5F5D9" />
+        <Button Content="Toogle View" Height="48" HorizontalAlignment="Left" Margin="897,12,0,0" Name="btnCompToogleView" VerticalAlignment="Top" Width="81" Background="#FFC1C1FF" Click="btnCompToogleView_Click" />
+        <Button Content="Back" Height="48" HorizontalAlignment="Left" Margin="44,12,0,0" Name="btnRecipeCompBack" VerticalAlignment="Top" Width="75" Click="btnRecipeCompBack_Click" />
     </Grid>
-</Page>
+</UserControl>

@@ -23,11 +23,8 @@ namespace HCI_Cooking.Pages
         public MainMenu()
         { 
             InitializeComponent();
+
         }
-
-
-
-
 
 
         #region ISwitchable Members
@@ -36,5 +33,15 @@ namespace HCI_Cooking.Pages
             throw new NotImplementedException();
         }
         #endregion
+
+        private void btnCookingTech_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeSelectionMenu());
+        }
+
+        private void btnAchievements_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new AchievementMenu());
+        }
     }
 }
