@@ -9,8 +9,8 @@
     <Grid Name="grdRecipeOverview">
         <Border BorderBrush="White" BorderThickness="5" Background="#FFBF7CA6" Height="264" HorizontalAlignment="Left" Margin="594,12,0,0" Name="imgRecipePreview" VerticalAlignment="Top" Width="385" />
         <Button Content="Start Cooking" FontFamily="Leelawadee" FontSize="24" Height="94" HorizontalAlignment="Left" Margin="666,535,0,0" Name="btnStartCooking" VerticalAlignment="Top" Width="294" Click="btnStartCooking_Click" />
-        <TextBlock Height="147" HorizontalAlignment="Left" Margin="18,69,0,0" Name="txtBlkRecipeIngred" Text="Recipe Ingredients" FontSize="20" VerticalAlignment="Top" Width="556" Background="#FFE2E2E2" />
-        <TextBlock Height="150" HorizontalAlignment="Left" Margin="18,231,0,0" Name="txtBlkTools" Text="Tools Required" FontSize="20" VerticalAlignment="Top" Width="251" Background="#FFF2ECEC" />
+        <TextBlock Height="147" HorizontalAlignment="Left" Margin="18,69,0,0" Name="txtBlkIngred" Text="Ingredients:" FontSize="20" VerticalAlignment="Top" Width="556" Background="#FFE2E2E2" />
+        <TextBlock Height="150" HorizontalAlignment="Left" Margin="18,231,0,0" Name="txtBlkTools" Text="Tools Required:" FontSize="20" VerticalAlignment="Top" Width="251" Background="#FFF2ECEC" />
         <Grid Height="251" HorizontalAlignment="Left" Margin="18,397,0,0" Name="grdSkillsNeeded" VerticalAlignment="Top" Width="478" Background="#FFF3FBCE">
             <Label Content="Skills Needed" FontFamily="Leelawadee" FontSize="18" Height="34" HorizontalAlignment="Left" Margin="6,6,0,0" Name="lblSkillsNeed" VerticalAlignment="Top" Width="255" />
             <Border Height="40" HorizontalAlignment="Left" Margin="22,46,0,0" Name="imgMixing" VerticalAlignment="Top" Width="46" />
@@ -27,5 +27,7 @@
             <Button Content="->" Height="27" HorizontalAlignment="Left" Margin="390,190,0,0" Name="btnWhiskPlay" VerticalAlignment="Top" Width="59" Click="btnWhiskPlay_Click" />
         </Grid>
         <Button Content="Back" Height="47" HorizontalAlignment="Left" Margin="18,12,0,0" Name="btnRecipeOverviewBack" VerticalAlignment="Top" Width="78" Click="btnRecipeOverviewBack_Click" />
+        <Label Content="&lt;title&gt;" Height="54" HorizontalAlignment="Left" Margin="128,9,0,0" Name="lblTitle" VerticalAlignment="Top" Width="419" FontSize="32" />
+        <TextBlock Height="185" HorizontalAlignment="Left" Margin="594,291,0,0" Name="txtBlkDescr" Text="" VerticalAlignment="Top" Width="376" FontSize="16" Background="#71FFB4C3" />
     </Grid>
 </UserControl>
