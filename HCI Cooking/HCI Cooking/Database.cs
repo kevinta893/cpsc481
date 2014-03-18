@@ -14,25 +14,28 @@ namespace HCI_Cooking
 {
     class Database
     {
-        private static List<Recipe> recipeList;
+        public List<Recipe> recipeList;
         
-        private static Recipe mangoCake;
-        private static Recipe powChicken;
-        private static Recipe springRolls;
-        private static Recipe ribs;
+        private Recipe mangoCake;
+        private Recipe powChicken;
+        private Recipe springRolls;
+        private Recipe ribs;
 
-        private static Image mangoPic;
+        //private Image mangoPic;
 
         public Database()
         {
-            recipeList = new List<Recipe>();
 
-            InitializeRecipes();
+            recipeList = new List<Recipe>();
 
             mangoCake = new Recipe();
             powChicken = new Recipe();
             springRolls = new Recipe();
             ribs = new Recipe();
+
+            InitializeRecipes();
+
+            //mangoCake.ID = 1;
 
             recipeList.Add(mangoCake);
             recipeList.Add(powChicken);
@@ -41,7 +44,7 @@ namespace HCI_Cooking
 
             // this line might cause a lot of issues
             // not sure how to load from relative path
-            mangoPic = Image.FromFile("\\Images\\pudding_cake.jpg");
+            //mangoPic = Image.FromFile("\\Images\\pudding_cake.jpg");
         }
 
         // fill in sample recipe info
@@ -61,11 +64,15 @@ namespace HCI_Cooking
             mangoCake.Steps.Add("3. ???");
             mangoCake.Steps.Add("4. PROFIT!");
 
-            mangoCake.MainPicture = mangoPic;
+            powChicken.Title = "POW Chicken";
+            springRolls.Title = "SPRING CHICKEN TENTATIVE";
+            ribs.Title = "RIBS TENTATIVE";
+
+            //mangoCake.MainPicture = mangoPic;
         }
 
         // return the recipe with id
-        public static Recipe GetRecipe(int id) 
+        public Recipe GetRecipe(int id) 
         {
             // find the recipe with a lambda expression
             Recipe target = recipeList.Find(x => x.ID == id);

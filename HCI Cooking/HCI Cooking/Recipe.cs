@@ -27,6 +27,7 @@ namespace HCI_Cooking
             id = -1;
             title = null;
             description = null;
+            ingredients = new List<string>();
             tools = new List<string>();
             steps = new List<string>();
             mainPicture = null;
