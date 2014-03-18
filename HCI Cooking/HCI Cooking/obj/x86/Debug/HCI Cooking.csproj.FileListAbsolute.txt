@@ -56,31 +56,6 @@ D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.exe
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.pdb
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.exe
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.pdb
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\MainWindow.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingTechniqueLessons.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\MainMenu.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeCompleteSteps.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeIndividualSteps.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeOverview.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeSelectionMenu.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\MainWindow.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingTechniqueLessons.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\MainMenu.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeCompleteSteps.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeIndividualSteps.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeOverview.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeSelectionMenu.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\App.g.cs
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking_MarkupCompile.cache
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.g.resources
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI_Cooking.Properties.Resources.resources
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonWhisking.baml
-\\cs-fs01\Profiles\ug\lnquach\Desktop\cpsc481-Awkto-s-Page-Play-Area\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonWhisking.g.cs
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonWhisking.baml
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonWhisking.g.cs
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\AchievementMenu.baml

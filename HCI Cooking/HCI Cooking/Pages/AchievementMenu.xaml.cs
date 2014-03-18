@@ -23,5 +23,10 @@ namespace HCI_Cooking.Pages
         {
             InitializeComponent();
         }
+
+        private void btnAchievementBack_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new MainMenu());
+        }
     }
 }

@@ -36,5 +36,10 @@ namespace HCI_Cooking.Pages
         {
             Switcher.Switch(new RecipeIndividualSteps());
         }
+
+        private void btnRecipeCompBack_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeOverview());
+        }
     }
 }

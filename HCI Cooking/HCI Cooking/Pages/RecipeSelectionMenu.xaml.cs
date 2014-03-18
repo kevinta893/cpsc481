@@ -24,7 +24,26 @@ namespace HCI_Cooking.Pages
         {
             InitializeComponent();
             txtBlkMPCDesc.Text = "Recipe Information"; //replace string with data from the recipe data class
+            chkBxAll.Click += new RoutedEventHandler(chkBxAll_Click);
+        }
 
+        void chkBxAll_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox thisChbx = (CheckBox)sender;
+            if (thisChbx.IsChecked == false)
+            {
+                canvRibs.Visibility = Visibility.Hidden;
+                canvMangoPuddingCake.Visibility = Visibility.Hidden;
+                canvPowChicken.Visibility = Visibility.Hidden;
+                canvSpringRolls.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                canvRibs.Visibility = Visibility.Visible;
+                canvMangoPuddingCake.Visibility = Visibility.Visible;
+                canvPowChicken.Visibility = Visibility.Visible;
+                canvSpringRolls.Visibility = Visibility.Visible;
+            }
         }
         
         #region ISwitchable Members
@@ -42,6 +61,17 @@ namespace HCI_Cooking.Pages
         private void btnRSMBack_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new MainMenu());
+        }
+
+        private void chkbxMixing_Checked(object sender, RoutedEventArgs e)
+        {
+            canvRibs.Visibility = Visibility.Hidden;
+            chkBxAll.IsChecked = false;
+        }
+
+        private void chkbxMixing_Unchecked(object sender, RoutedEventArgs e)
+        {
+            canvRibs.Visibility = Visibility.Visible;
         }
 
     }

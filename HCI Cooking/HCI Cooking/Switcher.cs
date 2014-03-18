@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Code taken from the following website. With slight modifications
  * 
  * http://azerdark.wordpress.com/2010/04/23/multi-page-application-in-wpf/
@@ -14,12 +14,12 @@ namespace HCI_Cooking
 {
     public static class Switcher
     {
-		private static Stack<UserControl> backStack = new Stack<UserControl>();
+        private static Stack<UserControl> backStack = new Stack<UserControl>();
         public static MainWindow pageSwitcher;
 
         public static void Switch(UserControl newPage)
         {
-			backStack.Push(newPage);
+            backStack.Push(newPage);
             pageSwitcher.Navigate(newPage);
         }
 
