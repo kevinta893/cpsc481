@@ -154,9 +154,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\nichi.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Rice Bowl.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

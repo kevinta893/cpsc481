@@ -6,11 +6,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1000">
 
-    <Grid Name="grdMainMenu">
-        <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="248" HorizontalAlignment="Left" Margin="77,378,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="340" Background="#E065CFEF" Click="btnCookingTech_Click" />
-        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="249" HorizontalAlignment="Left" Margin="553,378,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="#E065CFEF" Click="btnAchievements_Click" />
-        <Border BorderBrush="Silver" BorderThickness="5" Height="69" HorizontalAlignment="Left" Margin="236,54,0,0" Name="bdrTitle" VerticalAlignment="Top" Width="498" Background="#E065CFEF">
-            <Label Content="Learn To How To Cook Humans!" FontFamily="Elephant" FontSize="24" Height="39" Name="lblTitle" Width="409" />
+    <Grid Name="grdMainMenu" Background="#FFE51515">
+        <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="183" HorizontalAlignment="Left" Margin="50,429,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="361" Background="White" Click="btnCookingTech_Click" />
+        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="187" HorizontalAlignment="Left" Margin="582,429,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="White" Click="btnAchievements_Click" />
+        <Border BorderBrush="Black" BorderThickness="5" Name="border1" Margin="0,85,0,439" Background="White">
+            <Label Content="Learn To How To Cook Humans!" FontFamily="Jellyka Delicious Cake" FontSize="40" Height="77" Name="lblTitle" Width="595" FontWeight="Bold" />
         </Border>
     </Grid>
 </UserControl>
