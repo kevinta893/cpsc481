@@ -63,3 +63,7 @@ C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\R
 C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeIndividualSteps.g.cs
 C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeOverview.g.cs
 C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeSelectionMenu.g.cs
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.exe.manifest
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.application
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe.manifest
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.application

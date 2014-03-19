@@ -42,37 +42,43 @@ namespace HCI_Cooking.Pages
 
             LoadRecipes();
             
-            //txtBlkRecipe1.Text = "Recipe Information"; //replace string with data from the recipe data class
             chkBxAll.Click += new RoutedEventHandler(chkBxAll_Click);
         }
 
         private void LoadRecipes()
         {
             Recipe rec;
-            TextBlock txtBlock;
+            TextBlock txtBlk;
 
             for (int i = 0; i < numRecipes; i++)
             {
                 rec = db.recipeList[i];
-                txtBlock = (TextBlock) recipeBlocks[i].Children[0];
+                txtBlk = (TextBlock)recipeBlocks[i].Children[0];
 
-                txtBlock.Text = rec.Title;
+                txtBlk.Text = rec.Title; //gets and displays title of the recipe
+                txtBlk.Text += rec.Description;
+                txtBlk.Text += "\nCooking Time: " + rec.CookTime;
 
             }
         }
 
 
+        // Event controllers
 
-        // *************************** control events below
-
+        /*
+         * Event handler for the check all checkbox
+         * If the All checkbox is checked then all recipes will be visible,
+         * if it's not checked then no recipes will be shown
+         * 
+         */ 
         void chkBxAll_Click(object sender, RoutedEventArgs e)
         {
             CheckBox thisChbx = (CheckBox)sender;
             if (thisChbx.IsChecked == false)
             {
-                canvRecipe1.Visibility = Visibility.Hidden;
-                canvRecipe2.Visibility = Visibility.Hidden;
-                canvRecipe3.Visibility = Visibility.Hidden;
+                canvRecipe1.Visibility = Visibility.Hidden; //hides first recipe box
+                canvRecipe2.Visibility = Visibility.Hidden; //hides second recipe box
+                canvRecipe3.Visibility = Visibility.Hidden; //...
                 canvRecipe4.Visibility = Visibility.Hidden;
             }
             else
@@ -91,6 +97,8 @@ namespace HCI_Cooking.Pages
         }
         #endregion
 
+        //Event handler checks to see if user has clicked on it 
+        //Sends the user to the Recipe Overview page
         private void brdrMPCimgPH_MouseLeftButtonDown(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new RecipeOverview());
