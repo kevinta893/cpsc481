@@ -21,17 +21,17 @@ namespace HCI_Cooking.Pages
     public partial class RecipeSelectionMenu : ISwitchable
     {
 
-        Database db;
+        Database recipeDB;
         int numRecipes;
-        List<Canvas> recipeBlocks;
+        List<Canvas> recipeBlocks;      // a list of the GUI recipe containers
 
 
         public RecipeSelectionMenu()
         {
             InitializeComponent();
 
-            db = new Database();
-            numRecipes = db.recipeList.Count();
+            recipeDB = new Database();
+            numRecipes = recipeDB.recipeList.Count();
             recipeBlocks = new List<Canvas>();
 
             // add recipe containers to a list
@@ -41,9 +41,16 @@ namespace HCI_Cooking.Pages
             recipeBlocks.Add(canvRecipe4);
 
             LoadRecipes();
-            
+
+            canvRecipe1.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
+            canvRecipe2.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
+            canvRecipe3.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
+            canvRecipe4.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
+
+
             chkBxAll.Click += new RoutedEventHandler(chkBxAll_Click);
         }
+
 
         private void LoadRecipes()
         {
@@ -52,7 +59,7 @@ namespace HCI_Cooking.Pages
 
             for (int i = 0; i < numRecipes; i++)
             {
-                rec = db.recipeList[i];
+                rec = recipeDB.recipeList[i];
                 txtBlk = (TextBlock)recipeBlocks[i].Children[0];
 
                 txtBlk.Text = rec.Title; //gets and displays title of the recipe
@@ -97,12 +104,23 @@ namespace HCI_Cooking.Pages
         }
         #endregion
 
-        //Event handler checks to see if user has clicked on it 
-        //Sends the user to the Recipe Overview page
-        private void brdrMPCimgPH_MouseLeftButtonDown(object sender, RoutedEventArgs e)
+        //Event handler for recipe click
+        // Open new recipe overview page for that recipe
+        void recipeClick_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Switcher.Switch(new RecipeOverview());
+            Canvas clickedRecipe = (Canvas)sender;
+
+            if (clickedRecipe == canvRecipe1)
+                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[0]));
+            else if (clickedRecipe == canvRecipe2)
+                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[1]));
+            else if (clickedRecipe == canvRecipe3)
+                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[2]));
+            else if (clickedRecipe == canvRecipe4)
+                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[3]));
+
         }
+
 
         private void btnRSMBack_Click(object sender, RoutedEventArgs e)
         {

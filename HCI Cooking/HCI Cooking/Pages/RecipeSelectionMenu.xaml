@@ -44,7 +44,7 @@
             <Label Content="RECOMMENDED RECIPES" FontFamily="Leelawadee" FontSize="30" Height="47" HorizontalAlignment="Left" Margin="223,6,0,0" Name="lblRecRecipes" VerticalAlignment="Top" Width="352" />
             <Canvas Height="275" HorizontalAlignment="Left" Margin="18,59,0,0" Name="canvRecipe1" VerticalAlignment="Top" Width="347">
                 <TextBlock Text="Textblock" Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe1" Width="347" Background="White" />
-                <Border MouseLeftButtonDown="brdrMPCimgPH_MouseLeftButtonDown" BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrRecipe1" Width="347" Background="#FFBF7CA6"></Border>
+                <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrRecipe1" Width="347" Background="#FFBF7CA6"></Border>
             </Canvas>
             <Canvas Height="275" HorizontalAlignment="Left" Margin="390,59,0,0" Name="canvRecipe2" VerticalAlignment="Top" Width="347">
                 <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe2" Text="TextBlock" Width="347" Background="White" Foreground="Black" />

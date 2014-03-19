@@ -62,16 +62,18 @@ namespace HCI_Cooking.Pages
                 // change next button to "active" if it was on last step
                 if (stepIndex == lastStep)
                 {
-                    btnIndivRecipeNext.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
+                    btnIndivRecipeNext.IsEnabled = true;
+                    //btnIndivRecipeNext.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
                 }
 
                 stepIndex--;
                 txtBlkStep.Text = aRecipe.Steps[stepIndex];
-
+            
                 // change previous button colour to "inactive" if now on first step
                 if (stepIndex == 0)
                 {
-                    btnIndivRecipePrev.Background = new SolidColorBrush(Colors.DarkGray);
+                    btnIndivRecipePrev.IsEnabled = false;
+                    //btnIndivRecipePrev.Background = new SolidColorBrush(Colors.DarkGray);
                 }
             }
         }
@@ -85,7 +87,8 @@ namespace HCI_Cooking.Pages
                 // change previous button to "active" if it was on first step
                 if (stepIndex == 0)
                 {
-                    btnIndivRecipePrev.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
+                    btnIndivRecipePrev.IsEnabled = true;
+                    //btnIndivRecipePrev.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
                 }
 
                 stepIndex++;
@@ -94,7 +97,8 @@ namespace HCI_Cooking.Pages
                 // change next button colour to "inactive" if now on last step
                 if (stepIndex == lastStep)
                 {
-                    btnIndivRecipeNext.Background = new SolidColorBrush(Colors.DarkGray);
+                    btnIndivRecipeNext.IsEnabled = false;
+                    //btnIndivRecipeNext.Background = new SolidColorBrush(Colors.DarkGray);
                 }
             }
         }

@@ -39,7 +39,7 @@ namespace HCI_Cooking.Pages
         {
             foreach (string step in aRecipe.Steps)
             {
-                txtBlkFullRecipe.Text += step + "\n";
+                rTxtBlkSteps.AppendText(step + "\n");
             }
         }
 

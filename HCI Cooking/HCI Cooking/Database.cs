@@ -90,7 +90,7 @@ namespace HCI_Cooking
             mangoCake.Steps.Add("4. Mix the ingredients together.");
             mangoCake.Steps.Add("5. Pour mixture in to cake pans. Bake cakes at 450F for 20 minutes.");
 
-            mangoCake.Steps.Add("6.Once the cakes are baked. Take them out of the pan and spread a layer of the mango pudding \n on top of one cake. Place other cake on top. The cake is now ready to serve.");
+            mangoCake.Steps.Add("6.Once the cakes are baked. Take them out of the pan and spread a layer of the mango pudding on top of one cake. Place other cake on top. The cake is now ready to serve.");
 
             /*
              *  Pow Chicken Recipe Information 
