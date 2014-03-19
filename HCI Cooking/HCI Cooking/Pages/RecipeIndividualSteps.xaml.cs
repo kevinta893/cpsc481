@@ -19,12 +19,36 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class RecipeIndividualSteps : ISwitchable
     {
+<<<<<<< HEAD
         public RecipeIndividualSteps()
         {
             InitializeComponent();
         }
 
 
+=======
+        RecipeOverview overview;
+        Recipe aRecipe;
+        int stepIndex;
+        int lastStep;
+
+        public RecipeIndividualSteps(RecipeOverview parentPage, Recipe rec)
+        {
+            InitializeComponent();
+
+            overview = parentPage;
+            aRecipe = rec;
+
+            // load first step and picture
+            stepIndex = 0;
+            lastStep = aRecipe.Steps.Count() - 1;
+            txtBlkStep.Text = aRecipe.Steps[stepIndex];
+            // TO DO: LOAD THE IMAGE SOMEHOW
+        }
+
+
+
+>>>>>>> origin/recipe-loading-logic
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -32,6 +56,7 @@ namespace HCI_Cooking.Pages
         }
         #endregion
 
+<<<<<<< HEAD
         private void btnIndiToogleView_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new RecipeCompleteSteps());
@@ -51,6 +76,68 @@ namespace HCI_Cooking.Pages
         private void btnRecipeIndivBack_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new RecipeOverview());
+=======
+        // switch to view complete instructions view; pass in current view and previous view to go back
+        private void btnIndiToogleView_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeCompleteSteps(overview, this, aRecipe));
+        }
+
+        // go back one step
+        private void btnIndivRecipeBack_Click(object sender, RoutedEventArgs e)
+        {
+            // only go back step if not currently on first step
+            if (stepIndex != 0)
+            {
+                // change next button to "active" if it was on last step
+                if (stepIndex == lastStep)
+                {
+                    btnIndivRecipeNext.IsEnabled = true;
+                    //btnIndivRecipeNext.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
+                }
+
+                stepIndex--;
+                txtBlkStep.Text = aRecipe.Steps[stepIndex];
+            
+                // change previous button colour to "inactive" if now on first step
+                if (stepIndex == 0)
+                {
+                    btnIndivRecipePrev.IsEnabled = false;
+                    //btnIndivRecipePrev.Background = new SolidColorBrush(Colors.DarkGray);
+                }
+            }
+        }
+
+        // go forward one step
+        private void btnIndivRecipeNext_Click(object sender, RoutedEventArgs e)
+        {
+            // only go forward step if not currently on last step
+            if (stepIndex != lastStep)
+            {
+                // change previous button to "active" if it was on first step
+                if (stepIndex == 0)
+                {
+                    btnIndivRecipePrev.IsEnabled = true;
+                    //btnIndivRecipePrev.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
+                }
+
+                stepIndex++;
+                txtBlkStep.Text = aRecipe.Steps[stepIndex];
+
+                // change next button colour to "inactive" if now on last step
+                if (stepIndex == lastStep)
+                {
+                    btnIndivRecipeNext.IsEnabled = false;
+                    //btnIndivRecipeNext.Background = new SolidColorBrush(Colors.DarkGray);
+                }
+            }
+        }
+
+        // go back to previous recipe overview
+        private void btnRecipeIndivBack_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(overview);
+>>>>>>> origin/recipe-loading-logic
         }
     }
 }

@@ -7,8 +7,18 @@
       d:DesignHeight="700" d:DesignWidth="1000">
 
     <Grid Name="grdRCompSteps">
+<<<<<<< HEAD
         <TextBlock Height="578" HorizontalAlignment="Left" Margin="44,75,0,0" Name="txtBlkFullRecipe" Text="ALL THE RECIPE STEPS GO IN HERE" VerticalAlignment="Top" Width="914" Background="#FFF5F5D9" />
         <Button Content="Toogle View" Height="48" HorizontalAlignment="Left" Margin="897,12,0,0" Name="btnCompToogleView" VerticalAlignment="Top" Width="81" Background="#FFC1C1FF" Click="btnCompToogleView_Click" />
         <Button Content="Back" Height="48" HorizontalAlignment="Left" Margin="44,12,0,0" Name="btnRecipeCompBack" VerticalAlignment="Top" Width="75" Click="btnRecipeCompBack_Click" />
+=======
+        <Grid.RowDefinitions>
+            <RowDefinition Height="451*" />
+            <RowDefinition Height="249*" />
+        </Grid.RowDefinitions>
+        <Button Content="Toggle View" Height="48" HorizontalAlignment="Right" Margin="0,12,22,0" Name="btnCompToggleView" VerticalAlignment="Top" Width="81" Background="#FFC1C1FF" Click="btnCompToogleView_Click" />
+        <Button Content="Back to Overview" Height="48" HorizontalAlignment="Left" Margin="29,12,0,0" Name="btnRecipeCompBack" VerticalAlignment="Top" Width="125" Click="btnRecipeCompBack_Click" />
+        <RichTextBox Height="520" HorizontalAlignment="Left" Margin="81,89,0,0" Name="rTxtBlkSteps" VerticalAlignment="Top" Width="836" IsReadOnly="True" FontSize="36" VerticalScrollBarVisibility="Auto" MaxWidth="836" MaxHeight="555" Grid.RowSpan="2" />
+>>>>>>> origin/recipe-loading-logic
     </Grid>
 </UserControl>

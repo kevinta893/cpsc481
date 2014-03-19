@@ -19,21 +19,64 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class RecipeOverview : ISwitchable
     {
-        public RecipeOverview()
+        Recipe currentRecipe;
+
+        public RecipeOverview(Recipe rec)
         {
             InitializeComponent();
+
+            currentRecipe = rec;
+
+            LoadRecipeValues();
+        }
+
+        // load in the values from the recipe
+        private void LoadRecipeValues()
+        {
+            lblTitle.Content = currentRecipe.Title;
+
+            // display ingredients list
+            for (int i = 0; i < currentRecipe.Ingredients.Count(); i++)
+            {
+                txtBlkIngred.Text += "\n" + currentRecipe.Ingredients[i];
+            }
+
+            // disaply tools list
+            for (int i = 0; i < currentRecipe.Tools.Count(); i++)
+            {
+                txtBlkTools.Text += "\n" + currentRecipe.Tools[i];
+            }
+
+            // display description
+            txtBlkDescr.Text = currentRecipe.Description;
+           
+
         }
 
 
+<<<<<<< HEAD
+=======
+        //********************** Event handlers below *******
+
+
+>>>>>>> origin/recipe-loading-logic
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
         #endregion
+<<<<<<< HEAD
         private void btnStartCooking_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new RecipeIndividualSteps());
+=======
+
+        // go to the individual steps
+        private void btnStartCooking_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new RecipeIndividualSteps(this, currentRecipe));
+>>>>>>> origin/recipe-loading-logic
         }
 
         private void btnMixPlay_Click(object sender, RoutedEventArgs e)

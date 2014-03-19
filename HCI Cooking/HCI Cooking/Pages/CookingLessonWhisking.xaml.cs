@@ -26,7 +26,11 @@ namespace HCI_Cooking.Pages
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             Switcher.Switch(new RecipeOverview());
+=======
+            //Switcher.Switch(new RecipeOverview());
+>>>>>>> origin/recipe-loading-logic
         }
 
         private void imgLessonIII_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
