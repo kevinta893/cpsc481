@@ -56,7 +56,7 @@ namespace HCI_Cooking
              */
             mangoCake.ID = 1; //Mango Cake id
             mangoCake.Title = "Mango Pudding Cake";
-            mangoCake.Description = "Vanilla pudding gives the cake a nice moist taste.\n";
+            mangoCake.Description = "\nVanilla pudding gives the cake a nice moist taste.\n";
             mangoCake.CookTime = "1 hour";
             
             //list of mango pudding cake
@@ -97,7 +97,7 @@ namespace HCI_Cooking
              */
             powChicken.Title = "POW Chicken";
             powChicken.CookTime = "30 minutes";
-            powChicken.Description = "Nice chispy chicken rubbed in delicious spices.\n";
+            powChicken.Description = "\nNice chispy chicken rubbed in delicious spices.\n";
             
             //Pow Chicken's required tools
             powChicken.Tools.Add("Stove");
@@ -120,8 +120,12 @@ namespace HCI_Cooking
             powChicken.Steps.Add("4. Fry chicken breast until the outside is white. The chicken is ready.");
 
 
-            springRolls.Title = "SPRING CHICKEN TENTATIVE";
-            ribs.Title = "RIBS TENTATIVE";
+            springRolls.Title = "Spring Rolls";
+            springRolls.Description = "\nCrispy fried rolls filled with meats and veggies. A delicious asian dish \nperfect for any event.\n";
+            springRolls.CookTime = "45 minutes";
+
+            ribs.Title = "Lamb Ribs";
+
 
             //mangoCake.MainPicture = mangoPic;
         }

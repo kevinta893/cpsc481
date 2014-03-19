@@ -56,9 +56,8 @@ namespace HCI_Cooking.Pages
                 txtBlk = (TextBlock)recipeBlocks[i].Children[0];
 
                 txtBlk.Text = rec.Title; //gets and displays title of the recipe
-                txtBlk.Text += "\nDescription: \n";
                 txtBlk.Text += rec.Description;
-                txtBlk.Text += "Cooking Time: " + rec.CookTime;
+                txtBlk.Text += "\nCooking Time: " + rec.CookTime;
 
             }
         }

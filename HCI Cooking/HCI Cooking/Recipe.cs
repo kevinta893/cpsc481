@@ -11,7 +11,7 @@ using System.Drawing;
 
 namespace HCI_Cooking
 {
-    class Recipe
+    public class Recipe
     {
         private int id;                // internal code used to identify recipe? not sure if needed
         private string title;
