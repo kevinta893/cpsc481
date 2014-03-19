@@ -42,25 +42,23 @@ namespace HCI_Cooking.Pages
 
             LoadRecipes();
             
-            //txtBlkRecipe1.Text = "Recipe Information"; //replace string with data from the recipe data class
             chkBxAll.Click += new RoutedEventHandler(chkBxAll_Click);
         }
 
         private void LoadRecipes()
         {
             Recipe rec;
-            TextBlock txtBlock;
+            TextBlock txtBlk;
 
             for (int i = 0; i < numRecipes; i++)
             {
                 rec = db.recipeList[i];
-                txtBlock = (TextBlock) recipeBlocks[i].Children[0];
+                txtBlk = (TextBlock)recipeBlocks[i].Children[0];
 
-                txtBlock.Text = rec.Title; //gets and displays title of the recipe
-                txtBlock.Text += "\nDescription: \n";
-                txtBlock.Text += rec.Description; 
-                txtBlock.Text += "Cooking Time: " + rec.CookTime;
-
+                txtBlk.Text = rec.Title; //gets and displays title of the recipe
+                txtBlk.Text += "\nDescription: \n";
+                txtBlk.Text += rec.Description;
+                txtBlk.Text += "Cooking Time: " + rec.CookTime;
 
             }
         }
