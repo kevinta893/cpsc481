@@ -63,9 +63,11 @@ namespace HCI_Cooking.Pages
             throw new NotImplementedException();
         }
         #endregion
+
+        // go to the individual steps
         private void btnStartCooking_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new RecipeIndividualSteps());
+            Switcher.Switch(new RecipeIndividualSteps(this, currentRecipe));
         }
 
         private void btnMixPlay_Click(object sender, RoutedEventArgs e)
