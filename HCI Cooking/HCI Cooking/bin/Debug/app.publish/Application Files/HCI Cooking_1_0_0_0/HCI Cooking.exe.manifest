@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="HCI Cooking.exe" version="1.0.0.0" publicKeyToken="0cf0801f73df08e5" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="HCI Cooking" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="HCI Cooking.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HCI Cooking.exe" size="3617280">
+      <assemblyIdentity name="HCI Cooking" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>vP0QieckPtrw4pZwaYH7fMMwabE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=Fuyushi-HP\Fuyushi" issuerKeyHash="e005ce8af3b51bc31a0d9a49d7e4c433e3cd9617" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>hvJEx9hl4jS2r7A1mGoPxKhQcgA=</DigestValue></Reference></SignedInfo><SignatureValue>XyBMNPyYEfk3uuMh9molYzkLH37fLqW2HcuVCfsoqzrozKt3FMcwEc87s5vMLEmvMOA+SG/yf7BZBjoIo25xKXgfW4ApIOkDfpODYAwlXacsG8iuyTj1usTd/20dVTa14WK4gJlg9+K901Mref6ehREdqHwORy7DbH3qBM5+4Bc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>kcdVslP1A0lAbRklQEYDWGOGpdQ72k1Vk3URXxzkLbvxykR21OZjpfWWQXpfJmnq2afM80bJ06RZpcVadzzxrt/kTExvVIk8Aix3qZgETI1xQyFA1W6bngUwACxMxiu0NUg3hqMdL0LqILEkbEezpqC8sCJsFPip1QO9IucATa8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="007250a8c40f6a9835b0afb634e265d8c744f286" Description="" Url=""><as:assemblyIdentity name="HCI Cooking.exe" version="1.0.0.0" publicKeyToken="0cf0801f73df08e5" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Fuyushi-HP\Fuyushi</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Ny70KVxe2JRUUELqnIEgc9FNd34=</DigestValue></Reference></SignedInfo><SignatureValue>PV2tqa2Gsj1HRNLgNRouBq2P3nCwiuh/iOa2DrAYboTv4rday6cs84dWHHcPjkmBq7qvtI7IpQmzlagw+jFPXznp5cbphOaVS9QfTlZ7WB58n3h5jIL/vol+oTpCA45YzA7Qfw2UTgCPSA6n5kwmLc6GhCGkZNWBQfSNwet/eDI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>kcdVslP1A0lAbRklQEYDWGOGpdQ72k1Vk3URXxzkLbvxykR21OZjpfWWQXpfJmnq2afM80bJ06RZpcVadzzxrt/kTExvVIk8Aix3qZgETI1xQyFA1W6bngUwACxMxiu0NUg3hqMdL0LqILEkbEezpqC8sCJsFPip1QO9IucATa8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQONbyxsBG6bJCkydVA5rpZTANBgkqhkiG9w0BAQUFADAvMS0wKwYDVQQDHiQARgB1AHkAdQBzAGgAaQAtAEgAUABcAEYAdQB5AHUAcwBoAGkwHhcNMTQwMzE4MjMxNjI0WhcNMTUwMzE5MDUxNjI0WjAvMS0wKwYDVQQDHiQARgB1AHkAdQBzAGgAaQAtAEgAUABcAEYAdQB5AHUAcwBoAGkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJHHVbJT9QNJQG0ZJUBGA1hjhqXUO9pNVZN1EV8c5C278cpEdtTmY6X1lkF6XyZp6tmnzPNGydOkWaXFWnc88a7f5ExMb1SJPAIsd6mYBEyNcUMhQNVum54FMAAsTMYrtDVIN4ajHS9C6iCxJGxHs6agvLAibBT4qdUDvSLnAE2vAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEAFlRt+x+ZUesdlPfUZ4/Oip5llsbpzvDx8H57qW5LuOQDvelw7qARUJTmj7PcR3ThLSB6oWLGwXItlVCBuQ1HMN4FAMLimB2GWdFy6bWbP9l5QdCFhSRjEPVRQBuZyAgY0oc6234tm768DiPaiCVCTyGoJqNbCaUjDOUEi2QapN8=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

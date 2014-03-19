@@ -16,17 +16,19 @@ namespace HCI_Cooking
         private int id;                // internal code used to identify recipe? not sure if needed
         private string title;
         private string description;
+        private string cookTime; //cooking time value
         private List<string> tools;    // list of tools
         private List<string> ingredients; // list of ingredients
         private List<string> steps;    // list of steps
         private Image mainPicture;     // main picture for a recipe
         private List<Image> stepPictures; // list of step-by-step pictures
-
+        
         public Recipe()
         {
             id = -1;
             title = null;
             description = null;
+            cookTime = null;
             ingredients = new List<string>();
             tools = new List<string>();
             steps = new List<string>();
@@ -50,6 +52,12 @@ namespace HCI_Cooking
         {
             get { return description; }
             set { description = value; }
+        }
+
+        public string CookTime
+        {
+            get { return cookTime; }
+            set { cookTime = value; }
         }
 
         public List<string> Tools

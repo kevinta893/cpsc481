@@ -27,5 +27,6 @@
             <Button Content="->" Height="27" HorizontalAlignment="Left" Margin="390,190,0,0" Name="btnWhiskPlay" VerticalAlignment="Top" Width="59" Click="btnWhiskPlay_Click" />
         </Grid>
         <Button Content="Back" Height="47" HorizontalAlignment="Left" Margin="18,12,0,0" Name="btnRecipeOverviewBack" VerticalAlignment="Top" Width="78" Click="btnRecipeOverviewBack_Click" />
+        <TextBlock Height="152" HorizontalAlignment="Left" Margin="599,295,0,0" Name="txtBlockDesc" Text="TextBlock" VerticalAlignment="Top" Width="380" Background="#FFE2E2E2" />
     </Grid>
 </UserControl>

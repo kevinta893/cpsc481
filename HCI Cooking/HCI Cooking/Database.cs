@@ -52,7 +52,8 @@ namespace HCI_Cooking
         {
             mangoCake.ID = 1;
             mangoCake.Title = "Mango Pudding Cake";
-            mangoCake.Description = "A delicious mango pudding cake. Easy to make and great for kids!";
+            mangoCake.Description = "Vanilla pudding gives the cake a nice moist taste.\n";
+            mangoCake.CookTime = "1 hour";
             mangoCake.Tools.Add("Mixer");
             mangoCake.Tools.Add("Oven");
             mangoCake.Ingredients.Add("Sugar");
