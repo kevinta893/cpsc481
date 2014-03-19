@@ -42,23 +42,6 @@
         </StackPanel>
         <Grid Name="gridRecipeDisplay" Margin="224,12,12,29" Background="#FFD8E4FC">
             <Label Content="RECOMMENDED RECIPES" FontFamily="Leelawadee" FontSize="30" Height="47" HorizontalAlignment="Left" Margin="223,6,0,0" Name="lblRecRecipes" VerticalAlignment="Top" Width="352" />
-<<<<<<< HEAD
-            <Canvas Height="275" HorizontalAlignment="Left" Margin="18,59,0,0" Name="canvMangoPuddingCake" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkMPCDesc" Text="TextBlock" Width="347" Background="#FFF4F8E2" />
-                <Border MouseLeftButtonDown="brdrMPCimgPH_MouseLeftButtonDown" BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrMPCimgPH" Width="347" Background="#FFBF7CA6"></Border>
-            </Canvas>
-            <Canvas Height="275" HorizontalAlignment="Left" Margin="390,59,0,0" Name="canvPowChicken" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkPC" Text="TextBlock" Width="347" Background="#FFF4F8E2" Foreground="Black" />
-                <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrPCimgPH" Width="347" Background="#FFBF7CA6" />
-            </Canvas>
-            <Canvas Height="275" HorizontalAlignment="Left" Margin="18,349,0,0" Name="canvSpringRolls" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkSprRoll" Text="TextBlock" Width="347" Background="#FFF4F8E2" />
-                <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Height="187" Name="brdrSprRollimgPH" Width="347" Canvas.Left="0" Canvas.Top="0" />
-            </Canvas>
-            <Canvas Height="275" HorizontalAlignment="Left" Margin="390,349,0,0" Name="canvRibs" VerticalAlignment="Top" Width="347">
-                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRibs" Text="TextBlock" Width="347" Background="#FFF4F8E2"/>
-                <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Height="187" Name="brdrRibsimgPH" Width="347" Canvas.Left="0" Canvas.Top="0" />
-=======
             <Canvas Height="275" HorizontalAlignment="Left" Margin="18,59,0,0" Name="canvRecipe1" VerticalAlignment="Top" Width="347">
                 <TextBlock Text="Textblock" Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe1" Width="347" Background="White" />
                 <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrRecipe1" Width="347" Background="#FFBF7CA6"></Border>
@@ -74,7 +57,6 @@
             <Canvas Height="275" HorizontalAlignment="Left" Margin="390,349,0,0" Name="canvRecipe4" VerticalAlignment="Top" Width="347">
                 <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe4" Text="TextBlock" Width="347" Background="White"/>
                 <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Height="187" Name="brdrRecipe4" Width="347" Canvas.Left="0" Canvas.Top="0" />
->>>>>>> origin/recipe-loading-logic
             </Canvas>
         </Grid>
         <Button Content="Back" Height="47" HorizontalAlignment="Left" Margin="13,12,0,0" Name="btnRSMBack" VerticalAlignment="Top" Width="75" Click="btnRSMBack_Click" />

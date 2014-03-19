@@ -6,14 +6,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1000">
 
-<<<<<<< HEAD
-    <Grid Name="grdMainMenu">
-        <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="248" HorizontalAlignment="Left" Margin="77,378,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="340" Background="#E065CFEF" Click="btnCookingTech_Click" />
-        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="249" HorizontalAlignment="Left" Margin="553,378,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="#E065CFEF" Click="btnAchievements_Click" />
-        <Border BorderBrush="Silver" BorderThickness="5" Height="69" HorizontalAlignment="Left" Margin="236,54,0,0" Name="bdrTitle" VerticalAlignment="Top" Width="498" Background="#E065CFEF">
-            <Label Content="Learn To How To Cook Humans!" FontFamily="Elephant" FontSize="24" Height="39" Name="lblTitle" Width="409" />
-        </Border>
-=======
     <Grid Name="grdMainMenu" Background="#FFB7E3FF">
         <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="102" HorizontalAlignment="Left" Margin="69,522,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="361" Background="White" Click="btnCookingTech_Click" />
         <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="104" HorizontalAlignment="Left" Margin="592,520,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="White" Click="btnAchievements_Click" />
@@ -23,6 +15,5 @@
         <Border BorderBrush="White" BorderThickness="5" Height="194" HorizontalAlignment="Left" Margin="55,283,0,0" Name="brdrFoodImg1" VerticalAlignment="Top" Width="264" Background="#FF838383" />
         <Border Background="#FF838383" BorderBrush="White" BorderThickness="5" Height="194" HorizontalAlignment="Left" Margin="372,283,0,0" Name="brdrFoodImg2" VerticalAlignment="Top" Width="264" />
         <Border Background="#FF838383" BorderBrush="White" BorderThickness="5" Height="194" HorizontalAlignment="Left" Margin="689,283,0,0" Name="brdrFoodImg3" VerticalAlignment="Top" Width="264" />
->>>>>>> origin/recipe-loading-logic
     </Grid>
 </UserControl>
