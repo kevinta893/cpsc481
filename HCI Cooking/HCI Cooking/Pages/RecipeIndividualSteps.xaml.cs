@@ -19,14 +19,6 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class RecipeIndividualSteps : ISwitchable
     {
-<<<<<<< HEAD
-        public RecipeIndividualSteps()
-        {
-            InitializeComponent();
-        }
-
-
-=======
         RecipeOverview overview;
         Recipe aRecipe;
         int stepIndex;
@@ -48,7 +40,6 @@ namespace HCI_Cooking.Pages
 
 
 
->>>>>>> origin/recipe-loading-logic
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
@@ -56,27 +47,6 @@ namespace HCI_Cooking.Pages
         }
         #endregion
 
-<<<<<<< HEAD
-        private void btnIndiToogleView_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeCompleteSteps());
-        }
-
-        //FIX THIS TO BE GREYED OUT ON STEP 1
-        private void btnIndivRecipeBack_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.GoBack();
-        }
-
-        private void btnIndivRecipeNext_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeIndividualSteps());
-        }
-
-        private void btnRecipeIndivBack_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeOverview());
-=======
         // switch to view complete instructions view; pass in current view and previous view to go back
         private void btnIndiToogleView_Click(object sender, RoutedEventArgs e)
         {
@@ -137,7 +107,6 @@ namespace HCI_Cooking.Pages
         private void btnRecipeIndivBack_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(overview);
->>>>>>> origin/recipe-loading-logic
         }
     }
 }

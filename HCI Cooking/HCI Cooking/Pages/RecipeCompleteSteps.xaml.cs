@@ -19,11 +19,6 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class RecipeCompleteSteps : ISwitchable
     {
-<<<<<<< HEAD
-        public RecipeCompleteSteps()
-        {
-            InitializeComponent();
-=======
         Recipe aRecipe;
         RecipeOverview overview;
         RecipeIndividualSteps indivStep;          // used to go back to the previous indiv step if toggled again
@@ -46,7 +41,6 @@ namespace HCI_Cooking.Pages
             {
                 rTxtBlkSteps.AppendText(step + "\n");
             }
->>>>>>> origin/recipe-loading-logic
         }
 
 
@@ -57,16 +51,6 @@ namespace HCI_Cooking.Pages
         }
         #endregion
 
-<<<<<<< HEAD
-        private void btnCompToogleView_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeIndividualSteps());
-        }
-
-        private void btnRecipeCompBack_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeOverview());
-=======
         // go back to individual steps; same step as before
         private void btnCompToogleView_Click(object sender, RoutedEventArgs e)
         {
@@ -77,7 +61,6 @@ namespace HCI_Cooking.Pages
         private void btnRecipeCompBack_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(overview);
->>>>>>> origin/recipe-loading-logic
         }
     }
 }

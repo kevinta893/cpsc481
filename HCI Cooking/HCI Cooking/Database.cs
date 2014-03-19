@@ -14,22 +14,6 @@ namespace HCI_Cooking
 {
     class Database
     {
-<<<<<<< HEAD
-        private static List<Recipe> recipeList;
-        
-        private static Recipe mangoCake;
-        private static Recipe powChicken;
-        private static Recipe springRolls;
-        private static Recipe ribs;
-
-        private static Image mangoPic;
-
-        public Database()
-        {
-            recipeList = new List<Recipe>();
-
-            InitializeRecipes();
-=======
         public List<Recipe> recipeList;
         
         private Recipe mangoCake;
@@ -43,20 +27,16 @@ namespace HCI_Cooking
         {
 
             recipeList = new List<Recipe>();
->>>>>>> origin/recipe-loading-logic
 
             mangoCake = new Recipe();
             powChicken = new Recipe();
             springRolls = new Recipe();
             ribs = new Recipe();
 
-<<<<<<< HEAD
-=======
             InitializeRecipes();
 
             //mangoCake.ID = 1;
 
->>>>>>> origin/recipe-loading-logic
             recipeList.Add(mangoCake);
             recipeList.Add(powChicken);
             recipeList.Add(springRolls);
@@ -64,37 +44,12 @@ namespace HCI_Cooking
 
             // this line might cause a lot of issues
             // not sure how to load from relative path
-<<<<<<< HEAD
-            mangoPic = Image.FromFile("\\Images\\pudding_cake.jpg");
-=======
             //mangoPic = Image.FromFile("\\Images\\pudding_cake.jpg");
->>>>>>> origin/recipe-loading-logic
         }
 
         // fill in sample recipe info
         private void InitializeRecipes()
         {
-<<<<<<< HEAD
-            mangoCake.ID = 1;
-            mangoCake.Title = "Mango Pudding Cake";
-            mangoCake.Description = "A delicious mango pudding cake. Easy to make and great for kids!";
-            mangoCake.Tools.Add("Mixer");
-            mangoCake.Tools.Add("Oven");
-            mangoCake.Ingredients.Add("Sugar");
-            mangoCake.Ingredients.Add("Mango");
-            mangoCake.Ingredients.Add("Butter");
-            mangoCake.Ingredients.Add("Milk");
-            mangoCake.Steps.Add("1. Add ingredients together");
-            mangoCake.Steps.Add("2. Do some magic");
-            mangoCake.Steps.Add("3. ???");
-            mangoCake.Steps.Add("4. PROFIT!");
-
-            mangoCake.MainPicture = mangoPic;
-        }
-
-        // return the recipe with id
-        public static Recipe GetRecipe(int id) 
-=======
             /*
              * Mango Pudding Cake Recipe information
              * 
@@ -177,7 +132,6 @@ namespace HCI_Cooking
 
         // return the recipe with id
         public Recipe GetRecipe(int id) 
->>>>>>> origin/recipe-loading-logic
         {
             // find the recipe with a lambda expression
             Recipe target = recipeList.Find(x => x.ID == id);

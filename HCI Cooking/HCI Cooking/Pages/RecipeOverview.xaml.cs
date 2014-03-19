@@ -54,29 +54,20 @@ namespace HCI_Cooking.Pages
         }
 
 
-<<<<<<< HEAD
-=======
         //********************** Event handlers below *******
 
 
->>>>>>> origin/recipe-loading-logic
         #region ISwitchable Members
         public void UtilizeState(object state)
         {
             throw new NotImplementedException();
         }
         #endregion
-<<<<<<< HEAD
-        private void btnStartCooking_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeIndividualSteps());
-=======
 
         // go to the individual steps
         private void btnStartCooking_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new RecipeIndividualSteps(this, currentRecipe));
->>>>>>> origin/recipe-loading-logic
         }
 
         private void btnMixPlay_Click(object sender, RoutedEventArgs e)

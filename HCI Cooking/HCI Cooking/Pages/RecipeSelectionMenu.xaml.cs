@@ -29,12 +29,6 @@ namespace HCI_Cooking.Pages
         public RecipeSelectionMenu()
         {
             InitializeComponent();
-<<<<<<< HEAD
-            txtBlkMPCDesc.Text = "Recipe Information"; //replace string with data from the recipe data class
-            chkBxAll.Click += new RoutedEventHandler(chkBxAll_Click);
-        }
-
-=======
 
             recipeDB = new Database();
             numRecipes = recipeDB.recipeList.Count();
@@ -84,25 +78,11 @@ namespace HCI_Cooking.Pages
          * if it's not checked then no recipes will be shown
          * 
          */ 
->>>>>>> origin/recipe-loading-logic
         void chkBxAll_Click(object sender, RoutedEventArgs e)
         {
             CheckBox thisChbx = (CheckBox)sender;
             if (thisChbx.IsChecked == false)
             {
-<<<<<<< HEAD
-                canvRibs.Visibility = Visibility.Hidden;
-                canvMangoPuddingCake.Visibility = Visibility.Hidden;
-                canvPowChicken.Visibility = Visibility.Hidden;
-                canvSpringRolls.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                canvRibs.Visibility = Visibility.Visible;
-                canvMangoPuddingCake.Visibility = Visibility.Visible;
-                canvPowChicken.Visibility = Visibility.Visible;
-                canvSpringRolls.Visibility = Visibility.Visible;
-=======
                 canvRecipe1.Visibility = Visibility.Hidden; //hides first recipe box
                 canvRecipe2.Visibility = Visibility.Hidden; //hides second recipe box
                 canvRecipe3.Visibility = Visibility.Hidden; //...
@@ -114,7 +94,6 @@ namespace HCI_Cooking.Pages
                 canvRecipe2.Visibility = Visibility.Visible;
                 canvRecipe3.Visibility = Visibility.Visible;
                 canvRecipe4.Visibility = Visibility.Visible;
->>>>>>> origin/recipe-loading-logic
             }
         }
         
@@ -125,13 +104,6 @@ namespace HCI_Cooking.Pages
         }
         #endregion
 
-<<<<<<< HEAD
-        private void brdrMPCimgPH_MouseLeftButtonDown(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new RecipeOverview());
-        }
-
-=======
         //Event handler for recipe click
         // Open new recipe overview page for that recipe
         void recipeClick_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -150,7 +122,6 @@ namespace HCI_Cooking.Pages
         }
 
 
->>>>>>> origin/recipe-loading-logic
         private void btnRSMBack_Click(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new MainMenu());
@@ -158,21 +129,13 @@ namespace HCI_Cooking.Pages
 
         private void chkbxMixing_Checked(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            canvRibs.Visibility = Visibility.Hidden;
-=======
             canvRecipe1.Visibility = Visibility.Hidden;
->>>>>>> origin/recipe-loading-logic
             chkBxAll.IsChecked = false;
         }
 
         private void chkbxMixing_Unchecked(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            canvRibs.Visibility = Visibility.Visible;
-=======
             canvRecipe1.Visibility = Visibility.Visible;
->>>>>>> origin/recipe-loading-logic
         }
 
     }

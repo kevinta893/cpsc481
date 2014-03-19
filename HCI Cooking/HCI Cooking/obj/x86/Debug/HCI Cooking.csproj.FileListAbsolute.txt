@@ -33,8 +33,6 @@ C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.g.resources
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI_Cooking.Properties.Resources.resources
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
-<<<<<<< HEAD
-=======
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\AchievementMenu.baml
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonWhisking.baml
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingTechniqueLessons.baml
@@ -73,4 +71,3 @@ C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking
 C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.application
 C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe.manifest
 C:\Users\Peter\Desktop\git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.application
->>>>>>> origin/recipe-loading-logic
