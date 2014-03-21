@@ -146,7 +146,7 @@ namespace HCI_Cooking
             powChicken.Steps.Add("3. Drizzle olive oil in to frying pan");
             powChicken.Steps.Add("4. Fry chicken breast until the outside is white. The chicken is ready.");
             powChicken.Steps.Add("5. Let cool for 2 minutes and serve.");
-            powChicken.Steps.Add("Recipe Complete!\r\n\r\n You've earned 1500xp!");
+            powChicken.Steps.Add("Recipe Complete!\r\n\r\nYou've earned 1500xp!");
 
             //Pow Chicken Photo
             powChicken.MainPicture = HCI_Cooking.Properties.Resources.pow_chicken;
