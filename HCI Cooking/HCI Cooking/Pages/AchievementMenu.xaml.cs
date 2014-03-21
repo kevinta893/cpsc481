@@ -24,7 +24,7 @@ namespace HCI_Cooking.Pages
 
         public AchievementMenu()
         {
-            userDB = new Database();
+            userDB = Database.getInstance();
             mainUser = userDB.userList[0];
 
             InitializeComponent();
@@ -66,7 +66,7 @@ namespace HCI_Cooking.Pages
                         achieveLbl = (Label)achieveCanv.Children[item];
                     }
                 }
-                achieveCanv.Children[i].Visibility = Visibility.Visible;
+                grdBadgeHolder.Children[i].Visibility = Visibility.Visible;
 
                 achieveImg.Source = ImageLoader.ToWPFImage(mainUser.BadgeImages[i]);
                 achieveLbl.Content = mainUser.Accomplishments[i];

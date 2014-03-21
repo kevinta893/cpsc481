@@ -93,6 +93,16 @@ namespace HCI_Cooking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ace_cooking_title {
+            get {
+                object obj = ResourceManager.GetObject("ace_cooking_title", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b1_mix {
             get {
                 object obj = ResourceManager.GetObject("b1_mix", resourceCulture);

@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
+
 
 namespace HCI_Cooking.Pages
 {
@@ -21,6 +23,8 @@ namespace HCI_Cooking.Pages
     {
         RecipeOverview overview;
         Recipe aRecipe;
+        Database userDb;
+        User mainUser;
         int stepIndex;
         int lastStep;
 
@@ -30,6 +34,9 @@ namespace HCI_Cooking.Pages
 
             overview = parentPage;
             aRecipe = rec;
+
+            userDb = Database.getInstance();
+            mainUser = userDb.userList[0];
 
             // load first step
             stepIndex = 0;
@@ -68,7 +75,7 @@ namespace HCI_Cooking.Pages
                 if (stepIndex == lastStep)
                 {
                     btnIndivRecipeNext.IsEnabled = true;
-                    //btnIndivRecipeNext.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
+
                 }
 
                 stepIndex--;
@@ -81,7 +88,6 @@ namespace HCI_Cooking.Pages
                 if (stepIndex == 0)
                 {
                     btnIndivRecipePrev.IsEnabled = false;
-                    //btnIndivRecipePrev.Background = new SolidColorBrush(Colors.DarkGray);
                 }
             }
         }
@@ -89,6 +95,8 @@ namespace HCI_Cooking.Pages
         // go forward one step
         private void btnIndivRecipeNext_Click(object sender, RoutedEventArgs e)
         {
+            bool hasAchievement = false;
+
             // only go forward step if not currently on last step
             if (stepIndex != lastStep)
             {
@@ -96,7 +104,6 @@ namespace HCI_Cooking.Pages
                 if (stepIndex == 0)
                 {
                     btnIndivRecipePrev.IsEnabled = true;
-                    //btnIndivRecipePrev.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFC1C1FF"));
                 }
 
                 stepIndex++;
@@ -111,9 +118,26 @@ namespace HCI_Cooking.Pages
                 if (stepIndex == lastStep)
                 {
                     btnIndivRecipeNext.IsEnabled = false;
-                    //btnIndivRecipeNext.Background = new SolidColorBrush(Colors.DarkGray);
+                    foreach (string badge in mainUser.Accomplishments)
+                    {
+                        if (badge == "First Mango Pudding!")
+                        {
+                            hasAchievement = true;
+                        }
+                    }
+
+                    if (hasAchievement == false)
+                    {
+                        mainUser.Accomplishments.Add("First Mango Pudding!");
+                        mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
+                        mainUser.BadgesEarned += 1; 
+                    }
+
+                    mainUser.MealsCooked += 1;
+
                 }
             }
+
         }
 
         // go back to previous recipe overview

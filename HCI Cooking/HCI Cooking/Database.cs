@@ -24,10 +24,11 @@ namespace HCI_Cooking
 
 
         private User mainUser;
+        private static Database globalInstance;
 
-        public Database()
+        private Database()
         {
-
+            
             recipeList = new List<Recipe>();
             userList = new List<User>();
 
@@ -48,6 +49,15 @@ namespace HCI_Cooking
 
             InitializeUser();
             userList.Add(mainUser);
+        }
+        public static Database getInstance()
+        {
+            if (globalInstance == null)
+            {
+               globalInstance = new Database();
+            }
+
+            return globalInstance;
         }
 
         // fill in sample recipe info
