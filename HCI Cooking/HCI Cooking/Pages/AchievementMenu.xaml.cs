@@ -46,7 +46,32 @@ namespace HCI_Cooking.Pages
         }
         private void LoadAchievements()
         {
+            Canvas achieveCanv;
+            Image achieveImg = null;
+            Label achieveLbl = null;
 
+            for (int i = 0; i < mainUser.Accomplishments.Count(); i++)
+            {
+                achieveCanv = (Canvas)grdBadgeHolder.Children[i];
+
+                //Create image and label placement in the 
+                for (int item = 0; item < achieveCanv.Children.Count; item++)
+                {
+                    if (achieveCanv.Children[item] is Image)
+                    {
+                        achieveImg = (Image)achieveCanv.Children[item];
+                    }
+                    else if (achieveCanv.Children[item] is Label)
+                    {
+                        achieveLbl = (Label)achieveCanv.Children[item];
+                    }
+                }
+                achieveCanv.Children[i].Visibility = Visibility.Visible;
+
+                achieveImg.Source = ImageLoader.ToWPFImage(mainUser.BadgeImages[i]);
+                achieveLbl.Content = mainUser.Accomplishments[i];
+          
+            }
         }
 
         private void btnAchievementBack_Click(object sender, RoutedEventArgs e)
