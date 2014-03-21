@@ -98,7 +98,7 @@ namespace HCI_Cooking
             mangoCake.Steps.Add("4. Mix the ingredients together.");
             mangoCake.Steps.Add("5. Pour mixture in to cake pans. Bake cakes at 450F for 20 minutes.");
             mangoCake.Steps.Add("6. Once the cakes are baked. Take them out of the pan and spread a layer of the mango pudding on top of one cake. Place other cake on top. The cake is now ready to serve.");
-            mangoCake.Steps.Add("Recipe Complete!");
+            mangoCake.Steps.Add("Recipe Complete!\r\n\r\nYou've earned 2500xp!");
             //mango pudding photos
             mangoCake.MainPicture = HCI_Cooking.Properties.Resources.mango_cake;
             mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.a1_blend));
@@ -146,7 +146,7 @@ namespace HCI_Cooking
             powChicken.Steps.Add("3. Drizzle olive oil in to frying pan");
             powChicken.Steps.Add("4. Fry chicken breast until the outside is white. The chicken is ready.");
             powChicken.Steps.Add("5. Let cool for 2 minutes and serve.");
-            powChicken.Steps.Add("Recipe Complete!");
+            powChicken.Steps.Add("Recipe Complete!\r\n\r\n You've earned 1500xp!");
 
             //Pow Chicken Photo
             powChicken.MainPicture = HCI_Cooking.Properties.Resources.pow_chicken;
