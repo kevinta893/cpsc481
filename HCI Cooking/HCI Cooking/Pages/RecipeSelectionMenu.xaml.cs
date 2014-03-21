@@ -35,7 +35,7 @@ namespace HCI_Cooking.Pages
         {
             InitializeComponent();
 
-            recipeDB = new Database();
+            recipeDB = Database.getInstance();
             numRecipes = recipeDB.recipeList.Count();
             recipeBlocks = new List<Canvas>();
             activeFilters = new List<String>();
@@ -88,8 +88,8 @@ namespace HCI_Cooking.Pages
             for (int i = 0; i < numToLoad; i++)
             {
                 rec = recipeDB.GetRecipe(i);
-                txtBlk = (TextBlock)recipeBlocks[i].Children[0];
-                brdr = (Border)recipeBlocks[i].Children[1];
+                txtBlk = (TextBlock)recipeBlocks[i].Children[1];
+                brdr = (Border)recipeBlocks[i].Children[0];
                 img = (Image)recipeBlocks[i].Children[2];
 
                 txtBlk.Text = rec.Title; //gets and displays title of the recipe
