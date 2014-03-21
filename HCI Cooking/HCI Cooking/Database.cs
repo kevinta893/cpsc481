@@ -154,7 +154,7 @@ namespace HCI_Cooking
              *  Spring Rolls Recipe Information 
              */
             springRolls.Title = "Spring Rolls";
-            springRolls.Description = "\nCrispy fried rolls filled with meats and veggies. A delicious asian dish \nperfect for any event.";
+            springRolls.Description = "\nCrispy fried rolls filled with meats and veggies. A delicious asian\r\ndish perfect for any event.";
             springRolls.CookTime = "45 minutes";
             springRolls.Difficulty = 2;
             springRolls.MainPicture = HCI_Cooking.Properties.Resources.spring_rolls;
@@ -172,7 +172,7 @@ namespace HCI_Cooking
              *  Ribs Recipe Information 
              */
             ribs.Title = "Lamb Ribs";
-            ribs.Description = "\nJuicy and delicious rack of lambs ribs, rubbed with amazing\nspices.";
+            ribs.Description = "\nJuicy and delicious rack of lambs ribs, rubbed with amazing\nspices. Great for parties!";
             ribs.CookTime = " 55 minutes";
             ribs.Difficulty = 3;
             ribs.MainPicture = HCI_Cooking.Properties.Resources.ribs;
