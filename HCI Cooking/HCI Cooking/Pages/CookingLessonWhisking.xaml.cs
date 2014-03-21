@@ -25,6 +25,15 @@ namespace HCI_Cooking.Pages
         {
             aRecipe = rec;
             InitializeComponent();
+
+            txtBlkChapOverview.Text = "Here you will be learning about whisking!\r\n" +
+                "Whisking is an essential skill that makes you a great baker\r\nand also determines the texture of final baked product.\r\n\r\n" +
+                "In this tutorial, you will be learning how to:\r\n" +
+                    "- Beat eggs\r\n" +
+                    "- Mix flours\r\n" +
+                    "- Not spill your ingredients\r\n"+
+                    "- Use other kitchen tools to whisk\r\n" +
+                    "- Determine dough consistancy";
         }
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)

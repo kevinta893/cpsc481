@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HCI Cooking.exe" size="1022464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HCI Cooking.exe" size="1052672">
       <assemblyIdentity name="HCI Cooking" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vkZ4HJzYngzp0O3lbAYRsqDW79M=</dsig:DigestValue>
+        <dsig:DigestValue>uLiQkkyZJ5Ih6U88GodPYIO/DsM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
