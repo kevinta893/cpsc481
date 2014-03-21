@@ -101,8 +101,8 @@
     <Compile Include="Pages\CookingLessonWhisking.xaml.cs">
       <DependentUpon>CookingLessonWhisking.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\CookingTechniqueLessons.xaml.cs">
-      <DependentUpon>CookingTechniqueLessons.xaml</DependentUpon>
+    <Compile Include="Pages\CookingLessonFolding.xaml.cs">
+      <DependentUpon>CookingLessonFolding.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\RecipeCompleteSteps.xaml.cs">
       <DependentUpon>RecipeCompleteSteps.xaml</DependentUpon>
@@ -125,7 +125,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\CookingTechniqueLessons.xaml">
+    <Page Include="Pages\CookingLessonFolding.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

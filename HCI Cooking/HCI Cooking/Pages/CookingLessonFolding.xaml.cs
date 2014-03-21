@@ -17,11 +17,11 @@ namespace HCI_Cooking.Pages
     /// <summary>
     /// Interaction logic for CookingTechniqueLessons.xaml
     /// </summary>
-    public partial class CookingTechniqueLessons : ISwitchable
+    public partial class CookingLessonFolding : ISwitchable
     {
         Recipe currentRecipe;
 
-        public CookingTechniqueLessons(Recipe rec)
+        public CookingLessonFolding(Recipe rec)
         {
             currentRecipe = rec;
             InitializeComponent();

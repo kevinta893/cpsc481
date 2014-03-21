@@ -43,7 +43,7 @@ namespace HCI_Cooking.Pages
 
         private void imgLessonIII_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Switcher.Switch(new CookingTechniqueLessons(aRecipe));
+            Switcher.Switch(new CookingLessonFolding(aRecipe));
         }
     }
 }

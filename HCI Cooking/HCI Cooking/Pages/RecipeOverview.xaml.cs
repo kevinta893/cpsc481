@@ -156,7 +156,7 @@ namespace HCI_Cooking.Pages
         // show folding tutorial
         private void btnFoldPlay_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new CookingTechniqueLessons(currentRecipe));
+            Switcher.Switch(new CookingLessonFolding(currentRecipe));
         }
 
         // show whisking tutorial
