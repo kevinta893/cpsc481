@@ -110,7 +110,7 @@ namespace HCI_Cooking
             mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b4_mix));
             mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b5_bake));
             mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b6_cakedone));
-            
+            mangoCake.StepPictures.Add(new Bitmap(HCI_Cooking.Properties.Resources.b6_cakedone)); 
 
 
             /*

@@ -125,10 +125,12 @@ namespace HCI_Cooking.Pages
         // load event handlers
         private void LoadHandlers()
         {
+            Image clickableArea;
             // click events for recipe containers
             foreach (Canvas block in recipeBlocks)
             {
-                block.MouseDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
+                clickableArea = (Image)block.Children[2];
+                clickableArea.MouseDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
             }
 
             // click events for skill checkboxes
@@ -262,15 +264,15 @@ namespace HCI_Cooking.Pages
         // Open new recipe overview page for that recipe
         void recipeClick_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Canvas clickedRecipe = (Canvas)sender;
+            Image clickedRecipe = (Image)sender;
 
-            if (clickedRecipe == canvRecipe1)
+            if (clickedRecipe == img1)
                 Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(0)));
-            else if (clickedRecipe == canvRecipe2)
+            else if (clickedRecipe == img2)
                 Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(1)));
-            else if (clickedRecipe == canvRecipe3)
+            else if (clickedRecipe == img3)
                 Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(2)));
-            else if (clickedRecipe == canvRecipe4)
+            else if (clickedRecipe == img4)
                 Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(3)));
         }
 
