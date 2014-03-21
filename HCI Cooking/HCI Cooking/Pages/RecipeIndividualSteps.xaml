@@ -7,13 +7,13 @@
       d:DesignHeight="700" d:DesignWidth="1000">
 
     <Grid Name="grdRIndiSteps">
-        <Button Content="Toggle View" Height="48" HorizontalAlignment="Left" Margin="864,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndiToogleView_Click" />
+        <Button Content="Completed Steps" Height="48" HorizontalAlignment="Left" Margin="832,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="133" Background="#FFC1C1FF" Click="btnIndiToogleView_Click" />
         <Button Content="&lt;--" Height="249" HorizontalAlignment="Left" Margin="29,407,0,0" Name="btnIndivRecipePrev" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeBack_Click" FontSize="26" IsEnabled="False" />
         <Button Content="--&gt;" Height="249" HorizontalAlignment="Left" Margin="864,407,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeNext_Click" FontSize="26" />
-        <TextBlock Height="192" HorizontalAlignment="Left" Margin="168,439,0,69" Name="txtBlkStep" Text="" VerticalAlignment="Top" Width="657" Background="#FFF4F8E2" FontSize="22" TextWrapping="Wrap" TextAlignment="Center" />
-        <Border BorderBrush="Silver" BorderThickness="5" Height="363" HorizontalAlignment="Left" Margin="231,30,0,0" Name="brdrImagePlaceholder" VerticalAlignment="Top" Width="541" Background="#FFBF7CA6">
-            <Label Content="IMAGE PLACEHOLDER" Height="28" Name="lblimgPH" Width="152" />
-        </Border>
+        <TextBlock Height="192" HorizontalAlignment="Left" Margin="178,454,0,0" Name="txtBlkStep" Text="" VerticalAlignment="Top" Width="640" Background="#FFF4F8E2" FontSize="22" TextWrapping="Wrap" TextAlignment="Center" />
         <Button Content="Back to Overview" Height="48" HorizontalAlignment="Left" Margin="29,12,0,0" Name="btnRecipeIndivBack" VerticalAlignment="Top" Width="125" Click="btnRecipeIndivBack_Click" />
+        <Canvas Height="375" HorizontalAlignment="Left" Margin="178,52,0,0" Name="cnvImgHolder" VerticalAlignment="Top" Width="640">
+            <Image Height="375" Name="imgStep" Stretch="Uniform" Width="640" Canvas.Left="0" Canvas.Top="0" />
+        </Canvas>
     </Grid>
 </UserControl>

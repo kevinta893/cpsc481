@@ -37,10 +37,15 @@ namespace HCI_Cooking.Pages
         // show all the steps for the recipes from the list
         private void ShowAllSteps()
         {
+            Paragraph paraRichtxt = new Paragraph();
+            paraRichtxt.Inlines.Add("Instructions:\n\n");
+
             foreach (string step in aRecipe.Steps)
             {
-                rTxtBlkSteps.AppendText(step + "\n");
+                paraRichtxt.Inlines.Add(step + "\n"); //add steps in to the paragraph
             }
+
+            rTxtBlkSteps.Document.Blocks.Add(paraRichtxt); //attach the paragraph to the rich textbox
         }
 
 

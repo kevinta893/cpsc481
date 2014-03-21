@@ -84,6 +84,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="User.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +94,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="ImageLoader.cs" />
     <Compile Include="Pages\AchievementMenu.xaml.cs">
       <DependentUpon>AchievementMenu.xaml</DependentUpon>
     </Compile>
@@ -175,15 +177,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="HCI Cooking_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Rice Bowl.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -206,6 +204,54 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\pow_chicken.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ribs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\spring_rolls.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\a1_blend.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\a2_mix.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\a3_chill.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\b1_mix.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\b2_butter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\b3_eggs.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\b4_mix.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\b5_bake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mango_cake_steps\b6_cakedone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\achivements\waffle_badge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

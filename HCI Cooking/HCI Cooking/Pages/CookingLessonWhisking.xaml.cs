@@ -19,19 +19,22 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class CookingLessonWhisking : UserControl
     {
-        public CookingLessonWhisking()
+        Recipe aRecipe;
+
+        public CookingLessonWhisking(Recipe rec)
         {
+            aRecipe = rec;
             InitializeComponent();
         }
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)
         {
-            //Switcher.Switch(new RecipeOverview());
+            Switcher.Switch(new RecipeOverview(aRecipe));
         }
 
         private void imgLessonIII_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Switcher.Switch(new CookingTechniqueLessons());
+            Switcher.Switch(new CookingTechniqueLessons(aRecipe));
         }
     }
 }

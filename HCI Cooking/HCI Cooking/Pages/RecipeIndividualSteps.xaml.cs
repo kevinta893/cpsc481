@@ -31,11 +31,16 @@ namespace HCI_Cooking.Pages
             overview = parentPage;
             aRecipe = rec;
 
-            // load first step and picture
+            // load first step
             stepIndex = 0;
             lastStep = aRecipe.Steps.Count() - 1;
             txtBlkStep.Text = aRecipe.Steps[stepIndex];
-            // TO DO: LOAD THE IMAGE SOMEHOW
+
+            // load picture if exists
+            if (aRecipe.StepPictures.Count == lastStep + 1)
+                imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
+            else
+                imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder);
         }
 
 
@@ -68,6 +73,9 @@ namespace HCI_Cooking.Pages
 
                 stepIndex--;
                 txtBlkStep.Text = aRecipe.Steps[stepIndex];
+                // load picture if exists
+                if (aRecipe.StepPictures.Count == lastStep + 1)
+                    imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
             
                 // change previous button colour to "inactive" if now on first step
                 if (stepIndex == 0)
@@ -93,6 +101,11 @@ namespace HCI_Cooking.Pages
 
                 stepIndex++;
                 txtBlkStep.Text = aRecipe.Steps[stepIndex];
+                // load picture if exists
+                if (aRecipe.StepPictures.Count == lastStep + 1)
+                    imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
+                else
+                    imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder);
 
                 // change next button colour to "inactive" if now on last step
                 if (stepIndex == lastStep)

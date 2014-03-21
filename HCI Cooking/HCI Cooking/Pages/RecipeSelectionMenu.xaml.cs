@@ -13,19 +13,22 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using HCI_Cooking;
 
+
+/*
+ * This is the page where users can choose a recipe.
+ * The sidebar has checkboxs to filter the recipes based on skills.
+ */
+
 namespace HCI_Cooking.Pages
 {
-    /// <summary>
-    /// Interaction logic for RecipeSelectionMenu.xaml
-    /// </summary>
+
     public partial class RecipeSelectionMenu : ISwitchable
     {
-
         Database recipeDB;
         int numRecipes;
         List<Canvas> recipeBlocks;      // a list of the GUI recipe containers
 
-
+        // constructor
         public RecipeSelectionMenu()
         {
             InitializeComponent();
@@ -42,41 +45,71 @@ namespace HCI_Cooking.Pages
 
             LoadRecipes();
 
+            // set click event for the recipe containers
             canvRecipe1.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
             canvRecipe2.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
             canvRecipe3.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
             canvRecipe4.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
 
-
+            //CheckBoxLogic();
             chkBxAll.Click += new RoutedEventHandler(chkBxAll_Click);
         }
 
 
+        // load the 4 recipes into the recipe containers
         private void LoadRecipes()
         {
             Recipe rec;
             TextBlock txtBlk;
+            Border brdr;
+            Image img;
 
             for (int i = 0; i < numRecipes; i++)
             {
                 rec = recipeDB.recipeList[i];
                 txtBlk = (TextBlock)recipeBlocks[i].Children[0];
+                brdr = (Border)recipeBlocks[i].Children[1];
+                img = (Image)recipeBlocks[i].Children[2];
 
                 txtBlk.Text = rec.Title; //gets and displays title of the recipe
                 txtBlk.Text += rec.Description;
                 txtBlk.Text += "\nCooking Time: " + rec.CookTime;
 
+                // set border colour depending on difficulty
+                switch (rec.Difficulty)
+                {
+                    case 1:
+                        brdr.BorderBrush = Brushes.Green;
+                        break;
+                    case 2:
+                        brdr.BorderBrush = Brushes.Yellow;
+                        break;
+                    case 3:
+                        brdr.BorderBrush = Brushes.Red;
+                        break;
+                    default:
+                        brdr.BorderBrush = Brushes.SlateGray;
+                        break;
+                }
+
+                // load main picture for recipe
+                img.Source = ImageLoader.ToWPFImage(rec.MainPicture);
             }
         }
 
 
-        // Event controllers
+        // the logic for the checkbox filtering
+        private void CheckBoxLogic()
+        {
+            throw new NotImplementedException();
+        }
 
+
+// ***********Event controllers******
         /*
          * Event handler for the check all checkbox
          * If the All checkbox is checked then all recipes will be visible,
          * if it's not checked then no recipes will be shown
-         * 
          */ 
         void chkBxAll_Click(object sender, RoutedEventArgs e)
         {
@@ -96,13 +129,7 @@ namespace HCI_Cooking.Pages
                 canvRecipe4.Visibility = Visibility.Visible;
             }
         }
-        
-        #region ISwitchable Members
-        public void UtilizeState(object state)
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
+
 
         //Event handler for recipe click
         // Open new recipe overview page for that recipe
@@ -138,5 +165,12 @@ namespace HCI_Cooking.Pages
             canvRecipe1.Visibility = Visibility.Visible;
         }
 
+
+        #region ISwitchable Members
+        public void UtilizeState(object state)
+        {
+            throw new NotImplementedException();
+        }
+        #endregion
     }
 }

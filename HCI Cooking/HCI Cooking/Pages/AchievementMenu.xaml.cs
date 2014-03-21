@@ -19,9 +19,34 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class AchievementMenu : UserControl
     {
+        Database userDB;
+        User mainUser; 
+
         public AchievementMenu()
         {
+            userDB = new Database();
+            mainUser = userDB.userList[0];
+
             InitializeComponent();
+            LoadStats();
+            LoadAchievements();
+
+        }
+
+        /*
+         * Initalizes User's stats throughout the User's experience
+         * Gathers information from the User class and database
+         * 
+         */
+        private void LoadStats()
+        {
+            lblBadgeStats.Content = mainUser.BadgesEarned;
+            lblLessonStat.Content = mainUser.LessonsLearnt;
+            lblMealStats.Content = mainUser.MealsCooked;
+        }
+        private void LoadAchievements()
+        {
+
         }
 
         private void btnAchievementBack_Click(object sender, RoutedEventArgs e)

@@ -17,29 +17,41 @@ namespace HCI_Cooking
         private string title;
         private string description;
         private string cookTime; //cooking time value
+
         private List<string> tools;    // list of tools
         private List<string> ingredients; // list of ingredients
         private List<string> steps;    // list of steps
+        private List<string> skills;
+
         private Image mainPicture;     // main picture for a recipe
         private List<Image> stepPictures; // list of step-by-step pictures
-        
+        private int difficulty;
+
         public Recipe()
         {
             id = -1;
+            difficulty = -1;
             title = null;
             description = null;
             cookTime = null;
             ingredients = new List<string>();
             tools = new List<string>();
             steps = new List<string>();
+            skills = new List<string>();
             mainPicture = null;
-            stepPictures = null;
+            stepPictures = new List<Image>();
         }
 
         public int ID
         {
             get { return id; }
             set { id = value; }
+        }
+
+        public int Difficulty
+        {
+            get { return difficulty; }
+            set { difficulty = value; }
         }
 
         public string Title
@@ -70,6 +82,13 @@ namespace HCI_Cooking
         {
             get { return steps; }
             set { steps = value; }
+        }
+
+        //list of skills per respective recipes.
+        public List<string> Skills
+        {
+            get { return skills; }
+            set { skills = value; }
         }
 
         public Image MainPicture

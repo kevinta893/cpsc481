@@ -15,36 +15,39 @@ namespace HCI_Cooking
     class Database
     {
         public List<Recipe> recipeList;
-        
+        public List<User> userList;
+
         private Recipe mangoCake;
         private Recipe powChicken;
         private Recipe springRolls;
         private Recipe ribs;
 
-        //private Image mangoPic;
+
+        private User mainUser;
 
         public Database()
         {
 
             recipeList = new List<Recipe>();
+            userList = new List<User>();
 
             mangoCake = new Recipe();
             powChicken = new Recipe();
             springRolls = new Recipe();
             ribs = new Recipe();
 
-            InitializeRecipes();
+            mainUser = new User();
 
-            //mangoCake.ID = 1;
+
+            InitializeRecipes();
 
             recipeList.Add(mangoCake);
             recipeList.Add(powChicken);
             recipeList.Add(springRolls);
             recipeList.Add(ribs);
 
-            // this line might cause a lot of issues
-            // not sure how to load from relative path
-            //mangoPic = Image.FromFile("\\Images\\pudding_cake.jpg");
+            InitializeUser();
+            userList.Add(mainUser);
         }
 
         // fill in sample recipe info
@@ -52,45 +55,63 @@ namespace HCI_Cooking
         {
             /*
              * Mango Pudding Cake Recipe information
-             * 
              */
             mangoCake.ID = 1; //Mango Cake id
             mangoCake.Title = "Mango Pudding Cake";
             mangoCake.Description = "\nVanilla pudding gives the cake a nice moist taste.\n";
             mangoCake.CookTime = "1 hour";
+            mangoCake.Difficulty = 2;
             
             //list of mango pudding cake
-            mangoCake.Tools.Add("Mixer");
-            mangoCake.Tools.Add("Oven");
-            mangoCake.Tools.Add("Mixing bowl");
-            mangoCake.Tools.Add("2 1 1/2 inch Cake Pans");
-            mangoCake.Tools.Add("Measuring Cups");
-            mangoCake.Tools.Add("Blender");
+            mangoCake.Tools.Add("Mixer\n");
+            mangoCake.Tools.Add("Oven\n");
+            mangoCake.Tools.Add("Mixing bowl\n");
+            mangoCake.Tools.Add("2 1 1/2 inch Cake Pans\n");
+            mangoCake.Tools.Add("Measuring Cups\n");
+            mangoCake.Tools.Add("Blender\n");
             
             //list of mango pudding cake ingredients
-            mangoCake.Ingredients.Add("2 1/2 cup Sugar");
-            mangoCake.Ingredients.Add("2 1/2 cup Flour");
-            mangoCake.Ingredients.Add("1/2 Baking Powder");
-            mangoCake.Ingredients.Add("3 cups Mango");
-            mangoCake.Ingredients.Add("1/2 cup Butter");
-            mangoCake.Ingredients.Add("3 cups Milk");
-            mangoCake.Ingredients.Add("6 Eggs");
+            mangoCake.Ingredients.Add("2 1/2 cup Sugar\n");
+            mangoCake.Ingredients.Add("2 1/2 cup Flour\n");
+            mangoCake.Ingredients.Add("1/2 Baking Powder\n");
+            mangoCake.Ingredients.Add("3 cups Mango\n");
+            mangoCake.Ingredients.Add("1/2 cup Butter\n");
+            mangoCake.Ingredients.Add("3 cups Milk\n");
+            mangoCake.Ingredients.Add("6 Eggs\n");
+
+            mangoCake.Skills.Add("Mixing");
+            mangoCake.Skills.Add("Decorating");
+            mangoCake.Skills.Add("Folding");
+            mangoCake.Skills.Add("Whisking");
 
             //list of mango pudding cake steps
 
             //pudding base instructions
-            mangoCake.Steps.Add("Pudding base. \n 1. Blend mango in a blender until smooth.");
-            mangoCake.Steps.Add("2. Add 2 cups of sugar and 2 cups of milk and in the mixing bowl. Mix well.");
-            mangoCake.Steps.Add("3. Chill the pudding in the fridge for 30 minutes. Start on the cake base.");
+            mangoCake.Steps.Add("Pudding base. \n\n1. Blend mango in a blender until smooth.");
+            mangoCake.Steps.Add("2. Add 2 cups of sugar, 2 cups of milk, and the blended mango together in the mixing bowl. Mix well.");
+            mangoCake.Steps.Add("3. Chill the pudding in the fridge for 30 minutes. Start on the cake base. \n");
 
             //cake base instructions
-            mangoCake.Steps.Add("Cake base \n 1. Add sugar, flour and baking powder in the mixing bowl. Mix well.");
+            mangoCake.Steps.Add("Cake base \n\n1. Add sugar, flour and baking powder in the mixing bowl. Mix well.");
             mangoCake.Steps.Add("2. Melt the butter and add it in the mixing bowl.");
             mangoCake.Steps.Add("3. Crack the eggs carefully, making sure you don't get any eggshells in the bowl.");
             mangoCake.Steps.Add("4. Mix the ingredients together.");
             mangoCake.Steps.Add("5. Pour mixture in to cake pans. Bake cakes at 450F for 20 minutes.");
+            mangoCake.Steps.Add("6. Once the cakes are baked. Take them out of the pan and spread a layer of the mango pudding on top of one cake. Place other cake on top. The cake is now ready to serve.");
 
-            mangoCake.Steps.Add("6.Once the cakes are baked. Take them out of the pan and spread a layer of the mango pudding on top of one cake. Place other cake on top. The cake is now ready to serve.");
+            //mango pudding photos
+            mangoCake.MainPicture = HCI_Cooking.Properties.Resources.mango_cake;
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.a1_blend));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.a2_mix));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.a3_chill));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b1_mix));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b2_butter));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b3_eggs));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b4_mix));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b5_bake));
+            mangoCake.StepPictures.Add(new Bitmap (HCI_Cooking.Properties.Resources.b6_cakedone));
+            
+
 
             /*
              *  Pow Chicken Recipe Information 
@@ -98,20 +119,26 @@ namespace HCI_Cooking
             powChicken.Title = "POW Chicken";
             powChicken.CookTime = "30 minutes";
             powChicken.Description = "\nNice chispy chicken rubbed in delicious spices.\n";
-            
+            powChicken.Difficulty = 1;
+
             //Pow Chicken's required tools
-            powChicken.Tools.Add("Stove");
-            powChicken.Tools.Add("Frying Pan");
-            powChicken.Tools.Add("Knife");
-            powChicken.Tools.Add("Mixing Bowl");
+            powChicken.Tools.Add("Stove\n");
+            powChicken.Tools.Add("Frying Pan\n");
+            powChicken.Tools.Add("Knife\n");
+            powChicken.Tools.Add("Mixing Bowl\n");
+
+            powChicken.Skills.Add("Marinating");
+            powChicken.Skills.Add("Frying");
+            powChicken.Skills.Add("Mixing");
+            powChicken.Skills.Add("Cleaning");
 
             //Pow Chicken's ingredients 
-            powChicken.Ingredients.Add("Olive Oil");
-            powChicken.Ingredients.Add("4 Basil Leaves");
-            powChicken.Ingredients.Add("Pinch of Salt");
-            powChicken.Ingredients.Add("Cumin");
-            powChicken.Ingredients.Add("Chicken Breast");
-            powChicken.Ingredients.Add("1/2 cup Bread Crumbs");
+            powChicken.Ingredients.Add("Olive Oil\n");
+            powChicken.Ingredients.Add("4 Basil Leaves\n");
+            powChicken.Ingredients.Add("Pinch of Salt\n");
+            powChicken.Ingredients.Add("Cumin\n");
+            powChicken.Ingredients.Add("Chicken Breast\n");
+            powChicken.Ingredients.Add("1/2 cup Bread Crumbs\n");
 
             //Pow Chicken Recipe Steps
             powChicken.Steps.Add("1. Combine basil, salt, bread crumbs, and cumin in a small bowl. Mix together.");
@@ -119,15 +146,64 @@ namespace HCI_Cooking
             powChicken.Steps.Add("3. Drizzle olive oil in to frying pan");
             powChicken.Steps.Add("4. Fry chicken breast until the outside is white. The chicken is ready.");
 
+            //Pow Chicken Photo
+            powChicken.MainPicture = HCI_Cooking.Properties.Resources.pow_chicken;
 
+
+            /*
+             *  Spring Rolls Recipe Information 
+             */
             springRolls.Title = "Spring Rolls";
-            springRolls.Description = "\nCrispy fried rolls filled with meats and veggies. A delicious asian dish \nperfect for any event.\n";
+            springRolls.Description = "\nCrispy fried rolls filled with meats and veggies. A delicious asian dish \nperfect for any event.";
             springRolls.CookTime = "45 minutes";
+            springRolls.Difficulty = 2;
+            springRolls.MainPicture = HCI_Cooking.Properties.Resources.spring_rolls;
 
+            springRolls.Tools.Add("filler");
+            springRolls.Skills.Add("Breading");
+            springRolls.Skills.Add("Degreasing");
+            springRolls.Skills.Add("Whisking");
+            springRolls.Ingredients.Add("filler");
+
+            springRolls.Steps.Add("1. Fill in info!");
+            springRolls.Steps.Add("2. Empty...");
+
+            /*
+             *  Ribs Recipe Information 
+             */
             ribs.Title = "Lamb Ribs";
+            ribs.Description = "\nJuicy and delicious rack of lambs ribs, rubbed with amazing\nspices.";
+            ribs.CookTime = " 55 minutes";
+            ribs.Difficulty = 3;
+            ribs.MainPicture = HCI_Cooking.Properties.Resources.ribs;
+
+            ribs.Tools.Add("filler");
+            ribs.Skills.Add("Marinating");
+            ribs.Skills.Add("Glazing");
+            ribs.Ingredients.Add("filler");
+
+            ribs.Steps.Add("1. Ribs are delicious");
+            
+        }
+
+        private void InitializeUser()
+        {
+            mainUser.Accomplishments.Add("I can make waffles!");
+            mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.waffle_badge));
+
+            mainUser.Accomplishments.Add("Made my very first recipe");
+
+            mainUser.BadgesEarned = mainUser.Accomplishments.Count();
+
+            mainUser.LessonsLearnt = 3;
+
+            mainUser.MealsCooked = 1; 
+
+            mainUser.KnownSkills.Add("Mixing");
+            mainUser.KnownSkills.Add("Decorating");
+            mainUser.KnownSkills.Add("Breading");
 
 
-            //mangoCake.MainPicture = mangoPic;
         }
 
         // return the recipe with id
@@ -144,5 +220,7 @@ namespace HCI_Cooking
             else
                 return target;
         }
+
+        
     }
 }

@@ -19,8 +19,11 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class CookingTechniqueLessons : ISwitchable
     {
-        public CookingTechniqueLessons()
+        Recipe currentRecipe;
+
+        public CookingTechniqueLessons(Recipe rec)
         {
+            currentRecipe = rec;
             InitializeComponent();
         }
 
@@ -34,13 +37,13 @@ namespace HCI_Cooking.Pages
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)
         {
-            //Switcher.Switch(new RecipeOverview()); //by default I have set this to recipe overview. 
+            Switcher.Switch(new RecipeOverview(currentRecipe)); //by default I have set this to recipe overview. 
                                                  
         }
 
         private void imgLessonIV_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Switcher.Switch(new CookingLessonWhisking());
+            Switcher.Switch(new CookingLessonWhisking(currentRecipe));
         }
 
     }
