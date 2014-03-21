@@ -25,30 +25,34 @@
         </Canvas>
      
         <Grid Height="216" HorizontalAlignment="Left" Margin="26,455,0,0" Name="grdBadgeHolder" VerticalAlignment="Top" Width="949">
-            <Canvas Height="91" HorizontalAlignment="Left" Margin="14,6,0,0" Name="canvAchieve1" VerticalAlignment="Top" Width="277">
+            <Canvas Height="91" HorizontalAlignment="Left" Margin="14,6,0,0" Name="canvAchieve1" VerticalAlignment="Top" Width="277" Visibility="Hidden">
                 <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve1" Stretch="Fill" Width="88" />
                 <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="29" Content="Label" Height="28" Name="lblAchieve1" Width="161" />
             </Canvas>
-            <Canvas Height="91" HorizontalAlignment="Left" Margin="14,111,0,0" Name="canvAchieve2" VerticalAlignment="Top" Width="277">
+            <Canvas Height="91" HorizontalAlignment="Left" Margin="14,111,0,0" Name="canvAchieve2" VerticalAlignment="Top" Width="277" Visibility="Hidden">
                 <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve2" Stretch="Fill" Width="88" />
+                <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="28" Content="Label" Height="28" Name="lblAchieve2" Width="161" />
+            </Canvas>
+    
+
+            <Canvas Height="91" HorizontalAlignment="Left" Margin="329,10,0,0" Name="canvAchieve3" VerticalAlignment="Top" Width="277" Visibility="Hidden">
+                <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve3" Stretch="Fill" Width="88" />
                 <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="28" Content="Label" Height="28" Name="lblAchieve3" Width="161" />
             </Canvas>
-            <Canvas Height="91" HorizontalAlignment="Left" Margin="329,111,0,0" Name="canvAchieve4" VerticalAlignment="Top" Width="277">
+            
+            <Canvas Height="91" HorizontalAlignment="Left" Margin="329,111,0,0" Name="canvAchieve4" VerticalAlignment="Top" Width="277" Visibility="Hidden">
                 <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve4" Stretch="Fill" Width="88" />
-                <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="28" Content="Label" Height="28" Name="lblAchieve7" Width="161" />
+                <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="28" Content="Label" Height="28" Name="lblAchieve4" Width="161" />
             </Canvas>
-            <Canvas Height="91" HorizontalAlignment="Left" Margin="634,111,0,0" Name="canvAchieve6" VerticalAlignment="Top" Width="277">
+            <Canvas Height="91" HorizontalAlignment="Left" Margin="634,11,0,0" Name="canvAchieve5" VerticalAlignment="Top" Width="277" Visibility="Hidden">
+                <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve5" Stretch="Fill" Width="88" />
+                <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="28" Content="Label" Height="28" Name="lblAchieve5" Width="161" />
+            </Canvas>
+            <Canvas Height="91" HorizontalAlignment="Left" Margin="634,111,0,0" Name="canvAchieve6" VerticalAlignment="Top" Width="277" Visibility="Hidden">
                 <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve6" Stretch="Fill" Width="88" />
-                <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="28" Content="Label" Height="28" Name="lblAchieve11" Width="161" />
+                <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="28" Content="Label" Height="28" Name="lblAchieve6" Width="161" />
             </Canvas>
         </Grid>
-        <Canvas Height="91" HorizontalAlignment="Left" Margin="355,461,0,0" Name="canvAchieve3" VerticalAlignment="Top" Width="277">
-            <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve3" Stretch="Fill" Width="88" />
-            <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="29" Content="Label" Height="28" Name="lblAchieve5" Width="161" />
-        </Canvas>
-        <Canvas Height="91" HorizontalAlignment="Left" Margin="660,461,0,0" Name="canvAchieve5" VerticalAlignment="Top" Width="277">
-            <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve5" Stretch="Fill" Width="88" />
-            <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="29" Content="Label" Height="28" Name="lblAchieve9" Width="161" />
-        </Canvas>
+        
     </Grid>
 </UserControl>
