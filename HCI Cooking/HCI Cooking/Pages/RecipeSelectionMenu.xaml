@@ -52,35 +52,26 @@
         </StackPanel>
         <Grid Name="gridRecipeDisplay" Margin="224,12,12,29" Background="#FFD8E4FC">
             <Label Content="RECOMMENDED RECIPES" FontFamily="Leelawadee" FontSize="30" Height="47" HorizontalAlignment="Left" Margin="223,6,0,0" Name="lblRecRecipes" VerticalAlignment="Top" Width="352" />
-            <Border BorderBrush="Yellow" BorderThickness="5" Height="275" HorizontalAlignment="Left" Margin="18,65,0,0" Name="border1" VerticalAlignment="Top" Width="347">
-                <Border BorderBrush="Yellow" BorderThickness="5" Height="275" Name="border2" Width="347"></Border>
-            </Border>
-            <Canvas Height="275" Name="canvRecipe1" Width="347" Visibility="Hidden" Margin="19,66,398,318">
-                <TextBlock Text="Textblock" Canvas.Left="4" Canvas.Top="188" Height="81" Name="txtBlkRecipe1" Width="337" Background="White" />
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="18,59,0,0" Name="canvRecipe1" VerticalAlignment="Top" Width="347" Visibility="Hidden">
+                <TextBlock Text="Textblock" Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe1" Width="347" Background="White" />
                 <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrRecipe1" Width="347" Background="#FFBF7CA6"></Border>
                 <Image Height="177" Name="img1" Stretch="Fill" Width="337" Canvas.Top="5" Canvas.Left="5" />
             </Canvas>
-            <Border BorderBrush="Green" BorderThickness="5" Height="275" HorizontalAlignment="Left" Margin="382,66,0,0" Name="border3" VerticalAlignment="Top" Width="347">
-                <Canvas Height="275" Name="canvRecipe2" Width="347" Visibility="Hidden">
-                    <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe2" Text="TextBlock" Width="347" Background="White" Foreground="Black" />
-                    <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrRecipe2" Width="347" Background="#FFBF7CA6"></Border>
-                    <Image Canvas.Left="5" Canvas.Top="6" Height="177" Name="img2" Stretch="Fill" Width="337" />
-                </Canvas>
-            </Border>
-            <Border BorderBrush="Yellow" BorderThickness="5" Height="275" Name="border5" Width="347" Margin="382,356,35,28">
-                <Canvas Height="275" Name="canvRecipe4" Width="347" Visibility="Hidden">
-                    <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe4" Text="TextBlock" Width="347" Background="White" />
-                    <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Height="187" Name="brdrRecipe4" Width="347" Canvas.Left="0" Canvas.Top="0"></Border>
-                    <Image Canvas.Left="5" Canvas.Top="5" Height="177" Name="img4" Stretch="Fill" Width="337" />
-                </Canvas>
-            </Border>
-            <Border BorderBrush="Yellow" BorderThickness="5" Height="275" Name="border4" Width="347" Margin="19,356,398,28">
-                <Canvas Height="275" Name="canvRecipe3" Width="347" Visibility="Hidden">
-                    <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe3" Text="TextBlock" Width="347" Background="White" />
-                    <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Height="187" Name="brdrRecipe3" Width="347" Canvas.Left="0" Canvas.Top="0"></Border>
-                    <Image Canvas.Left="5" Canvas.Top="5" Height="177" Name="img3" Stretch="Fill" Width="337" />
-                </Canvas>
-            </Border>
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="390,59,0,0" Name="canvRecipe2" VerticalAlignment="Top" Width="347" Visibility="Hidden">
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe2" Text="TextBlock" Width="347" Background="White" Foreground="Black" />
+                <Border BorderBrush="White" BorderThickness="5" Canvas.Left="0" Canvas.Top="0" Height="187" Name="brdrRecipe2" Width="347" Background="#FFBF7CA6"></Border>
+                <Image Canvas.Left="5" Canvas.Top="6" Height="177" Name="img2" Stretch="Fill" Width="337" />
+            </Canvas>
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="18,349,0,0" Name="canvRecipe3" VerticalAlignment="Top" Width="347" Visibility="Hidden">
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe3" Text="TextBlock" Width="347" Background="White" />
+                <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Height="187" Name="brdrRecipe3" Width="347" Canvas.Left="0" Canvas.Top="0"></Border>
+                <Image Canvas.Left="5" Canvas.Top="5" Height="177" Name="img3" Stretch="Fill" Width="337" />
+            </Canvas>
+            <Canvas Height="275" HorizontalAlignment="Left" Margin="390,349,0,0" Name="canvRecipe4" VerticalAlignment="Top" Width="347" Visibility="Hidden">
+                <TextBlock Canvas.Left="0" Canvas.Top="202" Height="73" Name="txtBlkRecipe4" Text="TextBlock" Width="347" Background="White"/>
+                <Border Background="#FFBF7CA6" BorderBrush="White" BorderThickness="5" Height="187" Name="brdrRecipe4" Width="347" Canvas.Left="0" Canvas.Top="0"></Border>
+                <Image Canvas.Left="5" Canvas.Top="5" Height="177" Name="img4" Stretch="Fill" Width="337" />
+            </Canvas>
         </Grid>
         <Button Content="Back" Height="47" HorizontalAlignment="Left" Margin="13,12,0,0" Name="btnRSMBack" VerticalAlignment="Top" Width="75" Click="btnRSMBack_Click" />
         <CheckBox Content="Show All" Height="16" HorizontalAlignment="Left" Margin="141,49,0,0" Name="chkBxAll" VerticalAlignment="Top" Width="70" IsChecked="True" />
