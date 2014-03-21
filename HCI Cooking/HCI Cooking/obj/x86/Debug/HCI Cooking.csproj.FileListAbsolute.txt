@@ -102,3 +102,5 @@ V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI_Cooking.Propertie
 V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
 V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe.manifest
 V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.application
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
+D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb

@@ -27,6 +27,8 @@ namespace HCI_Cooking.Pages
         Database recipeDB;
         int numRecipes;
         List<Canvas> recipeBlocks;      // a list of the GUI recipe containers
+        List<String> activeFilters;
+        List<CheckBox> checkList;
 
         // constructor
         public RecipeSelectionMenu()
@@ -36,6 +38,8 @@ namespace HCI_Cooking.Pages
             recipeDB = new Database();
             numRecipes = recipeDB.recipeList.Count();
             recipeBlocks = new List<Canvas>();
+            activeFilters = new List<String>();
+            checkList = new List<CheckBox>();
 
             // add recipe containers to a list
             recipeBlocks.Add(canvRecipe1);
@@ -43,30 +47,47 @@ namespace HCI_Cooking.Pages
             recipeBlocks.Add(canvRecipe3);
             recipeBlocks.Add(canvRecipe4);
 
-            LoadRecipes();
+            // add all skill checkboxes to a list
+            checkList.Add(chkbxBread);
+            checkList.Add(chkbxDeco);
+            checkList.Add(chkBxDeglaze);
+            checkList.Add(chkBxDegrease);
+            checkList.Add(chkbxFolding);
+            checkList.Add(chkbxGlaze);
+            checkList.Add(chkBxKneeding);
+            checkList.Add(chkbxMarinate);
+            checkList.Add(chkbxMixing);
+            checkList.Add(chkBxWhisking);
 
-            // set click event for the recipe containers
-            canvRecipe1.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
-            canvRecipe2.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
-            canvRecipe3.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
-            canvRecipe4.MouseLeftButtonDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
+            // assign and load all recipes
+            for (int i = 0; i < numRecipes; i++)
+                recipeDB.recipeList[i].ID = i;
+            LoadRecipes(numRecipes);
 
-            //CheckBoxLogic();
-            chkBxAll.Click += new RoutedEventHandler(chkBxAll_Click);
+            LoadHandlers();
+            
         }
 
 
-        // load the 4 recipes into the recipe containers
-        private void LoadRecipes()
+        // load recipes into the recipe containers
+        // the number loaded depends on the filters
+        private void LoadRecipes(int numToLoad)
         {
             Recipe rec;
             TextBlock txtBlk;
             Border brdr;
             Image img;
 
-            for (int i = 0; i < numRecipes; i++)
+            // clear all containers to begin with
+            foreach (Canvas block in recipeBlocks)
             {
-                rec = recipeDB.recipeList[i];
+                block.Visibility = Visibility.Hidden;
+            }
+
+            // load the given number of recipes accord to their id;
+            for (int i = 0; i < numToLoad; i++)
+            {
+                rec = recipeDB.GetRecipe(i);
                 txtBlk = (TextBlock)recipeBlocks[i].Children[0];
                 brdr = (Border)recipeBlocks[i].Children[1];
                 img = (Image)recipeBlocks[i].Children[2];
@@ -94,41 +115,147 @@ namespace HCI_Cooking.Pages
 
                 // load main picture for recipe
                 img.Source = ImageLoader.ToWPFImage(rec.MainPicture);
+
+                // show recipe block
+                recipeBlocks[i].Visibility = Visibility.Visible;
             }
         }
 
 
-        // the logic for the checkbox filtering
-        private void CheckBoxLogic()
+        // load event handlers
+        private void LoadHandlers()
         {
-            throw new NotImplementedException();
+            // click events for recipe containers
+            foreach (Canvas block in recipeBlocks)
+            {
+                block.MouseDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
+            }
+
+            // click events for skill checkboxes
+            foreach (CheckBox box in checkList)
+            {
+                box.Click += new RoutedEventHandler(filterSkill_Click);
+            }
+
+            // check event for show-all box
+            chkBxAll.Checked += new RoutedEventHandler(chkBxAll_Updated);
+            chkBxAll.Unchecked += new RoutedEventHandler(chkBxAll_Updated);
+        }
+
+
+        // update the recipes shown to only include those in filter
+        private void UpdateFiltering()
+        {
+            int id = 0;
+            bool include;
+
+            // check which recipes belong with current filters
+            foreach (Recipe rec in recipeDB.recipeList)
+            {
+                include = true;
+                // test all skills against the recipe
+                foreach (String skill in activeFilters)
+                {
+                    if (!rec.Skills.Contains(skill))
+                    {   // recipe does not contain this skill
+                        include = false;
+                        break;
+                    }
+                }
+                // assign ID if recipe passes filter tesst
+                if (include == true)
+                {
+                    rec.ID = id;
+                    id++;
+                }
+                else
+                    rec.ID = -1;
+            }
+
+            // load id # of recipes
+            LoadRecipes(id);
+        }
+
+        // update the Show all checkbox depending on the current filters
+        private void UpdateAllBox(string status)
+        {
+            // a skill filter is checked, so uncheck all box
+            if (status.Equals("check"))
+                chkBxAll.IsChecked = false;
+            else
+            {   // a skill filter unchecked, if it was last filter, recheck all box
+                if (activeFilters.Count == 0)
+                    chkBxAll.IsChecked = true;
+            }
+
+
         }
 
 
 // ***********Event controllers******
         /*
-         * Event handler for the check all checkbox
+         * Event handler for the show-all checkbox
          * If the All checkbox is checked then all recipes will be visible,
          * if it's not checked then no recipes will be shown
          */ 
-        void chkBxAll_Click(object sender, RoutedEventArgs e)
+        void chkBxAll_Updated(object sender, RoutedEventArgs e)
         {
-            CheckBox thisChbx = (CheckBox)sender;
-            if (thisChbx.IsChecked == false)
+            // show-all got unchecked
+            if (chkBxAll.IsChecked == false)
             {
-                canvRecipe1.Visibility = Visibility.Hidden; //hides first recipe box
-                canvRecipe2.Visibility = Visibility.Hidden; //hides second recipe box
-                canvRecipe3.Visibility = Visibility.Hidden; //...
-                canvRecipe4.Visibility = Visibility.Hidden;
+                // get rid of all recipes by changing id to -1 
+                foreach (Recipe rec in recipeDB.recipeList)
+                {
+                    rec.ID = -1;
+                }
+
+                // load 0 recipes (this gets rid of existing ones)
+                LoadRecipes(0);
             }
-            else
+            else // show-all got checked
             {
-                canvRecipe1.Visibility = Visibility.Visible;
-                canvRecipe2.Visibility = Visibility.Visible;
-                canvRecipe3.Visibility = Visibility.Visible;
-                canvRecipe4.Visibility = Visibility.Visible;
+                int index = 0;
+                // get rid of all recipes by changing id to -1 
+                foreach (Recipe rec in recipeDB.recipeList)
+                {
+                    rec.ID = index;
+                    index++;
+                }
+
+                // load all recipes
+                LoadRecipes(recipeDB.recipeList.Count());
+
+                // uncheck all checkboxes
+                foreach (CheckBox box in checkList)
+                {
+                    box.IsChecked = false;
+                }
             }
         }
+
+
+        // event handler when a user clicks on a skill checkbox
+        // show recipes that only match ALL the filters applied
+        void filterSkill_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+
+            // box got checked
+            if (box.IsChecked == true)
+            {
+                activeFilters.Add((String)box.Content);
+                UpdateAllBox("check");
+                UpdateFiltering();
+            }
+            else // box got unchecked
+            {
+                activeFilters.Remove((String)box.Content);
+                UpdateAllBox("uncheck");
+                UpdateFiltering();
+            }
+
+        }
+
 
 
         //Event handler for recipe click
@@ -138,14 +265,13 @@ namespace HCI_Cooking.Pages
             Canvas clickedRecipe = (Canvas)sender;
 
             if (clickedRecipe == canvRecipe1)
-                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[0]));
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(0)));
             else if (clickedRecipe == canvRecipe2)
-                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[1]));
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(1)));
             else if (clickedRecipe == canvRecipe3)
-                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[2]));
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(2)));
             else if (clickedRecipe == canvRecipe4)
-                Switcher.Switch(new RecipeOverview(recipeDB.recipeList[3]));
-
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(3)));
         }
 
 
@@ -154,16 +280,7 @@ namespace HCI_Cooking.Pages
             Switcher.Switch(new MainMenu());
         }
 
-        private void chkbxMixing_Checked(object sender, RoutedEventArgs e)
-        {
-            canvRecipe1.Visibility = Visibility.Hidden;
-            chkBxAll.IsChecked = false;
-        }
-
-        private void chkbxMixing_Unchecked(object sender, RoutedEventArgs e)
-        {
-            canvRecipe1.Visibility = Visibility.Visible;
-        }
+        
 
 
         #region ISwitchable Members
