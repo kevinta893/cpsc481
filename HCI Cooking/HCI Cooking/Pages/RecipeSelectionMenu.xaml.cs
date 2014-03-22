@@ -100,7 +100,7 @@ namespace HCI_Cooking.Pages
                 switch (rec.Difficulty)
                 {
                     case 1:
-                        brdr.BorderBrush = Brushes.Green;
+                        brdr.BorderBrush = Brushes.LightGreen;
                         break;
                     case 2:
                         brdr.BorderBrush = Brushes.Yellow;
@@ -281,9 +281,6 @@ namespace HCI_Cooking.Pages
         {
             Switcher.Switch(new MainMenu());
         }
-
-        
-
 
         #region ISwitchable Members
         public void UtilizeState(object state)

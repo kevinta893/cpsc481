@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="1000">
+      d:DesignHeight="700" d:DesignWidth="1000" Background="#81D8E4FC">
 
     <Grid Name="grdRecipeOverview">
         <Border BorderBrush="White" BorderThickness="5" Background="#FFBF7CA6" Height="264" HorizontalAlignment="Left" Margin="594,12,0,0" Name="imgRecipePreview" VerticalAlignment="Top" Width="385">

@@ -20,10 +20,15 @@ namespace HCI_Cooking.Pages
     public partial class CookingLessonFolding : ISwitchable
     {
         Recipe currentRecipe;
+        Database userDb;
+        User mainUser;
 
         public CookingLessonFolding(Recipe rec)
         {
             currentRecipe = rec;
+            userDb = Database.getInstance();
+            mainUser = userDb.userList[0];
+
             InitializeComponent();
 
             txtBlkChapOverview.Text = "Folding is the process of both removing air bubbles from\r\n your dough and mixing ingredients together. " +
@@ -44,12 +49,44 @@ namespace HCI_Cooking.Pages
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)
         {
+            bool hasLearntLesson = false;
+
+            foreach (string skill in mainUser.KnownSkills)
+            {
+                if (skill == "Folding")
+                {
+                    hasLearntLesson = true;
+                }
+            }
+
+            if (hasLearntLesson == false)
+            {
+                mainUser.KnownSkills.Add("Folding");
+                mainUser.LessonsLearnt += 1;
+            }
+
             Switcher.Switch(new RecipeOverview(currentRecipe)); //by default I have set this to recipe overview. 
                                                  
         }
 
         private void imgLessonIV_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            bool hasLearntLesson = false;
+
+            foreach (string skill in mainUser.KnownSkills)
+            {
+                if (skill == "Folding")
+                {
+                    hasLearntLesson = true;
+                }
+            }
+
+            if (hasLearntLesson == false)
+            {
+                mainUser.KnownSkills.Add("Folding");
+                mainUser.LessonsLearnt += 1;
+            }
+
             Switcher.Switch(new CookingLessonWhisking(currentRecipe));
         }
 

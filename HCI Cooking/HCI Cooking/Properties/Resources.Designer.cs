@@ -163,6 +163,26 @@ namespace HCI_Cooking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap benny {
+            get {
+                object obj = ResourceManager.GetObject("benny", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap first_recipe {
+            get {
+                object obj = ResourceManager.GetObject("first_recipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mango_cake {
             get {
                 object obj = ResourceManager.GetObject("mango_cake", resourceCulture);

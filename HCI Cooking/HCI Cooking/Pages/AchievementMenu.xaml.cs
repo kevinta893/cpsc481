@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace HCI_Cooking.Pages
 {
@@ -28,6 +29,7 @@ namespace HCI_Cooking.Pages
             mainUser = userDB.userList[0];
 
             InitializeComponent();
+            imgUser.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.benny));
             LoadStats();
             LoadAchievements();
 
@@ -47,7 +49,7 @@ namespace HCI_Cooking.Pages
         private void LoadAchievements()
         {
             Canvas achieveCanv;
-            Image achieveImg = null;
+            System.Windows.Controls.Image achieveImg = null;
             Label achieveLbl = null;
 
             for (int i = 0; i < mainUser.Accomplishments.Count(); i++)
@@ -57,9 +59,9 @@ namespace HCI_Cooking.Pages
                 //Create image and label placement in the 
                 for (int item = 0; item < achieveCanv.Children.Count; item++)
                 {
-                    if (achieveCanv.Children[item] is Image)
+                    if (achieveCanv.Children[item] is System.Windows.Controls.Image)
                     {
-                        achieveImg = (Image)achieveCanv.Children[item];
+                        achieveImg = (System.Windows.Controls.Image)achieveCanv.Children[item];
                     }
                     else if (achieveCanv.Children[item] is Label)
                     {

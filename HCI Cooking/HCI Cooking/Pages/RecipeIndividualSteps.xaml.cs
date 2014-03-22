@@ -118,6 +118,8 @@ namespace HCI_Cooking.Pages
                 if (stepIndex == lastStep)
                 {
                     btnIndivRecipeNext.IsEnabled = false;
+                    
+                    //checks to see if the user has gain this achievement yet
                     foreach (string badge in mainUser.Accomplishments)
                     {
                         if (badge == "First Mango Pudding!")
@@ -130,7 +132,8 @@ namespace HCI_Cooking.Pages
                     {
                         mainUser.Accomplishments.Add("First Mango Pudding!");
                         mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
-                        mainUser.BadgesEarned += 1; 
+                        mainUser.BadgesEarned += 1;
+                        MessageBox.Show("New achievement!");
                     }
 
                     mainUser.MealsCooked += 1;

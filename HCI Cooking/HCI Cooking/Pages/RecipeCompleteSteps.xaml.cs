@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace HCI_Cooking.Pages
 {
@@ -22,6 +23,8 @@ namespace HCI_Cooking.Pages
         Recipe aRecipe;
         RecipeOverview overview;
         RecipeIndividualSteps indivStep;          // used to go back to the previous indiv step if toggled again
+        Database userDb;
+        User mainUser;
 
         public RecipeCompleteSteps(RecipeOverview parentPage, RecipeIndividualSteps indivPage, Recipe rec)
         {
@@ -30,6 +33,8 @@ namespace HCI_Cooking.Pages
             overview = parentPage;
             indivStep = indivPage;
             aRecipe = rec;
+            userDb = Database.getInstance();
+            mainUser = userDb.userList[0];
 
             ShowAllSteps();
         }
@@ -65,6 +70,25 @@ namespace HCI_Cooking.Pages
         // go back to recipe overview page
         private void btnRecipeCompBack_Click(object sender, RoutedEventArgs e)
         {
+            bool hasAchievement = false;
+
+            foreach (string badge in mainUser.Accomplishments)
+            {
+                if (badge == "First Mango Pudding!")
+                {
+                    hasAchievement = true;
+                }
+            }
+
+            if (hasAchievement == false)
+            {
+                mainUser.Accomplishments.Add("First Mango Pudding!");
+                mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
+                mainUser.BadgesEarned += 1;
+                MessageBox.Show("New achievement!");
+            }
+
+            mainUser.MealsCooked += 1;
             Switcher.Switch(overview);
         }
     }

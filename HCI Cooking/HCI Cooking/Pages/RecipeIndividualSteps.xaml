@@ -6,7 +6,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1000">
 
-    <Grid Name="grdRIndiSteps">
+    <Grid Name="grdRIndiSteps" Background="#81D8E4FC">
         <Button Content="Complete Steps" Height="48" HorizontalAlignment="Left" Margin="832,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="133" Background="#FFC1C1FF" Click="btnIndiToogleView_Click" />
         <Button Content="&lt;--" Height="249" HorizontalAlignment="Left" Margin="29,407,0,0" Name="btnIndivRecipePrev" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeBack_Click" FontSize="26" IsEnabled="False" />
         <Button Content="--&gt;" Height="249" HorizontalAlignment="Left" Margin="864,407,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeNext_Click" FontSize="26" />

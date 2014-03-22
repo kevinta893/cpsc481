@@ -20,10 +20,15 @@ namespace HCI_Cooking.Pages
     public partial class CookingLessonWhisking : UserControl
     {
         Recipe aRecipe;
+        Database userDb;
+        User mainUser; 
 
         public CookingLessonWhisking(Recipe rec)
         {
             aRecipe = rec;
+            userDb = Database.getInstance();
+            mainUser = userDb.userList[0];
+
             InitializeComponent();
 
             txtBlkChapOverview.Text = "Here you will be learning about whisking!\r\n" +
@@ -38,11 +43,43 @@ namespace HCI_Cooking.Pages
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)
         {
+            bool hasLearntLesson = false;
+
+            foreach (string skill in mainUser.KnownSkills)
+            {
+                if (skill == "Whisking")
+                {
+                    hasLearntLesson = true;
+                }
+            }
+
+            if (hasLearntLesson == false)
+            {
+                mainUser.KnownSkills.Add("Whisking");
+                mainUser.LessonsLearnt += 1;
+            }
+
             Switcher.Switch(new RecipeOverview(aRecipe));
         }
 
         private void imgLessonIII_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            bool hasLearntLesson = false;
+
+            foreach (string skill in mainUser.KnownSkills)
+            {
+                if (skill == "Whisking")
+                {
+                    hasLearntLesson = true;
+                }
+            }
+
+            if (hasLearntLesson == false)
+            {
+                mainUser.KnownSkills.Add("Whisking");
+                mainUser.LessonsLearnt += 1;
+            }
+
             Switcher.Switch(new CookingLessonFolding(aRecipe));
         }
     }
