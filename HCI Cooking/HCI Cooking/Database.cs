@@ -202,7 +202,7 @@ namespace HCI_Cooking
         private void InitializeUser()
         {
             mainUser.Accomplishments.Add("I can make waffles!");
-            mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.waffle_badge));
+            mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.waffle_badge_wbg));
 
             mainUser.Accomplishments.Add("Made my very first recipe");
             mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.first_recipe));

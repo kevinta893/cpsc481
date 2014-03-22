@@ -19,14 +19,16 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class CookingLessonTemplate : UserControl
     {
-        public CookingLessonTemplate()
+        Recipe aRecipe;
+        public CookingLessonTemplate(Recipe rec)
         {
+            aRecipe = rec;
             InitializeComponent();
         }
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)
         {
-            //Switcher.Switch(new RecipeOverview(aRecipe));
+            Switcher.Switch(new RecipeOverview(aRecipe));
         }
     }
 }

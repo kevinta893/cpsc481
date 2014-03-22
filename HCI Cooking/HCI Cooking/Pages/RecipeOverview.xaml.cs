@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace HCI_Cooking.Pages
 {
@@ -20,9 +21,13 @@ namespace HCI_Cooking.Pages
     public partial class RecipeOverview : ISwitchable
     {
         Recipe currentRecipe;
-
+        Database userDb;
+        User mainUser;
         public RecipeOverview(Recipe rec)
         {
+            userDb = Database.getInstance();
+            mainUser = userDb.userList[0];
+         
             InitializeComponent();
 
             currentRecipe = rec;
@@ -99,7 +104,7 @@ namespace HCI_Cooking.Pages
         private void LoadRecipeSkills()
         {
             Grid grdSkill;
-            Image imgSkill = null;
+            System.Windows.Controls.Image imgSkill = null;
             Label lblSkill = null;
             Button btnSkill = null;
 
@@ -111,8 +116,8 @@ namespace HCI_Cooking.Pages
                 // get pointers for each skill item
                 for (int item = 0; item < grdSkill.Children.Count; item++)
                 {
-                    if (grdSkill.Children[item] is Image)
-                        imgSkill = (Image)grdSkill.Children[item];
+                    if (grdSkill.Children[item] is System.Windows.Controls.Image)
+                        imgSkill = (System.Windows.Controls.Image)grdSkill.Children[item];
                     else if (grdSkill.Children[item] is Label)
                         lblSkill = (Label)grdSkill.Children[item];
                     else if (grdSkill.Children[item] is Button)
@@ -121,9 +126,17 @@ namespace HCI_Cooking.Pages
                 grdSkillsNeeded.Children[i].Visibility = Visibility.Visible;
 
                 // load skill items
-          // ****TODO: check if skill is done and load checkmark here
-                //imgSkill = ImageLoader.ToWPFImage(something here);
+                //skill image is default to cross
+                imgSkill.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.red_cross));
                 lblSkill.Content = currentRecipe.Skills[i];
+                for(int j = 0; j < mainUser.KnownSkills.Count(); j++)
+                {
+                    if (currentRecipe.Skills[i] == mainUser.KnownSkills[j])
+                    {
+                        imgSkill.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.green_check));
+                    }
+                }
+
 
                 if (currentRecipe.Skills[i].Equals("Folding"))
                     btnSkill.Click += new RoutedEventHandler(btnFoldPlay_Click);
@@ -166,9 +179,10 @@ namespace HCI_Cooking.Pages
         }
 
         // this skill has not been implemented yet!
+        // send the user to a lesson template that states its not implemented yet
         void btnSkill_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Sorry, this skill tutorial has not been implemented yet!");
+            Switcher.Switch(new CookingLessonTemplate(currentRecipe));
         }
 
         // go back to recipe selection screen

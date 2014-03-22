@@ -15,7 +15,7 @@
             <Label Content="Lessons:" FontFamily="Leelawadee" FontSize="20" Height="38" Name="lblLessonsHeaderNI" Margin="0,0,0,212" />
             <Border Name="imgLessonI"  Margin="14,44,265,0" Height="45" VerticalAlignment="Top" BorderThickness="5" BorderBrush="White" Background="#FFD4D4D4" />
             <Border Name="imgLessonII" Margin="14,95,265,0" Height="45" VerticalAlignment="Top" Background="#FFD4D4D4" BorderBrush="White" BorderThickness="5" />
-            <Border MouseLeftButtonDown="imgLessonIII_MouseLeftButtonDown" Name="imgLessonIII" Margin="14,146,265,0" Height="45" VerticalAlignment="Top" Background="#FFD4D4D4" BorderBrush="White" BorderThickness="5" />
+            <Border Name="imgLessonIII" Margin="14,146,265,0" Height="45" VerticalAlignment="Top" Background="#FFD4D4D4" BorderBrush="White" BorderThickness="5" />
             <Border Name="imgLessonIV"  Margin="14,197,265,0" Height="45" VerticalAlignment="Top" Background="#FFD4D4D4" BorderBrush="White" BorderThickness="5" />
             <Label Content="Not Implemented" FontFamily="Leelawadee" FontSize="20" Height="45" HorizontalAlignment="Left" Margin="85,44,0,0" Name="lblLessonINI" VerticalAlignment="Top" Width="180" />
             <Label Content="Not Implemented" FontFamily="Leelawadee" FontSize="20" Height="45" HorizontalAlignment="Left" Margin="85,95,0,0" Name="lblLessonIINI" VerticalAlignment="Top" Width="180" />

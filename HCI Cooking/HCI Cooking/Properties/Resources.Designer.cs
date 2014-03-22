@@ -103,6 +103,16 @@ namespace HCI_Cooking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_right {
+            get {
+                object obj = ResourceManager.GetObject("arrow_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b1_mix {
             get {
                 object obj = ResourceManager.GetObject("b1_mix", resourceCulture);
@@ -183,6 +193,16 @@ namespace HCI_Cooking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap green_check {
+            get {
+                object obj = ResourceManager.GetObject("green_check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mango_cake {
             get {
                 object obj = ResourceManager.GetObject("mango_cake", resourceCulture);
@@ -213,6 +233,16 @@ namespace HCI_Cooking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap red_cross {
+            get {
+                object obj = ResourceManager.GetObject("red_cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ribs {
             get {
                 object obj = ResourceManager.GetObject("ribs", resourceCulture);
@@ -233,9 +263,9 @@ namespace HCI_Cooking.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap waffle_badge {
+        internal static System.Drawing.Bitmap waffle_badge_wbg {
             get {
-                object obj = ResourceManager.GetObject("waffle_badge", resourceCulture);
+                object obj = ResourceManager.GetObject("waffle_badge_wbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
