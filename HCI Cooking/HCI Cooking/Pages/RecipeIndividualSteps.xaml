@@ -17,5 +17,10 @@
         </Canvas>
         <ProgressBar Height="30" HorizontalAlignment="Left" Margin="203,597,0,0" Name="progBar" VerticalAlignment="Top" Width="588" />
         <Label Content="Steps 1/1" Height="28" HorizontalAlignment="Left" Margin="446,628,0,0" Name="lblProg" VerticalAlignment="Top" Width="72" />
+        <Canvas Height="103" HorizontalAlignment="Left" Margin="689,597,0,0" Name="canvAchievement" VerticalAlignment="Top" Width="311" Background="#FF0A8EFF" Opacity="0">
+            <Label Canvas.Left="6" Canvas.Top="6" Content="New Achievment!" Height="24" Name="lblAchievement" FontStyle="Normal" FontSize="18" Width="208" FontFamily="Aharoni" />
+            <Image Canvas.Left="14" Canvas.Top="31" Height="62" Name="imgAchievement" Stretch="Fill" Width="61" />
+            <Label Canvas.Left="81" Canvas.Top="31" Height="62" Name="lblAchievementContent" Width="215" />
+        </Canvas>
     </Grid>
 </UserControl>

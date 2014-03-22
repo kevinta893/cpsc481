@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
-
+using System.Threading;
 
 namespace HCI_Cooking.Pages
 {
@@ -50,6 +50,19 @@ namespace HCI_Cooking.Pages
                 imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
             else
                 imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder);
+
+            //load the only achievment on this page
+            
+
+            for (int i = 0; i < mainUser.Accomplishments.Count(); i++)
+            {
+                if (mainUser.Accomplishments[i].Equals("First Mango Pudding!"))
+                {// set the image and description
+                    
+                    imgAchievement.Source = ImageLoader.ToWPFImage(mainUser.BadgeImages[i]);
+                    lblAchievementContent.Content = mainUser.Accomplishments[i];
+                }
+            }
         }
 
 
@@ -130,7 +143,7 @@ namespace HCI_Cooking.Pages
                 if (stepIndex == lastStep)
                 {
                     btnIndivRecipeNext.IsEnabled = false;
-                    
+
                     //checks to see if the user has gain this achievement yet
                     foreach (string badge in mainUser.Accomplishments)
                     {
@@ -146,14 +159,50 @@ namespace HCI_Cooking.Pages
                         mainUser.Accomplishments.Add("First Mango Pudding!");
                         mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
                         mainUser.BadgesEarned += 1;
-                        MessageBox.Show("New achievement!\n\"First Mango Pudding!\"");
+
+                        //show achivement once.
+                        Thread achieveShow = new Thread(new ThreadStart(achievmentShow));
+                        achieveShow.Start();
                     }
 
                     mainUser.MealsCooked += 1;
 
                 }
             }
+           
 
+        }
+
+        private void achievmentShow()
+        {
+            int[] delays = {10,10,10,10,10,10,10,10,10,10,10};
+            
+            double opacity = 0;
+            for (int i = 0; i < delays.Length; i++)
+            {
+
+                Thread.Sleep(delays[i]);
+                opacity += 0.1;
+                Dispatcher.BeginInvoke((Action) (() =>
+                    {
+                        canvAchievement.Opacity = opacity;
+                    }));
+                
+            }
+
+            Thread.Sleep(3000);
+
+            for (int i = 0; i < delays.Length; i++)
+            {
+
+                Thread.Sleep(delays[i]);
+                opacity -= 0.1;
+                Dispatcher.BeginInvoke((Action)(() =>
+                {
+                    canvAchievement.Opacity = opacity;
+                }));
+
+            }
         }
 
         // go back to previous recipe overview
