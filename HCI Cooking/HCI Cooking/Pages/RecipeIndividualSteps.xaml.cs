@@ -42,27 +42,24 @@ namespace HCI_Cooking.Pages
             stepIndex = 0;
             lastStep = aRecipe.Steps.Count() - 1;
             txtBlkStep.Text = aRecipe.Steps[stepIndex];
-            progBar.Maximum = lastStep - 1;
-            lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + lastStep;
+            progBar.Maximum = lastStep;
+            lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + (lastStep +1);
 
             // load picture if exists
             if (aRecipe.StepPictures.Count == lastStep + 1)
                 imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
             else
+            {
                 imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder);
 
-            //load the only achievment on this page
             
-
-            for (int i = 0; i < mainUser.Accomplishments.Count(); i++)
-            {
-                if (mainUser.Accomplishments[i].Equals("First Mango Pudding!"))
-                {// set the image and description
-                    
-                    imgAchievement.Source = ImageLoader.ToWPFImage(mainUser.BadgeImages[i]);
-                    lblAchievementContent.Content = mainUser.Accomplishments[i];
-                }
+                
             }
+
+            //load the only achievment on this page
+
+            imgAchievement.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
+            lblAchievementContent.Content = "First Mango Pudding!";
         }
 
 
@@ -102,7 +99,7 @@ namespace HCI_Cooking.Pages
 
                 // update progress-bar
                 progBar.Value--;
-                lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + lastStep;
+                lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + (lastStep +1);
             
                 // change previous button colour to "inactive" if now on first step
                 if (stepIndex == 0)
@@ -137,7 +134,7 @@ namespace HCI_Cooking.Pages
 
                 // update progress-bar
                 progBar.Value++;
-                lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + lastStep;
+                lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + (lastStep +1);
 
                 // change next button colour to "inactive" if now on last step
                 if (stepIndex == lastStep)
