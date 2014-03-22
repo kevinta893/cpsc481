@@ -133,3 +133,5 @@ C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.application
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
 C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonTemplate.baml
+C:\Users\Fuyushi\Documents\GitHub\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonTemplate.g.cs

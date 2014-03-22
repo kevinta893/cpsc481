@@ -31,6 +31,8 @@ namespace HCI_Cooking.Pages
 
             InitializeComponent();
 
+            lblMPCRecipeTitle.Content = rec.Title;
+
             txtBlkChapOverview.Text = "Folding is the process of both removing air bubbles from\r\n your dough and mixing ingredients together. " +
                 "This is a \r\ndifferent process from mixing because removing air bubbles\r\nrequires a different mixing technique for ingredients that\r\ntend to froth more if mixed intensely.\r\n\r\n" + 
                 "In this tutorial, you will learn how to: \r\n" +
