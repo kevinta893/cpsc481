@@ -28,6 +28,7 @@ namespace HCI_Cooking.Pages
             aRecipe = rec;
             InitializeComponent();
             lblRecipeTitle.Content = rec.Title;
+            imgVidPlaceholder.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.video_placeholder);
         }
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)

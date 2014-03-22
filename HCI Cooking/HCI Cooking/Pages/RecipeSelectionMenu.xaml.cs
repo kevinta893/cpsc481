@@ -118,7 +118,7 @@ namespace HCI_Cooking.Pages
                 }
 
                 lbl.Content = rec.Title; //gets and displays title of the recipe
-                txtBlk.Text = "  " + rec.Description;
+                txtBlk.Text = rec.Description;
                 txtBlk.Text += "\n\t\t\t\tCooking Time: " + rec.CookTime;
                 txtBlk.Text += "\n\t\t\t\tDifficulty Level: " + difficulty;
 

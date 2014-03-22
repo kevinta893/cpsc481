@@ -177,10 +177,10 @@ namespace HCI_Cooking
             springRolls.Skills.Add("Breading");
             springRolls.Skills.Add("Degreasing");
             springRolls.Skills.Add("Whisking");
-            springRolls.Ingredients.Add("filler");
+            springRolls.Ingredients.Add("None");
 
-            springRolls.Steps.Add("1. Fill in info!");
-            springRolls.Steps.Add("2. Empty...");
+            springRolls.Steps.Add("1. Go buy some spring rolls from your favourite supermarket");
+            springRolls.Steps.Add("2. Enjoy... (Actual recipe coming soon!)");
 
 
             /*
@@ -195,9 +195,9 @@ namespace HCI_Cooking
             ribs.Tools.Add("filler");
             ribs.Skills.Add("Marinating");
             ribs.Skills.Add("Glazing");
-            ribs.Ingredients.Add("filler");
+            ribs.Ingredients.Add("Ribs");
 
-            ribs.Steps.Add("1. Ribs are delicious");
+            ribs.Steps.Add("1. Ribs are delicious.");
             
         }
 

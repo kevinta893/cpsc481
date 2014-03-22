@@ -37,6 +37,7 @@ namespace HCI_Cooking
             //create pages and retain copies
             MainMenu mainmenu = new MainMenu();
             Switcher.Switch(mainmenu);
+            //this.Icon = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.ace_icon128);
 
         }
 

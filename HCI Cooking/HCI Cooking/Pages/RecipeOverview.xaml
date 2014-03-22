@@ -10,10 +10,10 @@
         <Border BorderBrush="White" BorderThickness="5" Background="#FFBF7CA6" Height="264" HorizontalAlignment="Left" Margin="594,12,0,0" Name="imgRecipePreview" VerticalAlignment="Top" Width="385">
             <Image Height="250" Name="imgRecOverview" Stretch="Fill" Width="370" />
         </Border>
-        <Button Content="Start Cooking" FontFamily="Leelawadee" FontSize="24" Height="94" HorizontalAlignment="Left" Margin="666,535,0,0" Name="btnStartCooking" VerticalAlignment="Top" Width="294" Click="btnStartCooking_Click" />
+        <Button Content="Start Cooking" FontFamily="Century Gothic" FontSize="32" Height="94" HorizontalAlignment="Left" Margin="666,535,0,0" Name="btnStartCooking" VerticalAlignment="Top" Width="294" Click="btnStartCooking_Click" />
         <RichTextBox VerticalScrollBarVisibility="Auto" Height="147" HorizontalAlignment="Left" Margin="18,69,0,0" Name="rtxtbxIngred" FontSize="16" VerticalAlignment="Top" Width="556" Background="#FFE2E2E2" IsReadOnly="True" />
         <RichTextBox VerticalScrollBarVisibility="Auto" Height="150" HorizontalAlignment="Left" Margin="18,231,0,0" Name="rtxtBlkTools" FontSize="16" VerticalAlignment="Top" Width="251" Background="#FFF2ECEC" />
-        <Button Content="Back" Height="47" HorizontalAlignment="Left" Margin="18,12,0,0" Name="btnRecipeOverviewBack" VerticalAlignment="Top" Width="78" Click="btnRecipeOverviewBack_Click" />
+        <Button Content="Back" Height="47" HorizontalAlignment="Left" Margin="18,12,0,0" Name="btnRecipeOverviewBack" VerticalAlignment="Top" Width="78" Click="btnRecipeOverviewBack_Click" FontFamily="Century Gothic" FontSize="16" />
         <Label Content="&lt;title&gt;" Height="54" HorizontalAlignment="Left" Margin="121,12,0,0" Name="lblTitle" VerticalAlignment="Top" Width="419" FontSize="32" FontFamily="Aharoni" />
         <TextBlock Height="185" HorizontalAlignment="Left" Margin="594,291,0,0" Name="txtBlkDescr" Text="" VerticalAlignment="Top" Width="376" FontSize="16" Background="#71FFB4C3" />
         <ScrollViewer Height="266" HorizontalAlignment="Left" Margin="18,399,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="478" VerticalScrollBarVisibility="Auto" Background="#FFF3FBCE">

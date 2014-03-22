@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
+using System.Threading;
 
 namespace HCI_Cooking.Pages
 {
@@ -29,6 +30,7 @@ namespace HCI_Cooking.Pages
         public RecipeCompleteSteps(RecipeOverview parentPage, RecipeIndividualSteps indivPage, Recipe rec)
         {
             InitializeComponent();
+            canvAchievement.Opacity = 0;
 
             overview = parentPage;
             indivStep = indivPage;
@@ -36,6 +38,10 @@ namespace HCI_Cooking.Pages
             userDb = Database.getInstance();
             mainUser = userDb.userList[0];
             lblTitle.Content = aRecipe.Title;
+
+            //load the only achievment on this page
+            imgAchievement.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
+            lblAchievementContent.Content = "First Mango Pudding!";
 
             ShowAllSteps();
         }
@@ -52,6 +58,30 @@ namespace HCI_Cooking.Pages
             }
 
             rTxtBlkSteps.Document.Blocks.Add(paraRichtxt); //attach the paragraph to the rich textbox
+
+
+            // check for acheivements
+
+            bool hasAchievement = false;
+
+            foreach (string badge in mainUser.Accomplishments)
+            {
+                if (badge == "First Mango Pudding!")
+                {
+                    hasAchievement = true;
+                }
+            }
+
+            if (hasAchievement == false && aRecipe.Title.Equals("Mango Pudding Cake"))
+            {
+                mainUser.Accomplishments.Add("First Mango Pudding!");
+                mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
+                mainUser.BadgesEarned += 1;
+
+                //show achivement once.
+                Thread achieveShow = new Thread(new ThreadStart(achievmentShow));
+                achieveShow.Start();
+            }
         }
 
 
@@ -71,26 +101,42 @@ namespace HCI_Cooking.Pages
         // go back to recipe overview page
         private void btnRecipeCompBack_Click(object sender, RoutedEventArgs e)
         {
-            bool hasAchievement = false;
-
-            foreach (string badge in mainUser.Accomplishments)
-            {
-                if (badge == "First Mango Pudding!")
-                {
-                    hasAchievement = true;
-                }
-            }
-
-            if (hasAchievement == false && aRecipe.Title.Equals("Mango Pudding Cake"))
-            {
-                mainUser.Accomplishments.Add("First Mango Pudding!");
-                mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
-                mainUser.BadgesEarned += 1;
-                MessageBox.Show("New achievement!\n\"First Mango Pudding!\"");
-            }
-
             mainUser.MealsCooked += 1;
             Switcher.Switch(overview);
+        }
+
+
+        private void achievmentShow()
+        {
+            int[] delays = { 30, 30, 30, 20, 10, 10, 10, 30, 30, 30, 30 };
+
+            double opacity_step = (double)1 / (double)delays.Length;
+            double opacity = 0;
+            for (int i = 0; i < delays.Length; i++)
+            {
+
+                Thread.Sleep(delays[i]);
+                opacity += opacity_step;
+                Dispatcher.BeginInvoke((Action)(() =>
+                {
+                    canvAchievement.Opacity = opacity;
+                }));
+
+            }
+
+            Thread.Sleep(3000);
+
+            for (int i = 0; i < delays.Length; i++)
+            {
+
+                Thread.Sleep(delays[i]);
+                opacity -= opacity_step;
+                Dispatcher.BeginInvoke((Action)(() =>
+                {
+                    canvAchievement.Opacity = opacity;
+                }));
+
+            }
         }
     }
 }

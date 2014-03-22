@@ -7,8 +7,8 @@
       d:DesignHeight="700" d:DesignWidth="1000">
 
     <Grid Name="grdMainMenu" Background="#FFE5E2FF">
-        <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="102" HorizontalAlignment="Left" Margin="69,522,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="361" Background="White" Click="btnCookingTech_Click" />
-        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="102" HorizontalAlignment="Left" Margin="577,522,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="White" Click="btnAchievements_Click" />
-        <Image Height="500" HorizontalAlignment="Left" Margin="205,12,0,0" Name="imgTitleScreen" Stretch="Fill" VerticalAlignment="Top" Width="600" />
+        <Button Content="Start Learning!" FontFamily="Century Gothic" FontSize="36" Height="102" HorizontalAlignment="Left" Margin="88,522,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="361" Background="White" Click="btnCookingTech_Click" FontStretch="Normal" FontWeight="Bold" />
+        <Button Content="Achievements" FontFamily="Century Gothic" FontSize="36" Height="102" HorizontalAlignment="Left" Margin="551,522,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="White" Click="btnAchievements_Click" FontWeight="Bold" FontStyle="Normal" />
+        <Image Height="500" HorizontalAlignment="Left" Margin="201,12,0,0" Name="imgTitleScreen" Stretch="Fill" VerticalAlignment="Top" Width="600" />
     </Grid>
 </UserControl>

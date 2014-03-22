@@ -32,6 +32,7 @@ namespace HCI_Cooking.Pages
         {
             InitializeComponent();
 
+            canvAchievement.Opacity = 0;
             overview = parentPage;
             aRecipe = rec;
 
@@ -50,7 +51,7 @@ namespace HCI_Cooking.Pages
                 imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
             else
             {
-                imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder);
+                imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder_2);
 
             
                 
@@ -130,7 +131,7 @@ namespace HCI_Cooking.Pages
                 if (aRecipe.StepPictures.Count == lastStep + 1)
                     imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
                 else
-                    imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder);
+                    imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder_2);
 
                 // update progress-bar
                 progBar.Value++;
@@ -172,19 +173,20 @@ namespace HCI_Cooking.Pages
 
         private void achievmentShow()
         {
-            int[] delays = {10,10,10,10,10,10,10,10,10,10,10};
-            
+            int[] delays = { 30, 30, 30, 20, 10, 10, 10, 30, 30, 30, 30 };
+
+            double opacity_step = (double)1 / (double)delays.Length;
             double opacity = 0;
             for (int i = 0; i < delays.Length; i++)
             {
 
                 Thread.Sleep(delays[i]);
-                opacity += 0.1;
-                Dispatcher.BeginInvoke((Action) (() =>
-                    {
-                        canvAchievement.Opacity = opacity;
-                    }));
-                
+                opacity += opacity_step;
+                Dispatcher.BeginInvoke((Action)(() =>
+                {
+                    canvAchievement.Opacity = opacity;
+                }));
+
             }
 
             Thread.Sleep(3000);
@@ -193,7 +195,7 @@ namespace HCI_Cooking.Pages
             {
 
                 Thread.Sleep(delays[i]);
-                opacity -= 0.1;
+                opacity -= opacity_step;
                 Dispatcher.BeginInvoke((Action)(() =>
                 {
                     canvAchievement.Opacity = opacity;

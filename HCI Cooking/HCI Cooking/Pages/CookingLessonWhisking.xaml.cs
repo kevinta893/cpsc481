@@ -27,12 +27,14 @@ namespace HCI_Cooking.Pages
 
         public CookingLessonWhisking(RecipeSelectionMenu page, Recipe rec)
         {
+            InitializeComponent();
+
             selectMenu = page;
             currentRecipe = rec;
             userDb = Database.getInstance();
             mainUser = userDb.userList[0];
-
-            InitializeComponent();
+            imgVidPlaceholder.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.video_placeholder);
+            
             lblMPCRecipeTitle.Content = rec.Title;
 
             txtBlkChapOverview.Text = "Here you will be learning about whisking!\r\n" +

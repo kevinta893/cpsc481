@@ -7,17 +7,21 @@
       d:DesignHeight="700" d:DesignWidth="1000">
 
     <Grid Name="grdRIndiSteps" Background="#81D8E4FC">
-        <Button Content="Complete Steps" Height="48" HorizontalAlignment="Left" Margin="832,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="133" Background="#FFC1C1FF" Click="btnIndiToogleView_Click" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500*" />
+            <ColumnDefinition Width="500*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Complete Steps" Height="48" HorizontalAlignment="Left" Margin="332,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="133" Background="#FFC1C1FF" Click="btnIndiToogleView_Click" FontFamily="Century Gothic" FontSize="14" Grid.Column="1" />
         <Button Content="&lt;--" Height="249" HorizontalAlignment="Left" Margin="29,407,0,0" Name="btnIndivRecipePrev" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeBack_Click" FontSize="26" IsEnabled="False" />
-        <Button Content="--&gt;" Height="249" HorizontalAlignment="Left" Margin="864,407,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeNext_Click" FontSize="26" />
-        <TextBlock Height="117" HorizontalAlignment="Left" Margin="178,454,0,0" Name="txtBlkStep" Text="" VerticalAlignment="Top" Width="640" Background="#FFF4F8E2" FontSize="22" TextWrapping="Wrap" TextAlignment="Center" />
-        <Button Content="Back to Overview" Height="48" HorizontalAlignment="Left" Margin="29,12,0,0" Name="btnRecipeIndivBack" VerticalAlignment="Top" Width="125" Click="btnRecipeIndivBack_Click" />
-        <Canvas Height="375" HorizontalAlignment="Left" Margin="178,52,0,0" Name="cnvImgHolder" VerticalAlignment="Top" Width="640">
+        <Button Content="--&gt;" Height="249" HorizontalAlignment="Left" Margin="364,407,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeNext_Click" FontSize="26" Grid.Column="1" />
+        <TextBlock Height="117" HorizontalAlignment="Left" Margin="178,454,0,0" Name="txtBlkStep" Text="" VerticalAlignment="Top" Width="640" Background="#FFF4F8E2" FontSize="22" TextWrapping="Wrap" TextAlignment="Center" Grid.ColumnSpan="2" />
+        <Button Content="Back to Overview" Height="48" HorizontalAlignment="Left" Margin="29,12,0,0" Name="btnRecipeIndivBack" VerticalAlignment="Top" Width="130" Click="btnRecipeIndivBack_Click" FontFamily="Century Gothic" FontSize="14" />
+        <Canvas Height="375" HorizontalAlignment="Left" Margin="178,52,0,0" Name="cnvImgHolder" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2">
             <Image Height="375" Name="imgStep" Stretch="Uniform" Width="640" Canvas.Left="0" Canvas.Top="0" />
         </Canvas>
-        <ProgressBar Height="30" HorizontalAlignment="Left" Margin="203,597,0,0" Name="progBar" VerticalAlignment="Top" Width="588" />
-        <Label Content="Steps 1/1" Height="28" HorizontalAlignment="Left" Margin="446,628,0,0" Name="lblProg" VerticalAlignment="Top" Width="72" />
-        <Canvas Height="157" HorizontalAlignment="Left" Margin="689,543,0,0" Name="canvAchievement" VerticalAlignment="Top" Width="311" Background="#FF0A8EFF" Opacity="0">
+        <ProgressBar Height="30" HorizontalAlignment="Left" Margin="206,597,0,0" Name="progBar" VerticalAlignment="Top" Width="588" Grid.ColumnSpan="2" />
+        <Label Content="Steps 1/1" Height="28" HorizontalAlignment="Left" Margin="435,628,0,0" Name="lblProg" VerticalAlignment="Top" Width="128" FontFamily="Century Gothic" FontSize="14" HorizontalContentAlignment="Center" Grid.ColumnSpan="2" />
+        <Canvas Height="157" HorizontalAlignment="Left" Margin="189,543,0,0" Name="canvAchievement" VerticalAlignment="Top" Width="311" Background="#CD6897DB" Opacity="1" Grid.Column="1">
             <Label Canvas.Left="6" Canvas.Top="6" Content="New Achievment!" Height="24" Name="lblAchievement" FontStyle="Normal" FontSize="18" Width="208" FontFamily="Aharoni" />
             <Image Canvas.Left="14" Canvas.Top="31" Height="62" Name="imgAchievement" Stretch="Fill" Width="61" />
             <Label Canvas.Left="81" Canvas.Top="31" Height="62" Name="lblAchievementContent" Width="215" />

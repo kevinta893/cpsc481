@@ -7,6 +7,7 @@
       d:DesignHeight="700" d:DesignWidth="1000" Background="#81D8E4FC">
 
     <Grid Name="grdCTLesson">
+        <Image Height="353" HorizontalAlignment="Left" Margin="25,109,0,0" Name="imgVidPlaceholder" Stretch="Fill" VerticalAlignment="Top" Width="579" ToolTip="Video feature not yet implemented." />
         <Label Content="Mango Pudding Cake" FontFamily="Leelawadee" FontSize="34" Height="54" HorizontalAlignment="Left" Margin="12,21,0,0" Name="lblMPCRecipeTitle" VerticalAlignment="Top" Width="391" />
         <Label Content="LESSON #III: Folding" FontFamily="Leelawadee" FontSize="16" Height="31" HorizontalAlignment="Left" Margin="41,72,0,0" Name="lblLessonNum" VerticalAlignment="Top" Width="294" />
         <Label Content="How to fold ingredients" FontFamily="Leelawadee" FontSize="28" Height="62" HorizontalAlignment="Right" Margin="0,41,44,0" Name="lblChapOverviewHeader" VerticalAlignment="Top" Width="305" />
@@ -33,11 +34,9 @@
                 <Button Content="-&gt;" Height="23" HorizontalAlignment="Left" Margin="216,14,0,0" Name="btnLessonIV" VerticalAlignment="Top" Width="75" Visibility="Visible" />
             </Grid>
         </Grid>
-        <Rectangle Height="301" HorizontalAlignment="Left" Margin="25,109,0,0" Name="rectVideo" Stroke="Black" VerticalAlignment="Top" Width="579" />
-        <Label Content="VIDEO GOES HERE" FontFamily="Leelawadee" FontSize="20" Height="51" HorizontalAlignment="Left" Margin="189,213,0,0" Name="label1" VerticalAlignment="Top" Width="229" />
-        <ProgressBar Height="45" HorizontalAlignment="Left" Margin="41,432,0,0" Name="progressBar1" VerticalAlignment="Top" Width="549" />
+        <ProgressBar Height="45" HorizontalAlignment="Left" Margin="41,488,0,0" Name="progressBar1" VerticalAlignment="Top" Width="549" />
         <Label Content="         0 / 1500 points"  FontFamily="Leelawadee" FontSize="20" Height="37" HorizontalAlignment="Left" Margin="176,493,0,0" Name="label2" VerticalAlignment="Top" Width="259" />
-        <Button Content="BACK" Height="53" HorizontalAlignment="Left" Margin="25,594,0,0" Name="btnLesBack" VerticalAlignment="Top" Width="112" Click="btnLesBack_Click" />
-        <Label Content="Lessons" FontFamily="Leelawadee" FontSize="20" Name="lblLessonsHeader" Margin="752,373,148,290" />
+        <Button Content="Back" Height="53" HorizontalAlignment="Left" Margin="25,594,0,0" Name="btnLesBack" VerticalAlignment="Top" Width="112" Click="btnLesBack_Click" FontFamily="Century Gothic" FontSize="16" />
+        <Label Content="Lessons:" Height="28" HorizontalAlignment="Left" Margin="651,382,0,0" Name="lblLessonHeader" VerticalAlignment="Top" FontSize="16" />
     </Grid>
 </UserControl>
