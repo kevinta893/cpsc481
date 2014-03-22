@@ -13,17 +13,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
 
+/*
+ * This is a page that displays detailed information about a recipe
+ * Users can click the skill tutorials or start the recipe.
+ */ 
+
 namespace HCI_Cooking.Pages
 {
-    /// <summary>
-    /// Interaction logic for RecipeOverview.xaml
-    /// </summary>
     public partial class RecipeOverview : ISwitchable
     {
         Recipe currentRecipe;
         Database userDb;
         User mainUser;
-        public RecipeOverview(Recipe rec)
+        RecipeSelectionMenu selectionMenu;
+
+        public RecipeOverview(Recipe rec, RecipeSelectionMenu previousMenu)
         {
             userDb = Database.getInstance();
             mainUser = userDb.userList[0];
@@ -31,6 +35,7 @@ namespace HCI_Cooking.Pages
             InitializeComponent();
 
             currentRecipe = rec;
+            selectionMenu = previousMenu;
 
             LoadRecipeValues();
             LoadRecipeSkills();
@@ -49,11 +54,14 @@ namespace HCI_Cooking.Pages
              * in the rich text box.
              */
             rtxtbxIngred.AppendText("Ingredients:");
+            //paraIngred.Inlines.Add("Ingredients:\n");     // cannot get rid of newline between ingredients and list :(
+
 
             // display ingredients list
             for (int i = 0; i < currentRecipe.Ingredients.Count(); i++)
             {
-                paraIngred.Inlines.Add(currentRecipe.Ingredients[i]);
+                paraIngred.Inlines.Add("   " + currentRecipe.Ingredients[i]);
+                //rtxtbxIngred.AppendText("   " + currentRecipe.Ingredients[i]);
                
             }
             rtxtbxIngred.Document.Blocks.Add(paraIngred);
@@ -68,7 +76,7 @@ namespace HCI_Cooking.Pages
             // disaply tools list
             for (int i = 0; i < currentRecipe.Tools.Count(); i++)
             {
-                paraTools.Inlines.Add(currentRecipe.Tools[i]);
+                paraTools.Inlines.Add("   " + currentRecipe.Tools[i]);
             }
 
             rtxtBlkTools.Document.Blocks.Add(paraTools);
@@ -87,20 +95,21 @@ namespace HCI_Cooking.Pages
                     diffLevel = "Hard";
                     break;
             }
-            txtBlkDescr.Text = "Difficulty: " + diffLevel + "\n";
+
 
             // display description
-            txtBlkDescr.Text += currentRecipe.Description;
+            txtBlkDescr.Text = currentRecipe.Description;
+
             txtBlkDescr.Text += "\nCooking Time: "+currentRecipe.CookTime;
+            txtBlkDescr.Text += "\nDifficulty: " + diffLevel;
             
             // display main picture
             imgRecOverview.Source = ImageLoader.ToWPFImage(currentRecipe.MainPicture);
         }
 
         // load the required skills needed for this recipe
-        // TO DO (maybe): -currently this can load 0-4 skills. anymore will cause an issue.
+        // TO DO (future): -currently this can load 0-4 skills. anymore will cause an issue.
         //                to fix, will have to create the container in code rather than XAML so it can be generated on the fly.
-        //                - also, the folding and whisking pages are explictly set. anything else shows not implemented skills popup.
         private void LoadRecipeSkills()
         {
             Grid grdSkill;
@@ -131,13 +140,14 @@ namespace HCI_Cooking.Pages
                 lblSkill.Content = currentRecipe.Skills[i];
                 for(int j = 0; j < mainUser.KnownSkills.Count(); j++)
                 {
+                    // change to check if user knows skill
                     if (currentRecipe.Skills[i] == mainUser.KnownSkills[j])
                     {
                         imgSkill.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.green_check));
                     }
                 }
 
-
+                // go to correct skill page, only folding and whisking implemented atm
                 if (currentRecipe.Skills[i].Equals("Folding"))
                     btnSkill.Click += new RoutedEventHandler(btnFoldPlay_Click);
                 else if (currentRecipe.Skills[i].Equals("Whisking"))
@@ -169,26 +179,26 @@ namespace HCI_Cooking.Pages
         // show folding tutorial
         private void btnFoldPlay_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new CookingLessonFolding(currentRecipe));
+            Switcher.Switch(new CookingLessonFolding(selectionMenu, currentRecipe));
         }
 
         // show whisking tutorial
         private void btnWhiskPlay_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new CookingLessonWhisking(currentRecipe));
+            Switcher.Switch(new CookingLessonWhisking(selectionMenu, currentRecipe));
         }
 
         // this skill has not been implemented yet!
         // send the user to a lesson template that states its not implemented yet
         void btnSkill_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new CookingLessonTemplate(currentRecipe));
+            Switcher.Switch(new CookingLessonTemplate(selectionMenu, currentRecipe));
         }
 
         // go back to recipe selection screen
         private void btnRecipeOverviewBack_Click(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new RecipeSelectionMenu());
+            Switcher.Switch(selectionMenu);
         }
 
     }

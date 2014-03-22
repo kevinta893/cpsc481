@@ -280,6 +280,9 @@
   <ItemGroup>
     <None Include="Images\achivements\waffle_badge_wbg.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\fixed_title.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

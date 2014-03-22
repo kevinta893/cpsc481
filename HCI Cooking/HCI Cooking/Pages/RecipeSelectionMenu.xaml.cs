@@ -71,12 +71,15 @@ namespace HCI_Cooking.Pages
 
         // load recipes into the recipe containers
         // the number loaded depends on the filters
+        // this function assumes that the proper IDs are set in the database already
         private void LoadRecipes(int numToLoad)
         {
             Recipe rec;
+            Label lbl;
             TextBlock txtBlk;
             Border brdr;
             Image img;
+            String difficulty = "";
 
             // clear all containers to begin with
             foreach (Canvas block in recipeBlocks)
@@ -87,31 +90,39 @@ namespace HCI_Cooking.Pages
             // load the given number of recipes accord to their id;
             for (int i = 0; i < numToLoad; i++)
             {
-                rec = recipeDB.GetRecipe(i);
-                txtBlk = (TextBlock)recipeBlocks[i].Children[1];
+                rec = recipeDB.GetRecipe(i);        // get recipe by ID
                 brdr = (Border)recipeBlocks[i].Children[0];
-                img = (Image)recipeBlocks[i].Children[2];
-
-                txtBlk.Text = rec.Title; //gets and displays title of the recipe
-                txtBlk.Text += rec.Description;
-                txtBlk.Text += "\nCooking Time: " + rec.CookTime;
+                lbl = (Label)recipeBlocks[i].Children[1];
+                txtBlk = (TextBlock)recipeBlocks[i].Children[2];
+                img = (Image)recipeBlocks[i].Children[3];
 
                 // set border colour depending on difficulty
                 switch (rec.Difficulty)
                 {
                     case 1:
                         brdr.BorderBrush = Brushes.LightGreen;
+                        difficulty = "Easy";
                         break;
                     case 2:
                         brdr.BorderBrush = Brushes.Yellow;
+                        difficulty = "Medium";
                         break;
                     case 3:
                         brdr.BorderBrush = Brushes.Red;
+                        difficulty = "Hard";
                         break;
                     default:
                         brdr.BorderBrush = Brushes.SlateGray;
+                        difficulty = "";
                         break;
                 }
+
+                lbl.Content = rec.Title; //gets and displays title of the recipe
+                txtBlk.Text = "  " + rec.Description;
+                txtBlk.Text += "\n\t\t\t\tCooking Time: " + rec.CookTime;
+                txtBlk.Text += "\n\t\t\t\tDifficulty Level: " + difficulty;
+
+                
 
                 // load main picture for recipe
                 img.Source = ImageLoader.ToWPFImage(rec.MainPicture);
@@ -126,10 +137,11 @@ namespace HCI_Cooking.Pages
         private void LoadHandlers()
         {
             Image clickableArea;
+
             // click events for recipe containers
             foreach (Canvas block in recipeBlocks)
             {
-                clickableArea = (Image)block.Children[2];
+                clickableArea = (Image)block.Children[3];
                 clickableArea.MouseDown += new MouseButtonEventHandler(recipeClick_MouseLeftButtonDown);
             }
 
@@ -211,13 +223,13 @@ namespace HCI_Cooking.Pages
                     rec.ID = -1;
                 }
 
-                // load 0 recipes (this gets rid of existing ones)
+                // load 0 recipes (this gets rid of existing ones only)
                 LoadRecipes(0);
             }
             else // show-all got checked
             {
                 int index = 0;
-                // get rid of all recipes by changing id to -1 
+                // set an ID value for all recipes
                 foreach (Recipe rec in recipeDB.recipeList)
                 {
                     rec.ID = index;
@@ -267,13 +279,13 @@ namespace HCI_Cooking.Pages
             Image clickedRecipe = (Image)sender;
 
             if (clickedRecipe == img1)
-                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(0)));
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(0), this));
             else if (clickedRecipe == img2)
-                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(1)));
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(1), this));
             else if (clickedRecipe == img3)
-                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(2)));
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(2), this));
             else if (clickedRecipe == img4)
-                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(3)));
+                Switcher.Switch(new RecipeOverview(recipeDB.GetRecipe(3), this));
         }
 
 

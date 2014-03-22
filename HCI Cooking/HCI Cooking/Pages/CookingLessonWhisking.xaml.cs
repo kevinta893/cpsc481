@@ -20,12 +20,14 @@ namespace HCI_Cooking.Pages
     /// </summary>
     public partial class CookingLessonWhisking : UserControl
     {
+        RecipeSelectionMenu selectMenu;
         Recipe currentRecipe;
         Database userDb;
-        User mainUser; 
+        User mainUser;
 
-        public CookingLessonWhisking(Recipe rec)
+        public CookingLessonWhisking(RecipeSelectionMenu page, Recipe rec)
         {
+            selectMenu = page;
             currentRecipe = rec;
             userDb = Database.getInstance();
             mainUser = userDb.userList[0];
@@ -68,7 +70,7 @@ namespace HCI_Cooking.Pages
                     else if (lessonGrid.Children[item] is Button)
                     {
                         lessonButton = (Button)lessonGrid.Children[item];
-                        if (currentRecipe.Skills[i] == "Whisking")
+                        if (currentRecipe.Skills[i].Equals("Whisking"))
                         {
                             lessonButton.Visibility = Visibility.Hidden;
                         }
@@ -89,7 +91,7 @@ namespace HCI_Cooking.Pages
                 }
 
                 //if the current skill is equal to folding, show an arrow pointing to it.
-                if (currentRecipe.Skills[i] == "Whisking")
+                if (currentRecipe.Skills[i].Equals("Whisking"))
                 {
                     lessonImg.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.arrow_right));
                 }
@@ -111,7 +113,7 @@ namespace HCI_Cooking.Pages
 
             foreach (string skill in mainUser.KnownSkills)
             {
-                if (skill == "Whisking")
+                if (skill.Equals("Whisking"))
                 {
                     hasLearntLesson = true;
                 }
@@ -123,7 +125,7 @@ namespace HCI_Cooking.Pages
                 mainUser.LessonsLearnt += 1;
             }
 
-            Switcher.Switch(new CookingLessonTemplate(currentRecipe));
+            Switcher.Switch(new CookingLessonTemplate(selectMenu, currentRecipe));
         } 
 
         private void  lessonButtonFold_Click(object sender, RoutedEventArgs e)
@@ -132,7 +134,7 @@ namespace HCI_Cooking.Pages
 
             foreach (string skill in mainUser.KnownSkills)
             {
-                if (skill == "Whisking")
+                if (skill.Equals("Whisking"))
                 {
                     hasLearntLesson = true;
                 }
@@ -144,7 +146,7 @@ namespace HCI_Cooking.Pages
                 mainUser.LessonsLearnt += 1;
             }
 
-            Switcher.Switch(new CookingLessonFolding(currentRecipe));
+            Switcher.Switch(new CookingLessonFolding(selectMenu, currentRecipe));
         } 
 
         private void btnLesBack_Click(object sender, RoutedEventArgs e)
@@ -153,7 +155,7 @@ namespace HCI_Cooking.Pages
 
             foreach (string skill in mainUser.KnownSkills)
             {
-                if (skill == "Whisking")
+                if (skill.Equals("Whisking"))
                 {
                     hasLearntLesson = true;
                 }
@@ -165,7 +167,7 @@ namespace HCI_Cooking.Pages
                 mainUser.LessonsLearnt += 1;
             }
 
-            Switcher.Switch(new RecipeOverview(currentRecipe));
+            Switcher.Switch(new RecipeOverview(currentRecipe, selectMenu));
         }
 
     }

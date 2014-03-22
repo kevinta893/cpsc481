@@ -9,37 +9,6 @@ d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj
 d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
 d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
 d:\users\kevin\documents\visual studio 2010\Projects\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.pdb
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.exe.manifest
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.application
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.exe
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.pdb
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\MainWindow.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\AchievementMenu.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonWhisking.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingTechniqueLessons.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\MainMenu.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeCompleteSteps.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeIndividualSteps.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeOverview.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeSelectionMenu.baml
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\MainWindow.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\AchievementMenu.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingLessonWhisking.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\CookingTechniqueLessons.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\MainMenu.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeCompleteSteps.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeIndividualSteps.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeOverview.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\Pages\RecipeSelectionMenu.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\App.g.cs
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking_MarkupCompile.cache
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.g.resources
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI_Cooking.Properties.Resources.resources
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.csproj.GenerateResource.Cache
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.exe.manifest
-V:\Users\Git\cpsc481\HCI Cooking\HCI Cooking\obj\x86\Debug\HCI Cooking.application
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.exe.manifest
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.application
 D:\Users\Kevin\GitHub\cpsc481\HCI Cooking\HCI Cooking\bin\Debug\HCI Cooking.exe

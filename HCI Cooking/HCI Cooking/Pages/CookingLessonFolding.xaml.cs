@@ -23,9 +23,11 @@ namespace HCI_Cooking.Pages
         Recipe currentRecipe;
         Database userDb;
         User mainUser;
+        RecipeSelectionMenu selectMenu;
 
-        public CookingLessonFolding(Recipe rec)
+        public CookingLessonFolding(RecipeSelectionMenu page, Recipe rec)
         {
+            selectMenu = page;
             currentRecipe = rec;
             userDb = Database.getInstance();
             mainUser = userDb.userList[0];
@@ -88,7 +90,7 @@ namespace HCI_Cooking.Pages
                 }
 
                 //if the current skill is equal to folding, show an arrow pointing to it.
-                if (currentRecipe.Skills[i] == "Folding")
+                if (currentRecipe.Skills[i].Equals("Folding"))
                 {
                     lessonImg.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.arrow_right));
                 }
@@ -111,7 +113,7 @@ namespace HCI_Cooking.Pages
             //check to see if the user has learnt the skill yet
             foreach (string skill in mainUser.KnownSkills)
             {
-                if (skill == "Folding")
+                if (skill.Equals("Folding"))
                 {
                     hasLearntLesson = true;
                 }
@@ -125,7 +127,7 @@ namespace HCI_Cooking.Pages
                 mainUser.LessonsLearnt += 1;
             }
 
-            Switcher.Switch(new CookingLessonTemplate(currentRecipe));
+            Switcher.Switch(new CookingLessonTemplate(selectMenu, currentRecipe));
         }
 
         void lessonButtonWhisk_Click(object sender, RoutedEventArgs e)
@@ -134,7 +136,7 @@ namespace HCI_Cooking.Pages
 
             foreach (string skill in mainUser.KnownSkills)
             {
-                if (skill == "Folding")
+                if (skill.Equals("Folding"))
                 {
                     hasLearntLesson = true;
                 }
@@ -146,7 +148,7 @@ namespace HCI_Cooking.Pages
                 mainUser.LessonsLearnt += 1;
             }
 
-            Switcher.Switch(new CookingLessonWhisking(currentRecipe));
+            Switcher.Switch(new CookingLessonWhisking(selectMenu, currentRecipe));
         }
 
         #region ISwitchable Members
@@ -162,7 +164,7 @@ namespace HCI_Cooking.Pages
 
             foreach (string skill in mainUser.KnownSkills)
             {
-                if (skill == "Folding")
+                if (skill.Equals("Folding"))
                 {
                     hasLearntLesson = true;
                 }
@@ -174,7 +176,7 @@ namespace HCI_Cooking.Pages
                 mainUser.LessonsLearnt += 1;
             }
 
-            Switcher.Switch(new RecipeOverview(currentRecipe)); //by default I have set this to recipe overview. 
+            Switcher.Switch(new RecipeOverview(currentRecipe, selectMenu)); //by default I have set this to recipe overview. 
                                                  
         }
 

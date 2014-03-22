@@ -14,6 +14,8 @@ namespace HCI_Cooking
 {
     class Database
     {
+        private static Database globalInstance;     // singleton Database object
+
         public List<Recipe> recipeList;
         public List<User> userList;
 
@@ -22,13 +24,11 @@ namespace HCI_Cooking
         private Recipe springRolls;
         private Recipe ribs;
 
-
         private User mainUser;
-        private static Database globalInstance;
 
+        // private constructor so only the singleton instance exists
         private Database()
         {
-            
             recipeList = new List<Recipe>();
             userList = new List<User>();
 
@@ -50,6 +50,8 @@ namespace HCI_Cooking
             InitializeUser();
             userList.Add(mainUser);
         }
+
+        // creates the single instance of Database on first call, then returns that one later
         public static Database getInstance()
         {
             if (globalInstance == null)
@@ -68,7 +70,7 @@ namespace HCI_Cooking
              */
             mangoCake.ID = 1; //Mango Cake id
             mangoCake.Title = "Mango Pudding Cake";
-            mangoCake.Description = "\nVanilla pudding gives the cake a nice moist taste.\n";
+            mangoCake.Description = "Vanilla pudding gives the cake a nice moist taste.\n";
             mangoCake.CookTime = "1 hour";
             mangoCake.Difficulty = 2;
             
@@ -128,7 +130,7 @@ namespace HCI_Cooking
              */
             powChicken.Title = "POW Chicken";
             powChicken.CookTime = "30 minutes";
-            powChicken.Description = "\nNice chispy chicken rubbed in delicious spices.\n";
+            powChicken.Description = "Nice chispy chicken rubbed in delicious spices.\n";
             powChicken.Difficulty = 1;
 
             //Pow Chicken's required tools
@@ -166,7 +168,7 @@ namespace HCI_Cooking
              *  Spring Rolls Recipe Information 
              */
             springRolls.Title = "Spring Rolls";
-            springRolls.Description = "\nCrispy fried rolls filled with meats and veggies. A delicious asian\r\ndish perfect for any event.";
+            springRolls.Description = "Crispy fried rolls filled with meats and veggies. A delicious asian\r\ndish perfect for any event.";
             springRolls.CookTime = "45 minutes";
             springRolls.Difficulty = 2;
             springRolls.MainPicture = HCI_Cooking.Properties.Resources.spring_rolls;
@@ -185,7 +187,7 @@ namespace HCI_Cooking
              *  Ribs Recipe Information 
              */
             ribs.Title = "Lamb Ribs";
-            ribs.Description = "\nJuicy and delicious rack of lambs ribs, rubbed with amazing\nspices. Great for parties!";
+            ribs.Description = "Juicy and delicious rack of lambs ribs, rubbed with amazing\nspices. Great for parties!";
             ribs.CookTime = " 55 minutes";
             ribs.Difficulty = 3;
             ribs.MainPicture = HCI_Cooking.Properties.Resources.ribs;
@@ -199,6 +201,7 @@ namespace HCI_Cooking
             
         }
 
+        // sample user info
         private void InitializeUser()
         {
             mainUser.Accomplishments.Add("I can make waffles!");
@@ -206,7 +209,6 @@ namespace HCI_Cooking
 
             mainUser.Accomplishments.Add("Made my very first recipe");
             mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.first_recipe));
-
 
 
             mainUser.BadgesEarned = mainUser.Accomplishments.Count();

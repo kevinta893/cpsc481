@@ -42,6 +42,8 @@ namespace HCI_Cooking.Pages
             stepIndex = 0;
             lastStep = aRecipe.Steps.Count() - 1;
             txtBlkStep.Text = aRecipe.Steps[stepIndex];
+            progBar.Maximum = lastStep - 1;
+            lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + lastStep;
 
             // load picture if exists
             if (aRecipe.StepPictures.Count == lastStep + 1)
@@ -80,9 +82,14 @@ namespace HCI_Cooking.Pages
 
                 stepIndex--;
                 txtBlkStep.Text = aRecipe.Steps[stepIndex];
+
                 // load picture if exists
                 if (aRecipe.StepPictures.Count == lastStep + 1)
                     imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
+
+                // update progress-bar
+                progBar.Value--;
+                lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + lastStep;
             
                 // change previous button colour to "inactive" if now on first step
                 if (stepIndex == 0)
@@ -108,11 +115,16 @@ namespace HCI_Cooking.Pages
 
                 stepIndex++;
                 txtBlkStep.Text = aRecipe.Steps[stepIndex];
+
                 // load picture if exists
                 if (aRecipe.StepPictures.Count == lastStep + 1)
                     imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
                 else
                     imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder);
+
+                // update progress-bar
+                progBar.Value++;
+                lblProg.Content = "Steps " + (progBar.Value + 1) + "/" + lastStep;
 
                 // change next button colour to "inactive" if now on last step
                 if (stepIndex == lastStep)
@@ -128,12 +140,13 @@ namespace HCI_Cooking.Pages
                         }
                     }
 
-                    if (hasAchievement == false)
+                    // conditions for unlocking this achievement
+                    if (hasAchievement == false && aRecipe.Title.Equals("Mango Pudding Cake"))
                     {
                         mainUser.Accomplishments.Add("First Mango Pudding!");
                         mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
                         mainUser.BadgesEarned += 1;
-                        MessageBox.Show("New achievement!");
+                        MessageBox.Show("New achievement!\n\"First Mango Pudding!\"");
                     }
 
                     mainUser.MealsCooked += 1;

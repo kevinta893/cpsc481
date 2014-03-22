@@ -8,7 +8,7 @@
 
     <Grid Name="grdMainMenu" Background="#FFE5E2FF">
         <Button Content="COOKING TECHNIQUES!" FontFamily="Leelawadee" FontSize="24" Height="102" HorizontalAlignment="Left" Margin="69,522,0,0" Name="btnCookingTech" VerticalAlignment="Top" Width="361" Background="White" Click="btnCookingTech_Click" />
-        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="104" HorizontalAlignment="Left" Margin="592,520,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="White" Click="btnAchievements_Click" />
-        <Image Height="500" HorizontalAlignment="Left" Margin="136,12,0,0" Name="imgTitleScreen" Stretch="Fill" VerticalAlignment="Top" Width="713" />
+        <Button Content="ACHIEVEMENTS" FontFamily="Leelawadee" FontSize="26" Height="102" HorizontalAlignment="Left" Margin="577,522,0,0" Name="btnAchievements" VerticalAlignment="Top" Width="361" Background="White" Click="btnAchievements_Click" />
+        <Image Height="500" HorizontalAlignment="Left" Margin="205,12,0,0" Name="imgTitleScreen" Stretch="Fill" VerticalAlignment="Top" Width="600" />
     </Grid>
 </UserControl>

@@ -35,6 +35,7 @@ namespace HCI_Cooking.Pages
             aRecipe = rec;
             userDb = Database.getInstance();
             mainUser = userDb.userList[0];
+            lblTitle.Content = aRecipe.Title;
 
             ShowAllSteps();
         }
@@ -43,7 +44,7 @@ namespace HCI_Cooking.Pages
         private void ShowAllSteps()
         {
             Paragraph paraRichtxt = new Paragraph();
-            paraRichtxt.Inlines.Add("Instructions:\n\n");
+            paraRichtxt.Inlines.Add("Instructions:\n");
 
             foreach (string step in aRecipe.Steps)
             {
@@ -80,12 +81,12 @@ namespace HCI_Cooking.Pages
                 }
             }
 
-            if (hasAchievement == false)
+            if (hasAchievement == false && aRecipe.Title.Equals("Mango Pudding Cake"))
             {
                 mainUser.Accomplishments.Add("First Mango Pudding!");
                 mainUser.BadgeImages.Add(new Bitmap(HCI_Cooking.Properties.Resources.mango_cake));
                 mainUser.BadgesEarned += 1;
-                MessageBox.Show("New achievement!");
+                MessageBox.Show("New achievement!\n\"First Mango Pudding!\"");
             }
 
             mainUser.MealsCooked += 1;

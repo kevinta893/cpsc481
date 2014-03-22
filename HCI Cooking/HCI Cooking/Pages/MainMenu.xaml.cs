@@ -24,7 +24,7 @@ namespace HCI_Cooking.Pages
         public MainMenu()
         {
             InitializeComponent();
-            imgTitleScreen.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.ace_cooking_title);
+            imgTitleScreen.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.fixed_title);
         }
 
 
