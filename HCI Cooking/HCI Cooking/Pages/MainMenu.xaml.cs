@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 
 namespace HCI_Cooking.Pages
@@ -21,9 +22,9 @@ namespace HCI_Cooking.Pages
     public partial class MainMenu : ISwitchable
     {
         public MainMenu()
-        { 
+        {
             InitializeComponent();
-
+            imgTitleScreen.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.fixed_title);
         }
 
 

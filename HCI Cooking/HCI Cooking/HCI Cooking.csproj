@@ -67,6 +67,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -84,6 +85,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Pages\CookingLessonTemplate.xaml.cs">
+      <DependentUpon>CookingLessonTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +124,10 @@
     <Page Include="Pages\AchievementMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CookingLessonTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\CookingLessonWhisking.xaml">
       <SubType>Designer</SubType>
@@ -256,6 +264,24 @@
   <ItemGroup>
     <Resource Include="Images\green_check.png" />
     <Resource Include="Images\red_cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ace cooking title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\achivements\first-recipe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\benny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\achivements\waffle_badge_wbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\fixed_title.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
