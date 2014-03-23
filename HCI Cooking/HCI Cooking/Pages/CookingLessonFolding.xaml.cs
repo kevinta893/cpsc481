@@ -94,6 +94,7 @@ namespace HCI_Cooking.Pages
                 if (currentRecipe.Skills[i].Equals("Folding"))
                 {
                     lessonImg.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.arrow_right));
+                    lessonGrid.Background = System.Windows.Media.Brushes.MediumSeaGreen;
                 }
 
                 if (currentRecipe.Skills[i].Equals("Whisking"))
