@@ -12,8 +12,8 @@
             <ColumnDefinition Width="500*" />
         </Grid.ColumnDefinitions>
         <Button Content="Complete Steps" Height="48" HorizontalAlignment="Left" Margin="332,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="133" Background="#FFC1C1FF" Click="btnIndiToogleView_Click" FontFamily="Century Gothic" FontSize="14" Grid.Column="1" />
-        <Button Content="&lt;--" Height="249" HorizontalAlignment="Left" Margin="29,407,0,0" Name="btnIndivRecipePrev" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeBack_Click" FontSize="26" IsEnabled="False" />
-        <Button Content="--&gt;" Height="249" HorizontalAlignment="Left" Margin="364,407,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeNext_Click" FontSize="26" Grid.Column="1" />
+        <Button Content="←" Height="249" HorizontalAlignment="Left" Margin="29,407,0,0" Name="btnIndivRecipePrev" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeBack_Click" FontSize="72" IsEnabled="False" FontWeight="Bold" />
+        <Button Content="→" Height="249" HorizontalAlignment="Left" Margin="364,407,0,0" Name="btnIndivRecipeNext" VerticalAlignment="Top" Width="101" Background="#FFC1C1FF" Click="btnIndivRecipeNext_Click" FontSize="72" Grid.Column="1" FontWeight="Bold" />
         <TextBlock Height="117" HorizontalAlignment="Left" Margin="178,454,0,0" Name="txtBlkStep" Text="" VerticalAlignment="Top" Width="640" Background="#FFF4F8E2" FontSize="22" TextWrapping="Wrap" TextAlignment="Center" Grid.ColumnSpan="2" />
         <Button Content="Back to Overview" Height="48" HorizontalAlignment="Left" Margin="29,12,0,0" Name="btnRecipeIndivBack" VerticalAlignment="Top" Width="130" Click="btnRecipeIndivBack_Click" FontFamily="Century Gothic" FontSize="14" />
         <Canvas Height="375" HorizontalAlignment="Left" Margin="178,52,0,0" Name="cnvImgHolder" VerticalAlignment="Top" Width="640" Grid.ColumnSpan="2">

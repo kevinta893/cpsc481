@@ -1,7 +1,7 @@
 ﻿<Window x:Class="HCI_Cooking.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Ace Cooking" MinHeight="700" MinWidth="1000" MaxHeight="700" MaxWidth="1000" WindowStartupLocation="CenterScreen" Icon="file:///C:/Users/Peter/Desktop/git/cpsc481/HCI%20Cooking/HCI%20Cooking/Images/ace_icon128.png">
+        Title="Ace Cooking" MinHeight="700" MinWidth="1000" MaxHeight="700" MaxWidth="1000" WindowStartupLocation="CenterScreen">
     <Grid>
         
     </Grid>

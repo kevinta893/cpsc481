@@ -50,12 +50,8 @@ namespace HCI_Cooking.Pages
             if (aRecipe.StepPictures.Count == lastStep + 1)
                 imgStep.Source = ImageLoader.ToWPFImage(aRecipe.StepPictures[stepIndex]);
             else
-            {
                 imgStep.Source = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.placeholder_2);
-
             
-                
-            }
 
             //load the only achievment on this page
 

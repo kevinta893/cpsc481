@@ -295,6 +295,12 @@
   <ItemGroup>
     <None Include="Images\video_placeholder.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\navarrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\navarrow_right.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

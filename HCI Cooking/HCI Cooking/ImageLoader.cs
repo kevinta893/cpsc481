@@ -33,6 +33,8 @@ namespace HCI_Cooking
             bmpImg.CacheOption = BitmapCacheOption.OnLoad;
             bmpImg.StreamSource = ms;
             bmpImg.EndInit();
+
+
             return bmpImg;
         }
     }

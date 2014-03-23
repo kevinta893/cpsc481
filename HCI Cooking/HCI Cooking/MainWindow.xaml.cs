@@ -32,6 +32,7 @@ namespace HCI_Cooking
         public MainWindow()
         {
             InitializeComponent();
+            this.Icon = ImageLoader.ToWPFImage(HCI_Cooking.Properties.Resources.ace_icon128);
 
             Switcher.pageSwitcher = this;
             //create pages and retain copies
