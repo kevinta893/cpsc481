@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="1000">
     <Grid Background="#81D8E4FC">
-        <Label Content="Achivements" Height="55" HorizontalAlignment="Left" Margin="150,12,0,0" Name="lblAchievements" VerticalAlignment="Top" Width="195" IsEnabled="True" FontSize="30" FontFamily="Leelawadee" />
+        <Label Content="Achievements" Height="55" HorizontalAlignment="Left" Margin="150,12,0,0" Name="lblAchievements" VerticalAlignment="Top" Width="195" IsEnabled="True" FontSize="30" FontFamily="Leelawadee" />
         <Label Content="Stats" Height="42" HorizontalAlignment="Left" Margin="12,73,0,0" Name="lblStats" VerticalAlignment="Top" Width="119" FontSize="20" />
         <Label Content="Badges" FontSize="20" Height="42" HorizontalAlignment="Left" Margin="12,407,0,0" Name="lblBadges" VerticalAlignment="Top" Width="119" />
         <Image Height="345" HorizontalAlignment="Left" Margin="477,73,0,0" Name="imgUser" VerticalAlignment="Top" Width="476" />
