@@ -7,15 +7,15 @@
              d:DesignHeight="700" d:DesignWidth="1000">
     <Grid Background="#81D8E4FC">
         <Label Content="Achievements" Height="55" HorizontalAlignment="Left" Margin="150,12,0,0" Name="lblAchievements" VerticalAlignment="Top" Width="195" IsEnabled="True" FontSize="30" FontFamily="Leelawadee" />
-        <Label Content="Stats" Height="42" HorizontalAlignment="Left" Margin="12,73,0,0" Name="lblStats" VerticalAlignment="Top" Width="119" FontSize="20" />
-        <Label Content="Badges" FontSize="20" Height="42" HorizontalAlignment="Left" Margin="12,407,0,0" Name="lblBadges" VerticalAlignment="Top" Width="119" />
-        <Image Height="345" HorizontalAlignment="Left" Margin="477,73,0,0" Name="imgUser" VerticalAlignment="Top" Width="476" />
-        <Label Content="Benny Bassilini" FontSize="30" Height="55" HorizontalAlignment="Left" IsEnabled="True" Margin="477,12,0,0" Name="lblUserName" VerticalAlignment="Top" Width="476" FontFamily="Leelawadee" />
+        <Label Content="Stats" Height="42" HorizontalAlignment="Left" Margin="12,85,0,0" Name="lblStats" VerticalAlignment="Top" Width="119" FontSize="20" />
+        <Label Content="Badges" FontSize="20" Height="42" HorizontalAlignment="Left" Margin="13,390,0,0" Name="lblBadges" VerticalAlignment="Top" Width="119" />
+        <Image Height="324" HorizontalAlignment="Left" Margin="574,65,0,0" Name="imgUser" VerticalAlignment="Top" Width="407" FlowDirection="LeftToRight" />
+        <Label Content="Benny Bassilini" FontSize="30" Height="55" HorizontalAlignment="Left" IsEnabled="True" Margin="568,19,0,0" Name="lblUserName" VerticalAlignment="Top" Width="476" FontFamily="Aharoni" />
         
         
         <Button Content="Back" Height="55" HorizontalAlignment="Left" Margin="25,12,0,0" Name="btnAchievementBack" VerticalAlignment="Top" Width="88" Click="btnAchievementBack_Click" FontFamily="Century Gothic" FontSize="16" />
 
-        <Canvas Height="171" HorizontalAlignment="Left" Margin="26,121,0,0" Name="canvStats" VerticalAlignment="Top" Width="425" Background="White">
+        <Canvas Height="136" HorizontalAlignment="Left" Margin="26,121,0,0" Name="canvStats" VerticalAlignment="Top" Width="425" Background="White">
             <Label FontWeight="Bold" Content="Meals cooked" Height="28" Name="label3" Canvas.Left="22" Canvas.Top="14" />
             <Label FontWeight="Bold" Content="Lessons Learned" Height="28" Name="label4" Canvas.Left="22" Canvas.Top="48" />
             <Label FontWeight="Bold" Content="Badges earned" Height="28" Name="label6" Canvas.Left="22" Canvas.Top="82" />
@@ -24,7 +24,7 @@
             <Label Canvas.Left="313" Canvas.Top="14" Content="Label" FontWeight="Bold" Height="27" Name="lblMealStats" />
         </Canvas>
      
-        <Grid Height="216" HorizontalAlignment="Left" Margin="26,455,0,0" Name="grdBadgeHolder" VerticalAlignment="Top" Width="949">
+        <Grid Height="216" HorizontalAlignment="Left" Margin="20,434,0,0" Name="grdBadgeHolder" VerticalAlignment="Top" Width="949" Background="White">
             <Canvas Height="91" HorizontalAlignment="Left" Margin="14,6,0,0" Name="canvAchieve1" VerticalAlignment="Top" Width="277" Visibility="Hidden">
                 <Image Canvas.Left="8" Canvas.Top="6" Height="77" Name="imgAchieve1" Stretch="Fill" Width="88" />
                 <Label FontWeight="Bold" Canvas.Left="110" Canvas.Top="29" Content="Label" Height="28" Name="lblAchieve1" Width="161" />

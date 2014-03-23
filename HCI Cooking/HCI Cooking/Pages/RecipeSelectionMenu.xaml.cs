@@ -244,6 +244,7 @@ namespace HCI_Cooking.Pages
                 {
                     box.IsChecked = false;
                 }
+                activeFilters.Clear();
             }
         }
 

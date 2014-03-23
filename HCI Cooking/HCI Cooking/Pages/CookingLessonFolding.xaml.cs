@@ -93,7 +93,9 @@ namespace HCI_Cooking.Pages
                 //if the current skill is equal to folding, show an arrow pointing to it.
                 if (currentRecipe.Skills[i].Equals("Folding"))
                 {
-                    lessonImg.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.arrow_right));
+                    // we don't want to show this arrow, too much icon clutter
+                    //lessonImg.Source = ImageLoader.ToWPFImage(new Bitmap(HCI_Cooking.Properties.Resources.arrow_right));
+                    lessonImg.Visibility = Visibility.Hidden;
                     lessonGrid.Background = System.Windows.Media.Brushes.MediumSeaGreen;
                 }
 

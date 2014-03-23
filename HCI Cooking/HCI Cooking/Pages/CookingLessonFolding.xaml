@@ -8,7 +8,7 @@
 
     <Grid Name="grdCTLesson">
         <Image Height="353" HorizontalAlignment="Left" Margin="25,109,0,0" Name="imgVidPlaceholder" Stretch="Fill" VerticalAlignment="Top" Width="579" ToolTip="Video feature not yet implemented." />
-        <Label Content="Mango Pudding Cake" FontFamily="Leelawadee" FontSize="34" Height="54" HorizontalAlignment="Left" Margin="12,21,0,0" Name="lblMPCRecipeTitle" VerticalAlignment="Top" Width="391" />
+        <Label Content="Mango Pudding Cake" FontFamily="Aharoni" FontSize="34" Height="54" HorizontalAlignment="Left" Margin="12,21,0,0" Name="lblMPCRecipeTitle" VerticalAlignment="Top" Width="391" />
         <Label Content="LESSON #III: Folding" FontFamily="Leelawadee" FontSize="16" Height="31" HorizontalAlignment="Left" Margin="41,72,0,0" Name="lblLessonNum" VerticalAlignment="Top" Width="294" />
         <Label Content="How to fold ingredients" FontFamily="Leelawadee" FontSize="28" Height="48" HorizontalAlignment="Right" Margin="0,41,44,0" Name="lblChapOverviewHeader" VerticalAlignment="Top" Width="327" />
         <TextBlock Height="266" HorizontalAlignment="Left" Margin="651,95,0,0" Name="txtBlkChapOverview" Text="Video Chapter Overview" VerticalAlignment="Top" Width="329" Background="#FFFDFDFD" />
