@@ -32,6 +32,7 @@ namespace HCI_Cooking.Pages
         {
             InitializeComponent();
 
+            canvAchievement.Visibility = Visibility.Hidden;
             canvAchievement.Opacity = 0;
             overview = parentPage;
             aRecipe = rec;
@@ -155,6 +156,7 @@ namespace HCI_Cooking.Pages
                         mainUser.BadgesEarned += 1;
 
                         //show achivement once.
+                        canvAchievement.Visibility = Visibility.Visible;
                         Thread achieveShow = new Thread(new ThreadStart(achievmentShow));
                         achieveShow.Start();
                     }
