@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Button Content="Back to Overview" Height="48" HorizontalAlignment="Left" Margin="29,12,0,0" Name="btnRecipeCompBack" VerticalAlignment="Top" Width="130" Click="btnRecipeCompBack_Click" FontFamily="Century Gothic" FontSize="14" />
         <RichTextBox Height="520" HorizontalAlignment="Left" Margin="81,89,0,0" Name="rTxtBlkSteps" VerticalAlignment="Top" Width="836" IsReadOnly="True" FontSize="20" VerticalScrollBarVisibility="Auto" MaxWidth="836" MaxHeight="555" Grid.RowSpan="2" />
-        <Button Background="#FFC1C1FF" Content="Individual Steps" Height="48" HorizontalAlignment="Left" Margin="832,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="133" Click="btnCompToogleView_Click" FontFamily="Century Gothic" FontSize="14" />
+        <Button Background="#FFC1C1FF" Content="Individual Steps" Height="48" HorizontalAlignment="Left" Margin="824,12,0,0" Name="btnIndivToggleView" VerticalAlignment="Top" Width="133" Click="btnCompToogleView_Click" FontFamily="Century Gothic" FontSize="14" />
         <Label Content="Label" Height="57" HorizontalAlignment="Left" Margin="190,12,0,0" Name="lblTitle" VerticalAlignment="Top" Width="515" FontFamily="Aharoni" FontSize="40" />
         <Canvas Background="#F76897DB" Height="157" HorizontalAlignment="Left" Margin="689,92,0,0" Name="canvAchievement" Opacity="1" VerticalAlignment="Top" Width="311" Grid.Row="1">
             <Label Canvas.Left="6" Canvas.Top="6" Content="New Achievment!" FontFamily="Aharoni" FontSize="18" FontStyle="Normal" Height="24" Name="lblAchievement" Width="208" />
